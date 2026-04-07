@@ -1,0 +1,157 @@
+================================================================================
+SCAMSHIELD BOT - INPUT PATTERN RESEARCH FILE 03
+TOPIC: FAKE BANK ALERT MESSAGE / LINK INPUT PATTERNS
+Last Updated: 2026-04-06
+Source Standard: Official government, regulator, law-enforcement, or public-agency
+sources only. No AI-generated or commercial summary sources used.
+================================================================================
+
+PURPOSE
+================================================================================
+This file supports the "paste suspicious message or link" feature for fake bank
+alerts and bank-impersonation scams, including SMS, email, and call-summary text.
+
+This file is for:
+- message-level red flag extraction
+- follow-up question design
+- rule-based risk escalation
+
+This file is NOT for:
+- live banking-site verification
+- definitive URL or hotline validation
+- device forensics
+
+================================================================================
+SECTION 1: PRIMARY SOURCE SET
+================================================================================
+
+1. BNM - Alert: SMS Scam and Fake Website Using BNM Name
+   https://www.bnm.gov.my/-/alert-on-sms-scam-and-fake-website-involving-bank-negara-malaysia-name
+2. BNM - Beware of Bogus Calls Impersonating BNM Officers
+   https://www.bnm.gov.my/-/beware-of-bogus-calls-from-persons-impersonating-as-bank-negara-malaysia-officers
+3. BNM - Beware of Fraudulent SMS and Telephone Calls (Credit Card)
+   https://www.bnm.gov.my/-/beware-of-fraudulent-sms-and-telephone-calls-requesting-confirmation-on-credit-card-transactions
+4. CCID (PDRM) - E-Banking Fraud
+   https://ccid.rmp.gov.my/Card/E-Banking-Fraud.cfm
+5. NFCC/NSRC - Reject 'NSRC Official' Calls
+   https://nfcc.jpm.gov.my/index.php/en/component/content/article/reject-nsrc-official-calls?catid=13&Itemid=114
+6. Maybank - Latest Scam Alerts
+   https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/security_alert/new-scam-alert.page
+7. CIMB - Security and Fraud Awareness
+   https://www.cimb.com.my/en/personal/help-support/security-and-fraud/security-and-fraud-awareness.html
+8. FTC - How to Avoid Imposter Scams
+   https://consumer.ftc.gov/features/how-avoid-imposter-scams
+9. FTC - Did Someone Tell You to Move Your Money? It Could Be a Scam
+   https://consumer.ftc.gov/consumer-alerts/2024/01/did-someone-tell-you-move-or-transfer-your-money-it-could-be-scam
+10. FBI IC3 - Account Takeover via Impersonation of Financial Institution Support
+    https://www.ic3.gov/PSA/2025/PSA251125
+11. FBI IC3 - Financial Institution Customer Fraud Scheme
+    https://www.ic3.gov/PSA/2024/PSA240802
+12. NCSC - How to Spot a Scam Email, Text or Call
+    https://www.ncsc.gov.uk/collection/phishing-scams/spot-scams
+
+================================================================================
+SECTION 2: COMMON FAKE BANK-ALERT WORDING PATTERNS
+================================================================================
+
+SECURITY ALERT / ACCOUNT PROBLEM
+- "suspicious transaction"
+- "unusual login"
+- "your card was used"
+- "security verification required"
+- "account suspended"
+- "account locked"
+
+CREDENTIAL REQUEST
+- "confirm OTP"
+- "provide PIN"
+- "verify password"
+- "share TAC code"
+- "confirm account details"
+
+SAFE ACCOUNT / MOVE YOUR MONEY
+- "move your money"
+- "transfer to safe account"
+- "secure account"
+- "temporary holding account"
+
+URGENT CALL TO ACTION
+- "call immediately"
+- "urgent action required"
+- "within 24 hours"
+- "respond now"
+
+================================================================================
+SECTION 3: LINK, HOTLINE, AND IMPERSONATION PATTERNS
+================================================================================
+
+- bank-like login or verification link
+- suspicious hotline or callback number in the message
+- bank or regulator impersonation
+- fake app or off-store install instruction
+
+Examples:
+- "click here to verify transaction"
+- "call this number immediately"
+- "fraud team from your bank"
+- "install security app to protect account"
+
+================================================================================
+SECTION 4: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+- claimsBankIdentity
+- claimsRegulatorIdentity
+- hasSecurityAlertPhrase
+- requestsOtp
+- requestsPinOrPassword
+- hasSuspiciousLink
+- hasSuspiciousHotline
+- requestsSafeAccountTransfer
+- requestsAppInstall
+- hasUrgency
+
+================================================================================
+SECTION 5: POST-INCIDENT INDICATORS
+================================================================================
+
+Escalate immediately if user says they:
+- already shared OTP or TAC
+- already shared PIN or password
+- already clicked the login or verification link
+- already called the suspicious hotline
+- already transferred money to a safe account
+- already installed an app from the message
+
+================================================================================
+SECTION 6: RULE-BASED USE IN THE BOT
+================================================================================
+
+Recommended flow:
+1. User pastes message or link.
+2. Bot extracts bank-alert indicators from the pasted content.
+3. Bot asks follow-up questions:
+   - Did it claim to be from your bank?
+   - Did it ask for OTP, PIN, or password?
+   - Did it give a suspicious link or hotline?
+   - Did it ask for a safe-account transfer?
+   - Did you already share any banking details?
+4. Bot calculates final risk from both the pasted content and user answers.
+
+================================================================================
+SECTION 7: LIMITATIONS
+================================================================================
+
+Do not claim these from pasted text or visible link alone:
+- that a bank website is definitely fake without verification
+- that a phone number is definitely malicious without independent checking
+- that a message is definitely from a real bank just because the wording looks polished
+- that the user's account is compromised without evidence
+
+Therefore:
+- The feature must be framed as a preliminary rule-based assessment.
+- The bot should not behave like a live bank-authentication or telecom-verification tool.
+
+================================================================================
+END OF FILE: kb_input_patterns_03_fake_bank_alert.txt
+================================================================================

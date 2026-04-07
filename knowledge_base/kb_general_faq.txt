@@ -1,0 +1,424 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 08
+TOPIC: GENERAL FAQ, POST-INCIDENT GUIDE & MALAYSIAN REPORTING DIRECTORY
+Last Updated: 2026-03-27
+Sources: NSRC 997, PDRM, BNM, MCMC, SC Malaysia, MyCERT, AKPK
+================================================================================
+
+SECTION 1: GENERAL FREQUENTLY ASKED QUESTIONS (FAQ)
+================================================================================
+
+Q: I think I am being scammed. What should I do first?
+A: Stay calm and STOP. Do not send any more money, do not provide any more personal
+information, and do not install any more apps. Cut off all communication with the
+suspected scammer. If money has been transferred recently, call NSRC 997 immediately —
+this is the fastest way to attempt to freeze the mule account before the scammer
+withdraws the money.
+
+---
+
+Q: How do I know if something is a scam?
+A: Common warning signs across all scam types:
+1. Unsolicited contact — you did not initiate the communication
+2. Too good to be true — unrealistically high earnings, prizes, or returns
+3. Urgency and pressure — must act NOW or lose money / face consequences
+4. Requests for money upfront — pay fees before receiving anything
+5. Requests for OTP or banking credentials — never share these with anyone
+6. Secrecy — told to keep the matter confidential or not tell family
+7. Payment via gift cards, cryptocurrency, or untraceable methods
+If two or more of these signs are present, treat it as a scam until proven otherwise.
+
+---
+
+Q: My friend referred me to this investment/job. Can it still be a scam?
+A: Yes, unfortunately. Your friend may themselves be a victim who was deceived into
+recruiting others — this is common in Ponzi schemes, fake investment platforms, and
+online part-time scams. Your friend is not necessarily at fault. Independently verify
+any opportunity through SC Malaysia, SSM, or JTKSM before committing funds or time.
+
+---
+
+Q: I already sent money. Can I get it back?
+A: Speed is critical. The moment you realise you have been scammed:
+1. Call NSRC 997 — they coordinate with banks to freeze mule accounts
+2. Call your bank's fraud hotline to dispute the transaction
+3. File a police report immediately
+Recovery is possible in some cases if the mule account is frozen before the money
+is withdrawn. However, once funds reach the final scammer's account (often overseas),
+recovery is very difficult. Acting within minutes to hours gives the best chance.
+
+---
+
+Q: Is there a single number I can call for all scam types?
+A: Yes — call NSRC (National Scam Response Centre): 997
+Operating hours: 8:00 AM to 8:00 PM, 7 days a week.
+This is Malaysia's dedicated anti-scam hotline that coordinates with all major banks.
+For emergencies outside NSRC hours: call PDRM at 999 or your bank's 24-hour fraud line.
+
+---
+
+Q: I am embarrassed to report — will people judge me?
+A: Scam victims come from all backgrounds, education levels, and ages. These criminals
+are professional manipulators who study psychology and exploit human trust and emotions.
+Being scammed is not a reflection of intelligence — it is the result of calculated
+deception by criminal syndicates. Reporting helps prevent the same criminals from
+victimising others. PDRM and NSRC officers handle these cases with confidentiality
+and professionalism.
+
+---
+
+Q: Can I go to jail for being used as a money mule without knowing?
+A: Potentially yes, though voluntary reporting significantly reduces risk.
+Under AMLATFPUAA 2001, allowing your bank account to be used for money laundering
+is a criminal offence even if you were deceived. If you discover you have been used
+as a mule: stop immediately, go to PDRM voluntarily to report, and consult a lawyer.
+Proactive reporting demonstrates good faith and is taken into consideration.
+
+---
+
+Q: How do I check if an investment is legitimate in Malaysia?
+A: Three steps:
+1. Check SC Malaysia's registered and licensed entities list: sc.com.my
+2. Check BNM's Financial Consumer Alert (unlicensed entities): bnm.gov.my
+3. Check SC Malaysia's InvestSmart investor alert list: investsmart.sc.com.my
+If the investment operator is not on the licensed list OR is on the alert/warning list,
+do not invest.
+
+---
+
+Q: How do I check if a company offering me a job is legitimate?
+A: Check SSM (Companies Commission of Malaysia): ssm.com.my
+All legitimate companies operating in Malaysia must be registered with SSM.
+For overseas jobs: verify the recruitment agency at JTKSM: jtksm.gov.my
+Only use JTKSM-registered agencies for overseas employment arrangements.
+
+---
+
+Q: Someone sent me money I wasn't expecting and asked me to forward it. Should I?
+A: NO. This is how money mules are recruited. The money you received is stolen from
+scam victims. Forwarding it makes you part of the money laundering chain.
+This is illegal under AMLATFPUAA 2001 regardless of whether you knew the source.
+Return the money to your bank and report the request to PDRM immediately.
+
+---
+
+Q: My bank account has been frozen. What do I do?
+A: Your account may have been flagged by police or PDRM as a mule account — sometimes
+this happens to genuine victims who received suspicious transfers unknowingly.
+Steps to take:
+1. Contact your bank to understand the reason for the freeze
+2. If freeze is related to a criminal investigation, you will receive a notice
+3. Consult a lawyer to assist with unfreezing your account
+4. Report your side of the story to PDRM to establish you are a victim, not a mule
+
+---
+
+Q: What is the NSRC and how does it work?
+A: NSRC (National Scam Response Centre) is Malaysia's centralised anti-scam coordination
+centre. It was established by PDRM and works with all major Malaysian banks.
+When you call 997 after being scammed, NSRC officers can:
+- Coordinate with banks to freeze mule accounts in real time
+- Escalate urgent cases to prevent further withdrawals
+- Refer cases to PDRM for criminal investigation
+NSRC operates 8:00 AM to 8:00 PM daily. For urgent cases after hours, call your
+bank's 24-hour fraud hotline directly.
+
+---
+
+Q: Can I report a scam if I did not lose any money?
+A: YES — and please do. Reporting attempted scams helps PDRM and MCMC build intelligence
+on active scam syndicates, shut down fake websites, and warn the public before more
+victims lose money. Report at:
+- MCMC: aduan.mcmc.gov.my (for online/messaging scams)
+- PDRM: ccid.rmp.gov.my (for cybercrime reports)
+- NSRC: 997 (for all scam types)
+Even if you only received a suspicious SMS or call, reporting it is valuable.
+
+---
+
+Q: A friend is being scammed but won't listen to me. What can I do?
+A: Romance scam and investment scam victims often develop strong emotional bonds with
+their scammers and may dismiss warnings from friends and family.
+What you can do:
+1. Stay patient and non-judgmental — do not tell them they are stupid
+2. Present factual information calmly — red flags from this chatbot or official sources
+3. Encourage them to do a reverse image search or call a trusted financial advisor
+4. Contact PDRM or MCMC and report your concern — authorities can sometimes intervene
+5. Reach out to the Malaysian Scam Victims Support community on social media
+6. If the person is at financial risk, consider involving other family members
+
+================================================================================
+SECTION 2: QUICK RISK SELF-ASSESSMENT
+================================================================================
+
+Answer YES or NO to each question. Count your YES answers.
+
+1. Did someone contact you out of nowhere with this offer, investment, or relationship?
+2. Does the offer promise very high returns, income, or prizes for little effort?
+3. Are you being asked to act urgently within hours or days?
+4. Have you been asked to pay any fee upfront before receiving anything?
+5. Have you been asked to share your OTP, banking password, or PIN?
+6. Have you been told to keep this matter secret from family or friends?
+7. Does the person or company offer cannot be verified on official government websites?
+8. Are you being asked to receive money and forward it to another account?
+9. Have you been asked to send gift cards, cryptocurrency, or wire transfers?
+10. Does something about this feel "too good to be true"?
+
+RESULTS:
+0 YES answers: Low risk — but stay vigilant
+1-2 YES answers: Moderate concern — verify the situation before proceeding
+3-4 YES answers: High risk — stop and verify with official sources before any action
+5+ YES answers: Very high risk — this is very likely a scam. Stop all activity.
+               Call NSRC 997 or PDRM 03-2610-1559 for assistance.
+
+================================================================================
+SECTION 3: POST-INCIDENT STEP-BY-STEP GUIDE
+================================================================================
+
+IF YOU JUST REALISED YOU MAY HAVE BEEN SCAMMED:
+Follow these steps in order — every minute counts.
+
+--- WITHIN THE FIRST 30 MINUTES ---
+
+STEP 1 - STOP ALL ACTIVITY
+Stop sending money immediately. Do not send anything more regardless of what the
+scammer says — threats, emotional appeals, or promises will not change the outcome.
+
+STEP 2 - CALL NSRC 997
+Tell them: how much you sent, when you sent it, and which bank or method you used.
+They can coordinate with banks in real time to freeze mule accounts.
+NSRC hotline: 997 (available 8 AM to 8 PM daily)
+
+STEP 3 - CALL YOUR BANK'S FRAUD HOTLINE
+Request an immediate account freeze or transaction dispute.
+Provide the transaction date, amount, and destination account if known.
+Bank fraud hotlines (24-hour):
+- Maybank: 1-300-88-6688
+- CIMB: 1-300-880-900
+- Public Bank: 1-800-22-5555
+- RHB: 1-800-88-9950
+- Hong Leong: 1-300-88-8111
+- AmBank: 1-800-88-9999
+- BSN: 1-300-88-1900
+- Bank Islam: 1-300-88-2265
+- Bank Rakyat: 1-800-88-5565
+
+STEP 4 - SECURE YOUR ACCOUNTS
+If you shared passwords or banking credentials:
+- Change all passwords from a different, clean device
+- Enable two-factor authentication on all accounts
+- Contact your bank to change your banking PIN
+- If your email was compromised — recovery may require contacting the email provider
+
+--- WITHIN 24 HOURS ---
+
+STEP 5 - PRESERVE EVIDENCE
+Screenshot everything: messages, transaction receipts, profile photos, platform
+screenshots, phone numbers, email addresses. Do NOT delete any conversations.
+This evidence is needed for the police report and bank dispute.
+
+STEP 6 - FILE A POLICE REPORT
+Option A: Online report at ccid.rmp.gov.my (for cybercrime)
+Option B: Walk into any nearest police station and file report in person
+Bring with you: IC, screenshots, transaction receipts, scammer's contact details
+You will receive a police report reference number — keep this for all future follow-up.
+
+STEP 7 - REPORT TO RELEVANT AUTHORITIES
+Depending on scam type, also report to:
+- SC Malaysia (investment scams): sc.com.my or 1-800-88-5465
+- MCMC (online/messaging scams): aduan.mcmc.gov.my or 1-800-188-030
+- BNM (banking-related fraud): bnmtelelink@bnm.gov.my or 1-300-88-5465
+- MyCERT (malware/device compromise): mycert.org.my or +603-8992-6969
+- JTKSM (job/labour scams): jtksm.gov.my or 03-8886-5000
+
+--- WITHIN THE FIRST WEEK ---
+
+STEP 8 - FOLLOW UP WITH BANK
+Ask for the outcome of the dispute. Request a formal written response.
+If dissatisfied with your bank's response, escalate to:
+- Ombudsman for Financial Services (OFS): ofs.org.my | 03-2272-2811
+- BNM BNMTELELINK: 1-300-88-5465
+
+STEP 9 - CONSULT FINANCIAL COUNSELLING (IF NEEDED)
+If you took loans or are in debt due to the scam:
+- AKPK (Agensi Kaunseling dan Pengurusan Kredit): 1-800-88-2575 | akpk.org.my
+  Free service for Malaysians in debt difficulty
+
+STEP 10 - SEEK EMOTIONAL SUPPORT
+Being scammed is traumatic. You do not have to cope alone:
+- Befrienders Malaysia: 03-7627-2929 (24 hours)
+- Talian Kasih: 15999 or WhatsApp 019-261-5999
+- Malaysian Mental Health Association: 03-2780-6803
+
+================================================================================
+SECTION 4: COMPLETE MALAYSIAN REPORTING DIRECTORY
+================================================================================
+
+--- IMMEDIATE RESPONSE ---
+NSRC (National Scam Response Centre)
+Phone: 997
+Hours: 8:00 AM - 8:00 PM, 7 days a week
+Best for: Freezing mule accounts after financial loss
+
+PDRM Emergency
+Phone: 999
+Best for: Emergencies, immediate physical danger
+
+--- CYBERCRIME REPORTING ---
+PDRM Cybercrime (CCID)
+Phone: 03-2610-1559
+Online: ccid.rmp.gov.my
+Best for: All cybercrime reports, police investigations
+
+Semak Mule (Check Mule Accounts)
+Website: semak.rmp.gov.my
+Best for: Verifying if a bank account or phone number is linked to scam reports
+
+--- FINANCIAL REGULATION ---
+BNM BNMTELELINK
+Phone: 1-300-88-5465
+Email: bnmtelelink@bnm.gov.my
+Best for: Banking-related fraud, unlicensed financial activities, bank complaints
+
+Securities Commission Malaysia (SC)
+Phone: 1-800-88-5465
+Website: sc.com.my | eTribuan: etribuan.sc.com.my
+Best for: Investment fraud, unlicensed investment advisors, capital market fraud
+
+InvestSmart (SC Malaysia investor education and alert portal)
+Website: investsmart.sc.com.my
+Best for: Verifying licensed investment entities, checking investor alert list
+
+Ombudsman for Financial Services (OFS)
+Phone: 03-2272-2811
+Website: ofs.org.my
+Best for: Unresolved disputes with financial institutions (banks, insurance)
+
+--- TELECOMMUNICATIONS AND ONLINE PLATFORMS ---
+MCMC Aduan (Communications & Multimedia Complaints)
+Phone: 1-800-188-030
+Website: aduan.mcmc.gov.my
+Best for: Scam SMS, phishing websites, fraudulent online content
+
+MyCERT (Malaysian Computer Emergency Response Team)
+Phone: +603-8992-6969
+Website: mycert.org.my
+Best for: Malware, hacked accounts, cybersecurity incidents
+
+--- EMPLOYMENT AND LABOUR ---
+JTKSM (Jabatan Tenaga Kerja Semenanjung Malaysia)
+Phone: 03-8886-5000
+Website: jtksm.gov.my
+Best for: Fake job offers, illegal recruitment agencies, overseas job scams
+
+Wisma Putra Emergency Hotline (Malaysians in distress abroad)
+Phone: 03-8887-4000 (24 hours)
+Best for: Malaysians stranded, trafficked, or in danger overseas
+
+MAPO (Counter-Trafficking Unit)
+Hotline: 15001
+Best for: Human trafficking victims
+
+--- DEBT AND FINANCIAL COUNSELLING ---
+AKPK (Agensi Kaunseling dan Pengurusan Kredit)
+Phone: 1-800-88-2575
+Website: akpk.org.my
+Best for: Free financial counselling and debt management for Malaysians
+
+--- EMOTIONAL SUPPORT ---
+Befrienders Malaysia
+Phone: 03-7627-2929
+Hours: 24 hours, 7 days a week
+Best for: Emotional distress, mental health support, suicidal thoughts
+
+Talian Kasih (Ministry of Women, Family & Community Development)
+Phone: 15999
+WhatsApp: 019-261-5999
+Hours: 24 hours
+Best for: Family issues, financial distress, social assistance
+
+Malaysian Mental Health Association
+Phone: 03-2780-6803
+Website: mmha.org.my
+Best for: Mental health counselling referrals
+
+--- COMPANY VERIFICATION ---
+SSM (Companies Commission of Malaysia)
+Website: ssm.com.my
+Best for: Verifying if a company is legally registered in Malaysia
+
+================================================================================
+SECTION 5: SCAM AWARENESS — KNOW YOUR RIGHTS
+================================================================================
+
+RIGHT 1 - RIGHT TO REFUSE:
+You have the absolute right to refuse any request for money, OTP, or personal
+information from any person, whether they claim to be a bank, government officer,
+courier, employer, or romantic partner. No legitimate institution will threaten
+you with arrest or account closure for refusing to comply immediately.
+
+RIGHT 2 - RIGHT TO VERIFY:
+You have the right to hang up and call back using the official number before
+taking any action. No legitimate organisation will prevent you from independently
+verifying their identity. A caller who objects to you hanging up to verify is a scammer.
+
+RIGHT 3 - RIGHT TO REPORT:
+You have the right to report any suspicious activity to PDRM, MCMC, SC Malaysia,
+or BNM without fear of consequences. Reporting a scam — even if no money was lost —
+is your civic duty and helps protect others in your community.
+
+RIGHT 4 - RIGHT TO DISPUTE:
+Under BNM's consumer protection guidelines, you have the right to file a formal
+dispute with your bank for unauthorised transactions. Banks are required to investigate
+and respond in writing. If unsatisfied, you can escalate to OFS or BNM BNMTELELINK.
+
+RIGHT 5 - RIGHT TO PROTECTION:
+Malaysia has multiple laws protecting citizens from financial fraud:
+- Computer Crimes Act 1997
+- Communications and Multimedia Act 1998
+- Anti-Money Laundering, Anti-Terrorism Financing and Proceeds of Unlawful
+  Activities Act (AMLATFPUAA) 2001
+- Capital Markets and Services Act (CMSA) 2007
+- Financial Services Act (FSA) 2013
+- Personal Data Protection Act (PDPA) 2010
+
+================================================================================
+SECTION 6: KEY SCAM PREVENTION RULES TO REMEMBER
+================================================================================
+
+THE GOLDEN RULES OF SCAM PREVENTION:
+
+RULE 1 — NEVER share your OTP with anyone. Ever.
+Your OTP is the last line of defence for your bank account. No bank officer,
+government agent, family member, or romantic partner has a legitimate reason
+to ask for it.
+
+RULE 2 — NEVER pay upfront to receive something.
+Whether it is a job, a prize, an investment return, or a parcel — if you have
+to pay before receiving, stop. Legitimate rewards do not require upfront payments.
+
+RULE 3 — NEVER transfer money to a safe account.
+No bank, government agency, or police force will ever ask you to transfer money
+to a different account to protect it from fraud. This is always a scam.
+
+RULE 4 — NEVER install an app from a link in a message.
+All legitimate apps are available on the official Google Play Store or Apple App Store.
+APK files sent via WhatsApp, Telegram, or SMS are almost always malware.
+
+RULE 5 — VERIFY before you trust, click, or pay.
+When in doubt: hang up, do not click, do not pay. Verify independently using
+official websites or official hotline numbers. Scammers rely on urgency to prevent
+you from stopping to verify.
+
+RULE 6 — TALK to someone you trust.
+Scammers thrive on isolation and secrecy. Before making any significant financial
+decision based on an online interaction, discuss it with a trusted family member
+or friend. A fresh perspective often reveals what you cannot see when under pressure.
+
+RULE 7 — REPORT everything — even if you lost nothing.
+Every report helps build intelligence against scam syndicates.
+Call 997 | PDRM: ccid.rmp.gov.my | MCMC: aduan.mcmc.gov.my
+
+================================================================================
+END OF FILE: kb_general_faq.txt
+================================================================================

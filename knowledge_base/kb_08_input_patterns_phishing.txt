@@ -1,0 +1,214 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 08
+TOPIC: INPUT PATTERN RESEARCH - PHISHING MESSAGES AND LINKS
+Last Updated: 2026-04-06
+Scope: Rule-based assessment of pasted phishing messages or links
+Source Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the optional "paste a suspicious message or link" feature for
+phishing-related assessments. It is limited to patterns that can be identified
+from pasted text or visible link strings alone. It is NOT a live URL reputation
+checker and does NOT inspect website content in real time.
+
+Supported input types:
+- SMS or WhatsApp text
+- Email text
+- Visible URL or partial URL
+- User summary of a phishing call or bank/social-engineering message
+
+================================================================================
+SECTION 2: MESSAGE WORDING PATTERNS OBSERVABLE FROM TEXT
+================================================================================
+
+PATTERN GROUP PH-INPUT-01: ACCOUNT VERIFICATION OR SECURITY ACTION
+Common observable wording:
+- verify your account
+- unlock your account
+- secure your account
+- update your payment information
+- confirm your identity
+- suspended / locked / restricted
+
+PATTERN GROUP PH-INPUT-02: URGENCY, THREAT, OR DEADLINE
+Common observable wording:
+- act now
+- within 24 hours
+- immediately
+- urgent
+- final notice
+- avoid legal action
+- account will be suspended
+
+PATTERN GROUP PH-INPUT-03: REQUEST FOR CREDENTIALS OR SECRET CODES
+Common observable wording:
+- enter OTP
+- confirm password
+- provide PIN
+- banking password
+- security code
+- verification code
+
+PATTERN GROUP PH-INPUT-04: REWARD, REFUND, OR PRIZE PRETEXT
+Common observable wording:
+- claim refund
+- tax refund
+- prize
+- reward
+- cashback
+- you have won
+
+PATTERN GROUP PH-INPUT-05: UNEXPECTED ATTACHMENT OR DOWNLOAD PROMPT
+Common observable wording:
+- open attachment
+- download statement
+- download security app
+- install update
+
+================================================================================
+SECTION 3: SUSPICIOUS URL OR LINK PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+PATTERN GROUP PH-LINK-01: BRAND OR DOMAIN MISMATCH
+Observable link traits:
+- visible domain does not match the official organisation domain
+- spelling variation of a trusted brand name
+- extra words like secure, verify, login, support inserted into domain
+
+PATTERN GROUP PH-LINK-02: SHORTENED OR OBFUSCATED LINK
+Observable link traits:
+- bit.ly
+- tinyurl
+- other shortened links hiding destination
+- raw link pasted without clear brand identity
+
+PATTERN GROUP PH-LINK-03: WEAK OR STRANGE DOMAIN FORMAT
+Observable link traits:
+- IP address instead of normal domain
+- obviously unrelated domain endings
+- free-hosting-style domains
+- extra hyphens or random-looking strings
+- HTTP instead of HTTPS
+
+PATTERN GROUP PH-LINK-04: CALL-HOTLINE IN MESSAGE INSTEAD OF OFFICIAL CHANNEL
+Observable text traits:
+- call this number immediately
+- hotline number included directly in the suspicious message
+- number does not match known official contact pattern
+
+================================================================================
+SECTION 4: IMPERSONATION PATTERNS
+================================================================================
+
+Common impersonated entities:
+- banks
+- government agencies
+- tax authorities
+- courier companies
+- telcos
+- e-wallet or e-commerce services
+
+Observable impersonation indicators:
+- sender claims to be a trusted organisation but requests sensitive data
+- generic greeting instead of actual name
+- suspicious sender address or phone number
+- official-looking brand name combined with unsafe instructions
+- message directs user away from official app/website to a provided link
+
+================================================================================
+SECTION 5: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser may safely extract these binary indicators from pasted content:
+
+- contains_link
+- contains_attachment_prompt
+- contains_urgency
+- contains_threat_of_suspension
+- contains_reward_or_refund_claim
+- requests_otp
+- requests_password_or_pin
+- requests_sensitive_info
+- requests_security_app_download
+- provides_callback_number
+- mentions_bank_or_government_brand
+- shows_visible_domain_mismatch
+- shows_shortened_link
+- shows_http_or_non_official_style_link
+
+================================================================================
+SECTION 6: POST-INCIDENT INDICATORS
+================================================================================
+
+These indicators usually come from the user's accompanying message, not the scam
+message itself, but they must be captured if present:
+
+- user already clicked the link
+- user already entered OTP
+- user already entered password or PIN
+- user already downloaded a file or app
+- user already called the number in the message
+- user already noticed unauthorised transactions
+
+================================================================================
+SECTION 7: SAFE RULES FOR INPUT-BASED PRELIMINARY ASSESSMENT
+================================================================================
+
+RULE PH-IN-01 [HIGH]:
+IF pasted content contains a link AND contains urgency language AND mentions
+account verification or suspension THEN classify as at least HIGH.
+
+RULE PH-IN-02 [HIGH]:
+IF pasted content requests OTP, password, or PIN THEN classify as at least HIGH.
+
+RULE PH-IN-03 [HIGH]:
+IF visible link shows domain mismatch, shortened URL, or clearly suspicious URL
+format THEN increase risk significantly.
+
+RULE PH-IN-04 [CRITICAL]:
+IF user confirms they already entered credentials or OTP after following the
+pasted message/link THEN classify as CRITICAL.
+
+RULE PH-IN-05 [FOLLOW-UP REQUIRED]:
+IF the pasted content is suspicious but does not clearly request credentials,
+the bot should ask follow-up questions before final classification.
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The bot must NOT claim the following from pasted content alone:
+
+- that a link is definitely safe
+- that a domain is officially owned by the claimed organisation
+- that the destination website is malicious if the live site was not inspected
+- that HTTPS means the site is legitimate
+- that a message is harmless simply because no obvious red flag was extracted
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. MCMC - Identify Phishing E-Mail
+   https://www.mcmc.gov.my/en/faqs/phishing-attack/2-identify-phishing-e-mail
+2. MCMC - Protect Yourself from Phishing
+   https://mcmc.gov.my/en/faqs/phishing-attack/3-protect-yourself-how
+3. CISA - Recognize and Report Phishing
+   https://www.cisa.gov/secure-our-world/recognize-and-report-phishing
+4. CISA - Phishing Guidance: Stopping the Attack Cycle at Phase One
+   https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one
+5. FTC - How To Recognize and Avoid Phishing Scams
+   https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
+6. NCSC (UK) - Phishing: Spot and Report Scam Emails, Texts, Websites and Calls
+   https://www.ncsc.gov.uk/collection/phishing-scams
+7. FBI IC3 - Cyber Actors Exploit 'Secure' Websites in Phishing
+   https://www.ic3.gov/PSA/2019/PSA190610
+8. CCID (PDRM) - E-Banking Fraud
+   https://ccid.rmp.gov.my/Card/E-Banking-Fraud.cfm
+
+================================================================================
+END OF FILE: kb_08_input_patterns_phishing.txt
+================================================================================

@@ -1,0 +1,320 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 05
+TOPIC: INVESTMENT SCAMS
+Last Updated: 2026-03-27
+Sources: SC Malaysia, BNM, IOSCO, FTC, SEC, FBI IC3, Interpol, ACCC Scamwatch
+================================================================================
+
+SECTION 1: WHAT IS AN INVESTMENT SCAM?
+================================================================================
+
+An investment scam is a type of fraud where criminals offer victims fake or
+fraudulent investment opportunities promising extraordinarily high returns with
+little or no risk. Victims are lured with the promise of becoming wealthy quickly
+through investment in stocks, foreign exchange (forex), cryptocurrency, gold,
+unit trusts, or other financial instruments.
+
+In Malaysia, investment scams are the HIGHEST-LOSS category of financial fraud.
+The Securities Commission Malaysia (SC) and Bank Negara Malaysia (BNM) receive
+thousands of complaints annually. Losses can range from thousands to millions
+of ringgit per victim.
+
+Malaysian investment scams commonly operate through:
+- Telegram and WhatsApp investment groups
+- Social media platforms (Facebook, Instagram, TikTok)
+- Fake trading platforms (apps or web-based)
+- Pyramid and multi-level marketing (MLM) schemes
+- Cryptocurrency investment platforms
+
+Key regulatory fact: ALL persons giving investment advice or managing investments
+in Malaysia must be LICENSED by the Securities Commission Malaysia (SC) or
+Bank Negara Malaysia (BNM). Investing with unlicensed individuals or entities
+is illegal and unprotected.
+
+================================================================================
+SECTION 2: HOW INVESTMENT SCAMS WORK (STEP BY STEP)
+================================================================================
+
+STEP 1 - INITIAL CONTACT AND RECRUITMENT
+Scammer contacts victim via:
+- Random WhatsApp or Telegram message (often a "wrong number" opener)
+- Social media ad featuring fake celebrities endorsing investment scheme
+- Friend referral (victim's friend was already scammed and unknowingly recruits others)
+- Dating app — scammer poses as romantic interest who then introduces investment
+  (this variant is called "Pig Butchering" or Love + Investment scam)
+
+STEP 2 - TRUST BUILDING
+Scammer spends time building a relationship and credibility:
+- Shows screenshots of "profits" and fake bank statements
+- Shares "expert analysis" and market predictions
+- Introduces victim to a private "VIP investment group" with active participants
+  (all are fake accounts controlled by the syndicate)
+- Claims to have insider information or proprietary trading software
+
+STEP 3 - SMALL INITIAL INVESTMENT
+Victim is encouraged to invest a small amount (RM500–RM2,000).
+The fake platform shows the investment "growing" rapidly.
+Victim is allowed to withdraw a small profit to build confidence.
+
+STEP 4 - ESCALATING INVESTMENT
+Emboldened by early success, victim invests larger amounts.
+Friends and family may be asked to contribute. Some victims take out loans.
+The fake platform continues to show unrealistically high returns.
+
+STEP 5 - WITHDRAWAL BLOCK
+When victim tries to withdraw a large amount, they are told:
+- "You must pay a withdrawal tax of 20% before release"
+- "Your account needs to be upgraded — pay RM5,000 for VIP tier"
+- "Our system is under maintenance — wait 30 days"
+- "You owe a processing fee — pay first then funds will be released"
+
+Every additional payment is extracted from the victim before the scammer disappears.
+
+STEP 6 - TOTAL LOSS
+Platform becomes inaccessible. Scammer stops responding. All deposited funds are lost.
+Total loss often significantly exceeds initial investment due to escalating payments.
+
+================================================================================
+SECTION 3: TYPES OF INVESTMENT SCAMS
+================================================================================
+
+TYPE 1 - FOREX / CRYPTOCURRENCY TRADING SCAM (Most Common High-Loss Scam)
+Victim is introduced to a "professional trader" or AI trading bot.
+Fake trading platform shows extraordinary returns (50–200% monthly).
+Victim cannot independently verify positions or trades on the fake platform.
+Key identifier: Real forex brokers are regulated by SC Malaysia or BNM.
+No legitimate broker guarantees fixed returns.
+
+TYPE 2 - PIG BUTCHERING SCAM (Sha Zhu Pan)
+Long-term relationship (romantic or friendly) is built over weeks or months.
+Once trust is established, scammer introduces the investment.
+Victim is gradually encouraged to invest more and more (being "fattened").
+When investment is large enough, the scammer disappears ("slaughter").
+Key identifier: Someone you met online who is both romantically interested AND
+pushes you to invest in a specific platform they recommend.
+
+TYPE 3 - PONZI SCHEME
+Returns to earlier investors are paid using money from newer investors.
+Scheme is sustainable only as long as new investors keep joining.
+When recruitment slows, scheme collapses and later investors lose everything.
+Key identifier: Returns that seem unusually high and consistent regardless of
+market conditions. Pressure to recruit others.
+
+TYPE 4 - PYRAMID SCHEME / ILLEGAL MLM
+Participants earn primarily by recruiting new members rather than selling products.
+Income is dependent on downline recruitment, not product sales.
+Key identifier: If the product or service is secondary to recruitment commissions,
+it may be an illegal pyramid scheme. Check the MLM company's legitimacy with SC Malaysia.
+
+TYPE 5 - FAKE CRYPTOCURRENCY EXCHANGE / WALLET SCAM
+Victim is directed to deposit cryptocurrency into a fake exchange or wallet.
+Platform shows balance growing — but it is fake. Funds cannot be withdrawn.
+Key identifier: Only use cryptocurrency exchanges registered with SC Malaysia
+or internationally recognised regulated exchanges.
+
+TYPE 6 - FIXED DEPOSIT / HIGH-YIELD INVESTMENT SCAM
+Victim is offered "fixed deposit" or "high-yield savings" products by unlicensed
+entities with returns far higher than bank rates (e.g., 15–30% monthly).
+Key identifier: Legitimate Malaysian banks offer FD rates of 2–4% per year, not per month.
+Any returns significantly above this are a major warning sign.
+
+TYPE 7 - GOLD / COMMODITY INVESTMENT SCAM
+Scammer sells certificates for gold or commodities at inflated prices.
+Returns are promised based on commodity price movements.
+Physical gold may not exist, or the price claimed is far above market value.
+Key identifier: Verify gold price at BNM's official page or major exchanges.
+Only buy gold investment products from LBMA-accredited dealers or licensed banks.
+
+TYPE 8 - CELEBRITY-ENDORSED SCAM
+Scammer uses fake social media posts, deepfake videos, or edited screenshots
+to falsely show that famous Malaysians (politicians, businesspeople, celebrities)
+are endorsing a specific investment.
+Key identifier: Verify celebrity endorsements directly on their official verified accounts.
+
+================================================================================
+SECTION 4: RED FLAGS AND WARNING SIGNS
+================================================================================
+
+UNREALISTIC RETURNS:
+- Promised returns of 10% per week, 30% per month, or "guaranteed" profits
+- Profits that are consistent regardless of market conditions
+- "Risk-free" or "zero risk" investment (no legitimate investment is risk-free)
+- Returns far higher than any regulated bank or investment product in Malaysia
+
+UNLICENSED OPERATORS:
+- Investment operator is not listed on SC Malaysia's licensed entities list
+- Operator cannot provide a valid SC or BNM licence number
+- Operator only communicates via WhatsApp or Telegram — no physical office
+- Company is not registered with SSM (Companies Commission of Malaysia)
+
+PRESSURE AND SECRECY:
+- Pressure to invest quickly ("limited slots", "promotion ends today")
+- Told to keep the investment secret or not tell family members
+- Asked to recruit friends or family for additional returns
+- Discouraged from consulting financial advisors or family
+
+WITHDRAWAL PROBLEMS:
+- Withdrawal requests are delayed, rejected, or subject to sudden new fees
+- Asked to pay "taxes", "processing fees", or "unlock fees" before withdrawal
+- Platform goes offline or becomes inaccessible when you try to withdraw
+- Customer support becomes unreachable or unresponsive
+
+PLATFORM CONCERNS:
+- Platform is a mobile app downloaded from outside Play Store / App Store
+- App does not appear on official stores or is very new with few reviews
+- Platform website has no physical address, regulation information, or company details
+- Balance on the platform looks too good — numbers rise too steadily
+
+================================================================================
+SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
+================================================================================
+
+RULE IV-01 [CRITICAL RISK]:
+IF user is being asked to pay a fee (tax, upgrade, processing) to withdraw their
+investment returns THEN risk level is CRITICAL.
+ACTION: Stop all payments. This is the final stage of a scam. No legitimate
+investment platform charges fees to release your own money. Funds are likely lost.
+
+RULE IV-02 [CRITICAL RISK]:
+IF someone user met online (romantically or as a new friend) is recommending a
+specific investment platform AND user is developing emotional attachment THEN
+risk level is CRITICAL — this is the Pig Butchering pattern.
+ACTION: Immediately cease investment activity. Seek advice from family or trusted
+friends. Report to PDRM if money has been transferred.
+
+RULE IV-03 [HIGH RISK]:
+IF the investment operator CANNOT provide an SC Malaysia or BNM licence number
+OR is not listed on SC's official registered entities list THEN risk level is HIGH.
+ACTION: Do NOT invest. Check SC Malaysia's list of licensed entities at sc.com.my
+before committing any funds.
+
+RULE IV-04 [HIGH RISK]:
+IF investment promises returns of more than 10% per month or "guaranteed" returns
+regardless of market conditions THEN risk level is HIGH.
+ACTION: Such returns are mathematically unsustainable. This is a classic scam promise.
+No legitimate investment guarantees these returns.
+
+RULE IV-05 [HIGH RISK]:
+IF investment platform requires download of an app from outside the official app store
+OR the app has very few reviews or downloads THEN risk level is HIGH.
+ACTION: Do NOT download. Verify legitimacy on SC Malaysia's InvestSmart portal.
+
+RULE IV-06 [MEDIUM RISK]:
+IF user's friend or family member is promoting an investment scheme AND pressure
+is applied to join quickly THEN risk level is MEDIUM.
+ACTION: Even referrals from known persons can be scams — the referrer may also
+be a victim. Independently verify the investment with SC Malaysia before joining.
+
+RULE IV-07 [MEDIUM RISK]:
+IF user sees a social media ad featuring a celebrity endorsing an investment platform
+THEN risk level is MEDIUM.
+ACTION: Verify the celebrity endorsement on their official, verified accounts.
+Check if the investment operator is licensed by SC Malaysia.
+
+================================================================================
+SECTION 6: HOW TO VERIFY AN INVESTMENT IS LEGITIMATE
+================================================================================
+
+STEP 1 - CHECK SC MALAYSIA'S LICENSED ENTITIES LIST:
+Visit: sc.com.my — go to "Investor Relations" > "Registered and Licensed Persons/Entities"
+All legitimate investment advisors, fund managers, and brokers must be listed here.
+If the person or company is not on this list, they are NOT licensed to give investment
+advice or manage money in Malaysia.
+
+STEP 2 - CHECK BNM'S FINANCIAL CONSUMER ALERT LIST:
+BNM maintains a list of unlicensed financial companies and schemes:
+Visit: bnm.gov.my — search "Financial Consumer Alert"
+This list is updated regularly with known scams and unlicensed operators.
+
+STEP 3 - CHECK SC MALAYSIA'S INVESTOR ALERT LIST:
+SC Malaysia also maintains an investor alert list of unauthorised investments:
+Visit: sc.com.my/investor-alert
+If the company or scheme appears here, it is confirmed fraudulent.
+
+STEP 4 - USE SC MALAYSIA'S INVESTSMART PORTAL:
+Visit: investsmart.sc.com.my
+This portal provides tools to verify licensed intermediaries, read investor education
+materials, and check investment opportunities.
+
+STEP 5 - VERIFY RETURNS ARE REALISTIC:
+Compare offered returns against current Malaysian fixed deposit rates (approximately
+2–4% per year at major banks). If offered returns are significantly higher, be
+extremely cautious and verify thoroughly.
+
+STEP 6 - GOOGLE THE INVESTMENT:
+Search for the company name + "scam" or "complaint" or "review Malaysia".
+Check if the company appears on consumer forums or news articles as a scam.
+
+================================================================================
+SECTION 7: WHAT TO DO IF YOU ARE A VICTIM
+================================================================================
+
+STOP INVESTING IMMEDIATELY:
+1. Cease all further payments — every additional payment increases your loss
+2. Do not believe promises that paying more will recover your funds
+
+TAKE ACTION:
+1. Report to SC Malaysia: 1-800-88-5465 or via eTribuan at sc.com.my
+2. Report to BNM: 1-300-88-5465 (BNMTELELINK)
+3. Report to PDRM (CCID): ccid.rmp.gov.my or 03-2610-1559
+4. If money was recently transferred: call NSRC 997 immediately
+5. Report to MCMC if scam was via online platform: aduan.mcmc.gov.my
+
+PRESERVE EVIDENCE:
+- Screenshots of all conversations, transaction records, platform balance
+- All receipts, bank transfer confirmations, and invoices
+- Names, phone numbers, and WhatsApp IDs used by scammers
+- Screenshots of the fake investment platform
+- All evidence needed for police investigation and potential civil claim
+
+FINANCIAL RECOVERY OPTIONS:
+- Contact your bank to dispute transactions if made recently
+- Consult a lawyer about potential civil recovery actions
+- Speak to a financial counsellor at AKPK (Credit Counselling and Debt Management
+  Agency): akpk.org.my | 1-800-88-2575 (free service for debt advice)
+- Bank Negara can assist with unresolved complaints through the Ombudsman for
+  Financial Services: ofs.org.my
+
+PSYCHOLOGICAL SUPPORT:
+- Investment scam victims often experience shame, depression, and financial stress
+- Seek support from family, friends, or mental health professionals
+- Contact Befrienders Malaysia for emotional support: 03-7627-2929
+
+================================================================================
+SECTION 8: KNOW YOUR RIGHTS AS AN INVESTOR
+================================================================================
+
+REGULATORY FRAMEWORK IN MALAYSIA:
+- Securities Commission Malaysia (SC): Regulates capital markets, investment advisors,
+  fund managers, stock brokers, and equity crowdfunding platforms.
+  Authority under: Capital Markets and Services Act (CMSA) 2007
+
+- Bank Negara Malaysia (BNM): Regulates banking institutions, insurance companies,
+  money services businesses, and financial products offered by banks.
+  Authority under: Financial Services Act (FSA) 2013
+
+- Companies Commission of Malaysia (SSM): Registers all companies.
+  Verify company legitimacy at ssm.com.my.
+
+INVESTOR RIGHTS:
+- You have the right to demand proof of licence from any person giving investment advice
+- You have the right to independently verify any investment before committing funds
+- You have the right to report any unlicensed investment activity to SC or BNM
+- You have the right to a formal investigation and response when you file a complaint
+
+================================================================================
+SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
+================================================================================
+
+SC Malaysia (investment fraud): 1-800-88-5465 | sc.com.my | eTribuan portal
+BNM BNMTELELINK: 1-300-88-5465 | bnm.gov.my
+NSRC (National Scam Response Centre): 997 (call immediately if recently paid)
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+MCMC: aduan.mcmc.gov.my
+AKPK (debt counselling): 1-800-88-2575 | akpk.org.my
+Ombudsman for Financial Services: ofs.org.my | 03-2272-2811
+InvestSmart Portal: investsmart.sc.com.my
+
+================================================================================
+END OF FILE: kb_05_investment_scam.txt
+================================================================================

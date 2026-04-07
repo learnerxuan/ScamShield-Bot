@@ -1,0 +1,234 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 08
+TOPIC: PHISHING INPUT-PATTERN RESEARCH
+Last Updated: 2026-04-06
+Research Scope: Pasted message text, SMS text, email text, and visible link strings
+Validation Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the planned "paste suspicious message or link" feature for
+phishing-related scam checks. It is not a live URL reputation database and it is
+not a website scanner. Instead, it documents artifact-level patterns that can be
+extracted from pasted text or visible links using rule-based logic.
+
+This file should be used to:
+- detect phishing-like wording patterns
+- detect suspicious visible URL patterns
+- detect sender and impersonation cues
+- trigger follow-up questions
+- strengthen risk scoring for phishing workflows
+
+This file should NOT be used to:
+- guarantee that a link is safe
+- verify the real destination of a shortened URL
+- assess page content that the user did not paste
+
+================================================================================
+SECTION 2: SUPPORTED INPUT TYPES
+================================================================================
+
+SUPPORTED:
+- SMS text
+- WhatsApp or Telegram message text
+- Email subject/body text
+- Visible URL pasted by user
+- Sender name or sender address pasted by user
+
+NOT SUPPORTED BY THIS FILE ALONE:
+- live webpage inspection
+- attachment scanning
+- QR code resolution
+- shortened-link expansion
+- domain age / WHOIS checks without separate tooling
+
+================================================================================
+SECTION 3: COMMON MESSAGE WORDING PATTERNS
+================================================================================
+
+PATTERN GROUP A - ACCOUNT VERIFICATION / SECURITY ACTION
+Examples of wording cues:
+- verify your account
+- secure your account
+- unlock your account
+- confirm your identity
+- unusual activity detected
+- suspicious login attempt
+- account suspended / frozen / blocked
+
+Interpretation:
+- Strong phishing indicator when paired with a link, credential request, or
+  urgency language.
+
+PATTERN GROUP B - URGENCY / THREAT
+Examples of wording cues:
+- act now
+- within 24 hours
+- immediate action required
+- failure to respond will result in account closure
+- legal action / penalty / suspension
+
+Interpretation:
+- Medium-strength indicator by itself.
+- Higher risk when combined with a link or request for credentials.
+
+PATTERN GROUP C - REWARD / REFUND / PRIZE BAIT
+Examples of wording cues:
+- refund available
+- claim your reward
+- prize waiting
+- payment failed, retry here
+- tax refund / bonus / cashback
+
+Interpretation:
+- Used as a lure to drive clicks.
+- Becomes higher risk if the message includes a link or asks for login details.
+
+PATTERN GROUP D - CREDENTIAL HARVESTING LANGUAGE
+Examples of wording cues:
+- enter OTP
+- confirm password
+- verify PIN
+- update banking details
+- enter card number
+
+Interpretation:
+- High to Critical indicator.
+- If the user says they already entered these details, escalate immediately.
+
+================================================================================
+SECTION 4: SUSPICIOUS URL / LINK PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+VISIBLE URL CUES THAT CAN BE RULE-CHECKED:
+- uses a misspelled brand or domain
+  Example pattern: maybonk / mayb4nk / secure-maybank-login
+- uses HTTP instead of HTTPS
+- contains an IP address instead of a normal domain
+- uses a long, random, or unrelated domain string
+- uses free-hosting or non-official subpages
+  Example pattern: wixsite / blogspot / weebly
+- uses a shortened URL
+  Example pattern: bit.ly / tinyurl / short links hiding destination
+- adds misleading words such as:
+  secure, verify, update, confirm, login, support, refund
+
+IMPORTANT LIMIT:
+- HTTPS alone does NOT prove legitimacy.
+- A visible URL can look safe but still be malicious.
+
+================================================================================
+SECTION 5: SENDER / IMPERSONATION PATTERNS
+================================================================================
+
+SENDER CUES:
+- sender domain does not match the claimed organisation
+- sender uses a free email service instead of an official corporate domain
+- slight misspellings in sender address
+- caller or sender claims to be a bank, government agency, or major service
+- sender asks the user to trust the message because it is "official"
+
+COMMON IMPERSONATION TARGETS MENTIONED IN SOURCE MATERIAL:
+- banks
+- government agencies
+- tax/refund agencies
+- major consumer services
+
+BOT-USEFUL EXTRACTION FLAGS:
+- claimsBank
+- claimsGovernment
+- senderMismatch
+- suspiciousCallerNumber
+
+================================================================================
+SECTION 6: EXPLICIT EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser should attempt to detect these indicators from pasted content:
+
+- containsLink
+- asksForOtp
+- asksForPassword
+- asksForPin
+- asksForBankingDetails
+- claimsAccountProblem
+- claimsRefundOrPrize
+- hasUrgencyLanguage
+- hasThreatLanguage
+- senderMismatch
+- visibleMisspelledDomain
+- httpNotHttps
+- shortenedUrl
+- freeHostingDomain
+- asksToCallSpecificNumber
+- asksToInstallApp
+
+Suggested use:
+- use these indicators to pre-fill suspicion signals
+- still ask follow-up questions before final assessment
+
+================================================================================
+SECTION 7: POST-INCIDENT INDICATORS
+================================================================================
+
+These signals indicate possible compromise and should heavily increase risk:
+
+- user already clicked the link
+- user already entered OTP
+- user already entered password or PIN
+- user already entered banking information
+- user already downloaded an app from the message
+- user already called the number in the message
+
+Suggested rule handling:
+- entered OTP / password / banking details = CRITICAL
+- downloaded app from suspicious message = HIGH or CRITICAL depending on context
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The following cannot be safely inferred from pasted text or visible links alone:
+
+- whether a shortened URL resolves to a malicious destination
+- whether a website uses deceptive page content not visible in the pasted text
+- whether a sender address was spoofed at the email-header level
+- whether an attachment contains malware
+- whether a domain is newly registered or controlled by the claimed brand
+- whether a live website is compromised
+
+Therefore, this file supports PRELIMINARY RULE-BASED ASSESSMENT only.
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. MCMC - Identify Phishing E-Mail
+   https://www.mcmc.gov.my/en/faqs/phishing-attack/2-identify-phishing-e-mail
+
+2. MCMC - Protect Yourself from Phishing
+   https://mcmc.gov.my/en/faqs/phishing-attack/3-protect-yourself-how
+
+3. CISA - Recognize and Report Phishing
+   https://www.cisa.gov/secure-our-world/recognize-and-report-phishing
+
+4. CISA - Phishing Guidance: Stopping the Attack Cycle at Phase One
+   https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one
+
+5. FTC - How To Recognize and Avoid Phishing Scams
+   https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
+
+6. FBI IC3 - Cyber Actors Exploit 'Secure' Websites in Phishing
+   https://www.ic3.gov/PSA/2019/PSA190610
+
+7. MyCERT - Phishing Emails Targeting Bank Negara Malaysia
+   https://www.mycert.org.my/portal/advisory?id=MA-640.102016
+
+8. CyberSecurity Malaysia - Security Best Practices for Online Account Credentials
+   https://www.cybersecurity.my/portal-main/advisories-details/3800db58-522f-11f0-a5d3-0050568c1b65
+
+================================================================================
+END OF FILE: kb_08_phishing_input_patterns.txt
+================================================================================

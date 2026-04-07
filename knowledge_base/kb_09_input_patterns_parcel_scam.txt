@@ -1,0 +1,208 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 09
+TOPIC: INPUT PATTERN RESEARCH - FAKE PARCEL DELIVERY MESSAGES AND LINKS
+Last Updated: 2026-04-06
+Scope: Rule-based assessment of pasted parcel-delivery scam messages or links
+Source Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the optional "paste a suspicious message or link" feature for
+fake parcel delivery scams. It is limited to text-visible patterns and does not
+verify the live destination website or application package.
+
+Supported input types:
+- SMS or WhatsApp text
+- email text
+- visible tracking/reschedule/payment link
+- user summary of courier/customs/police call tied to a parcel
+
+================================================================================
+SECTION 2: MESSAGE WORDING PATTERNS OBSERVABLE FROM TEXT
+================================================================================
+
+PATTERN GROUP PA-INPUT-01: DELIVERY FAILURE OR MISSED DELIVERY
+Common observable wording:
+- delivery failed
+- missed parcel
+- unable to deliver
+- reschedule delivery
+- update address
+- parcel on hold
+
+PATTERN GROUP PA-INPUT-02: TRACKING OR RESCHEDULING ACTION
+Common observable wording:
+- track parcel
+- tracking update
+- click here to reschedule
+- verify delivery
+- confirm address
+
+PATTERN GROUP PA-INPUT-03: SMALL FEE OR CUSTOMS PAYMENT
+Common observable wording:
+- delivery fee
+- redelivery fee
+- customs duty
+- release fee
+- pay RM...
+- insurance fee
+
+PATTERN GROUP PA-INPUT-04: APP OR APK DOWNLOAD PROMPT
+Common observable wording:
+- download tracking app
+- install app
+- APK
+- update courier app
+- install delivery app
+
+PATTERN GROUP PA-INPUT-05: ESCALATION TO CUSTOMS / POLICE / SAFE ACCOUNT
+Common observable wording:
+- illegal items found
+- customs investigation
+- police case
+- safe account
+- avoid arrest
+- keep this confidential
+
+================================================================================
+SECTION 3: SUSPICIOUS URL OR LINK PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+PATTERN GROUP PA-LINK-01: FAKE COURIER BRAND DOMAIN
+Observable link traits:
+- courier name appears in a non-official domain
+- domain does not match known official courier site format
+- extra hyphens or unrelated domain parts around courier brand
+
+PATTERN GROUP PA-LINK-02: TRACKING / RESCHEDULE LINK WITH NO VERIFIED CONTEXT
+Observable link traits:
+- message contains a tracking or reschedule link but no trusted order context
+- no matching order or tracking evidence accompanies the message
+
+PATTERN GROUP PA-LINK-03: SHORTENED LINK OR RANDOM DOMAIN
+Observable link traits:
+- shortened URL
+- random-looking domain
+- free-hosting style domain
+- strange payment page for a courier message
+
+PATTERN GROUP PA-LINK-04: APP DOWNLOAD LINK OUTSIDE OFFICIAL APP STORES
+Observable link traits:
+- direct APK file
+- app install link not pointing to official app store
+- message text instructs recipient to sideload an application
+
+================================================================================
+SECTION 4: IMPERSONATION PATTERNS
+================================================================================
+
+Common impersonated entities:
+- Pos Malaysia
+- J&T Express
+- DHL
+- FedEx
+- Ninja Van
+- GDex
+- customs officers
+- police officers
+
+Observable impersonation indicators:
+- unexpected parcel notice using trusted courier name
+- sender information does not match official courier channel format
+- caller claims to be customs or police because of a parcel
+- conversation escalates from courier issue to legal threat or safe-account demand
+
+================================================================================
+SECTION 5: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser may safely extract these indicators from pasted content:
+
+- mentions_parcel_or_delivery
+- mentions_failed_delivery
+- mentions_tracking_or_reschedule
+- contains_link
+- requests_fee_payment
+- mentions_customs
+- requests_app_or_apk_install
+- mentions_police_or_investigation
+- mentions_illegal_items
+- mentions_safe_account
+- contains_urgency
+- uses_shortened_or_suspicious_link
+- requests_sensitive_info_for_delivery
+
+================================================================================
+SECTION 6: POST-INCIDENT INDICATORS
+================================================================================
+
+Post-incident indicators the bot must capture:
+
+- user already clicked the parcel link
+- user already paid a fee
+- user already entered banking details
+- user already installed an app or APK
+- user already transferred money after customs/police call
+
+================================================================================
+SECTION 7: SAFE RULES FOR INPUT-BASED PRELIMINARY ASSESSMENT
+================================================================================
+
+RULE PA-IN-01 [HIGH]:
+IF pasted content mentions failed delivery or parcel rescheduling AND contains a
+link THEN classify as at least HIGH.
+
+RULE PA-IN-02 [HIGH]:
+IF pasted content requests customs fee, delivery fee, or redelivery payment for
+an unexpected parcel THEN classify as at least HIGH.
+
+RULE PA-IN-03 [CRITICAL]:
+IF pasted content mentions illegal items, police/customs investigation, and safe
+account transfer THEN classify as CRITICAL.
+
+RULE PA-IN-04 [CRITICAL]:
+IF user confirms they already paid or installed an APK related to the message
+THEN classify as CRITICAL.
+
+RULE PA-IN-05 [FOLLOW-UP REQUIRED]:
+IF pasted content only mentions a parcel with limited context, ask whether the
+user was expecting the parcel and whether any fee or install request appeared.
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The bot must NOT claim the following from pasted content alone:
+
+- that a courier link is genuine
+- that a tracking number is valid unless independently checked on the official site
+- that a package really exists
+- that a payment page is official simply because it uses HTTPS
+- that a message is safe because it contains a courier brand name
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. Pos Malaysia - Scam Update Page
+   https://www.pos.com.my/scam-update
+2. Pos Malaysia - Impersonator Scams Are on the Rise
+   https://www.pos.com.my/knowledge-hub/pos-malaysia-scam-are-on-the-rise
+3. Pos Malaysia - Online Security, Fraud and Scams
+   https://www.pos.com.my/news-info/online-security-fraud-and-scams.html
+4. NCSC (UK) - Scam 'Missed Parcel' SMS Messages
+   https://www.ncsc.gov.uk/guidance/scam-missed-parcel-sms-messages
+5. FTC - Fake Shipping Notification Emails and Text Messages
+   https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season
+6. FTC - Think That Text from USPS Could Be a Scam
+   https://consumer.ftc.gov/consumer-alerts/2025/04/think-text-message-usps-it-could-be-scam
+7. Action Fraud (UK) - Courier Fraud A-Z
+   https://www.actionfraud.police.uk/a-z-of-fraud/courier-fraud
+8. CyberSecurity Malaysia - Malicious Attachment Targeting Banking Users (2025)
+   https://www.cybersecurity.my/portal-main/advisories-details/dc8402e8-b9f7-11f0-b161-0050568ccc16
+
+================================================================================
+END OF FILE: kb_09_input_patterns_parcel_scam.txt
+================================================================================

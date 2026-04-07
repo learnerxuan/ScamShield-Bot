@@ -1,0 +1,194 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 10
+TOPIC: INPUT PATTERN RESEARCH - FAKE BANK ALERT MESSAGES AND LINKS
+Last Updated: 2026-04-06
+Scope: Rule-based assessment of pasted bank-alert messages, links, or call summaries
+Source Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the optional "paste a suspicious message or link" feature for
+fake bank alerts and bank-impersonation scams. It focuses on patterns visible
+from message text, visible URLs, and user summaries of suspicious calls.
+
+Supported input types:
+- SMS text
+- email text
+- visible login or callback link
+- user summary of a suspicious bank/security phone call
+
+================================================================================
+SECTION 2: MESSAGE WORDING PATTERNS OBSERVABLE FROM TEXT
+================================================================================
+
+PATTERN GROUP BA-INPUT-01: SECURITY ALERT OR SUSPICIOUS TRANSACTION PRETEXT
+Common observable wording:
+- suspicious transaction
+- unauthorised login
+- security alert
+- account locked
+- verify account
+- secure your account now
+
+PATTERN GROUP BA-INPUT-02: CREDENTIAL OR OTP REQUEST
+Common observable wording:
+- enter OTP
+- confirm PIN
+- provide password
+- share TAC/OTP
+- verify card details
+
+PATTERN GROUP BA-INPUT-03: CALL THIS NUMBER / HOTLINE PROMPT
+Common observable wording:
+- call this number immediately
+- contact our fraud department
+- hotline
+- press 1 to continue
+
+PATTERN GROUP BA-INPUT-04: SAFE ACCOUNT OR FUND TRANSFER PRETEXT
+Common observable wording:
+- safe account
+- secure account
+- move your money
+- protect your funds
+- temporary transfer
+
+PATTERN GROUP BA-INPUT-05: BANK BRAND + IMMEDIATE ACTION
+Common observable wording:
+- bank officer
+- fraud department
+- security team
+- risk unit
+- immediate verification required
+
+================================================================================
+SECTION 3: SUSPICIOUS URL, LINK, OR HOTLINE PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+PATTERN GROUP BA-LINK-01: LOGIN LINK IN ALERT MESSAGE
+Observable traits:
+- message contains a link to verify or log in
+- security alert directs user to a clickable login page
+- visible domain does not match official bank site
+
+PATTERN GROUP BA-LINK-02: DIFFERENT HOTLINE NUMBER
+Observable traits:
+- message gives a hotline number that may differ from the official number on the
+  bank card or official bank site
+- user is instructed to use the provided number rather than official channels
+
+PATTERN GROUP BA-LINK-03: BANK-BRAND DOMAIN MISMATCH
+Observable traits:
+- bank name appears in domain but domain is not official
+- suspicious subdomain or spelling variation
+- HTTP, shortened links, or random-looking login links
+
+================================================================================
+SECTION 4: IMPERSONATION PATTERNS
+================================================================================
+
+Common impersonated roles:
+- bank officer
+- fraud officer
+- security team
+- central bank / regulator official
+
+Observable impersonation indicators:
+- message claims authority from a bank or regulator but asks for secrets
+- call summary states a bank officer asked for OTP
+- message combines urgent risk language with provided hotline or login link
+- caller instructs user to keep matter secret or act immediately
+
+================================================================================
+SECTION 5: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser may safely extract these indicators from pasted content:
+
+- mentions_bank_brand
+- mentions_security_alert
+- mentions_suspicious_transaction
+- contains_link
+- requests_login_or_verification
+- requests_otp
+- requests_pin_or_password
+- provides_hotline_number
+- mentions_safe_account
+- requests_transfer
+- contains_urgency
+- shows_visible_domain_mismatch
+- shows_shortened_or_suspicious_link
+
+================================================================================
+SECTION 6: POST-INCIDENT INDICATORS
+================================================================================
+
+Critical post-incident indicators:
+
+- user already gave OTP
+- user already entered login credentials
+- user already called the suspicious number
+- user already transferred money to a safe account
+- user already installed or used a suspicious banking-related app
+
+================================================================================
+SECTION 7: SAFE RULES FOR INPUT-BASED PRELIMINARY ASSESSMENT
+================================================================================
+
+RULE BA-IN-01 [HIGH]:
+IF pasted content claims to be from a bank AND requests OTP, PIN, or password
+THEN classify as at least HIGH.
+
+RULE BA-IN-02 [HIGH]:
+IF pasted content includes a bank security alert plus a clickable login link or
+callback number THEN classify as at least HIGH.
+
+RULE BA-IN-03 [CRITICAL]:
+IF pasted content instructs the user to move money to a safe account THEN
+classify as CRITICAL.
+
+RULE BA-IN-04 [CRITICAL]:
+IF user confirms they already shared OTP/credentials or transferred money after
+following the pasted alert THEN classify as CRITICAL.
+
+RULE BA-IN-05 [FOLLOW-UP REQUIRED]:
+IF the content only mentions a bank without clear credential or transfer request,
+ask follow-up questions before final classification.
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The bot must NOT claim the following from pasted text alone:
+
+- that a bank hotline number is genuine without independent verification
+- that a login page is official if only a visible URL string is provided
+- that a suspicious message definitely came from the real bank
+- that a message is safe just because it uses bank branding
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. BNM - Alert: SMS Scam and Fake Website Using BNM Name
+   https://www.bnm.gov.my/-/alert-on-sms-scam-and-fake-website-involving-bank-negara-malaysia-name
+2. BNM - Beware of Bogus Calls Impersonating BNM Officers
+   https://www.bnm.gov.my/-/beware-of-bogus-calls-from-persons-impersonating-as-bank-negara-malaysia-officers
+3. BNM - Beware of Fraudulent SMS and Telephone Calls (Credit Card)
+   https://www.bnm.gov.my/-/beware-of-fraudulent-sms-and-telephone-calls-requesting-confirmation-on-credit-card-transactions
+4. BNM - Financial Fraud Alert Hub
+   https://www.bnm.gov.my/web/financial-fraud-alert
+5. CCID (PDRM) - E-Banking Fraud
+   https://ccid.rmp.gov.my/Card/E-Banking-Fraud.cfm
+6. FTC - Did Someone Tell You to Move Your Money? It Could Be a Scam
+   https://consumer.ftc.gov/consumer-alerts/2022/09/did-someone-tell-you-move-your-money-it-could-be-scam
+7. FTC - How to Avoid Imposter Scams
+   https://consumer.ftc.gov/articles/how-avoid-imposter-scams
+8. NCSC (UK) - Phishing: Spot and Report Scam Emails, Texts, Websites and Calls
+   https://www.ncsc.gov.uk/collection/phishing-scams
+
+================================================================================
+END OF FILE: kb_10_input_patterns_bank_alert.txt
+================================================================================

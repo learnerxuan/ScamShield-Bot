@@ -1,0 +1,272 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 02
+TOPIC: FAKE PARCEL DELIVERY SCAMS
+Last Updated: 2026-03-27
+Sources: PDRM, MCMC, NSRC 997, FTC, Pos Malaysia Advisories, FBI IC3, MCMC
+================================================================================
+
+SECTION 1: WHAT IS A FAKE PARCEL DELIVERY SCAM?
+================================================================================
+
+A fake parcel delivery scam (also called parcel or courier scam) is a type of fraud
+where scammers impersonate legitimate courier or postal services to deceive victims
+into paying fake fees, revealing banking credentials, or downloading malware.
+
+In Malaysia, this is one of the fastest-growing scam categories. Scammers commonly
+impersonate:
+- Pos Malaysia
+- J&T Express
+- DHL
+- FedEx
+- Ninja Van
+- GDex
+- Lazada Logistics / Shopee Express
+
+These scams exploited the surge in e-commerce and online shopping during and after
+the COVID-19 pandemic as millions of Malaysians shop online regularly.
+
+The typical Malaysian victim profile: online shoppers who frequently receive parcels,
+often from platforms like Shopee and Lazada.
+
+================================================================================
+SECTION 2: HOW FAKE PARCEL DELIVERY SCAMS WORK (STEP BY STEP)
+================================================================================
+
+STEP 1 - FAKE NOTIFICATION
+Victim receives an SMS, WhatsApp message, or email claiming a parcel is on the way
+but cannot be delivered. The message appears to come from a real courier service.
+Examples:
+- "Your parcel cannot be delivered. Update your address to reschedule."
+- "Your package is being held at customs. Pay RM12 customs duty to release."
+- "Delivery failed. Click here to reschedule: [fake link]"
+
+STEP 2 - PHISHING LINK
+The message contains a link to a fake website that mimics the courier's official site.
+The fake site may ask the victim to:
+a) Enter personal details to "reschedule" delivery
+b) Pay a small fee (RM5–RM30) via banking transfer or e-wallet
+c) Enter credit card details for delivery fee payment
+d) Download a "tracking app" (actually malware or RAT)
+
+STEP 3 - DATA AND MONEY THEFT
+If victim pays the fee — the money goes directly to the scammer.
+If victim enters banking credentials — the scammer uses them for full account access.
+If victim downloads the fake app — scammer gains remote control of device.
+
+STEP 4 - ESCALATION (ADVANCED VARIANTS)
+In more sophisticated versions:
+- Scammer calls victim claiming to be from customs or courier company
+- They inform victim a "suspicious package" was found in their name
+- They transfer victim to a fake "police officer" who demands investigation cooperation
+- Victim is pressured to transfer large sums to a "safe account" (mule account)
+- This variant can cause losses of RM10,000 to RM500,000+
+
+================================================================================
+SECTION 3: TYPES OF FAKE PARCEL DELIVERY SCAMS
+================================================================================
+
+TYPE 1 - FAILED DELIVERY SMS/WHATSAPP SCAM (Most Common in Malaysia)
+Victim receives fake SMS claiming parcel delivery failed and must click link to
+reschedule. Link leads to phishing site asking for personal info or small payment.
+Key identifier: Unexpected message for a parcel you did not order.
+
+TYPE 2 - CUSTOMS DUTY SCAM
+Victim is told a parcel was intercepted at customs and must pay duty fees.
+Payment is requested via bank transfer, e-wallet, or cryptocurrency.
+Key identifier: Real customs duty notices come via official channels, not WhatsApp.
+
+TYPE 3 - FAKE TRACKING APP SCAM
+Victim is asked to download a courier tracking app via APK link (not from Play Store).
+The APK is malware that steals banking credentials, SMS OTPs, and contact lists.
+Key identifier: Real courier companies never ask you to install an APK via SMS.
+
+TYPE 4 - FAKE CUSTOMS + POLICE SCAM (Syndikat Macau Scam variant)
+Victim is told their parcel was flagged for illegal items. A fake police officer
+calls to "investigate" and instructs victim to transfer money to a "safe account."
+Key identifier: Police NEVER contact civilians via WhatsApp or ask for bank transfers.
+
+TYPE 5 - WRONG PARCEL / REFUND SCAM
+Scammer claims a parcel was sent to victim by mistake and requests banking details
+to process a "refund." Instead of sending money, they steal banking credentials.
+Key identifier: Why would a courier need your full banking credentials for a refund?
+
+TYPE 6 - PRIZE/REWARD PARCEL SCAM
+Victim is told they won a prize and a parcel is being sent, but they must pay
+"delivery charges" or "insurance fees" to receive it.
+Key identifier: Legitimate prize winners do not pay fees to receive their prizes.
+
+================================================================================
+SECTION 4: RED FLAGS AND WARNING SIGNS
+================================================================================
+
+UNEXPECTED PARCEL NOTIFICATION:
+- You receive a notification for a parcel you never ordered or are not expecting
+- The notification arrives via WhatsApp or Telegram (official couriers use SMS/email)
+- There is no tracking number provided or the tracking number cannot be verified
+- The message addresses you generically ("Dear Customer" instead of your name)
+
+SUSPICIOUS LINK:
+- Link does not match official courier website (e.g., pos-malaysia.com.my vs pos.com.my)
+- URL uses free hosting platforms or random character domains
+- Link is shortened (bit.ly, tinyurl) hiding the real destination
+- Website asks for personal information not needed for delivery rescheduling
+- Website loads slowly or has poor visual quality/missing graphics
+
+REQUESTS FOR PAYMENT:
+- Asked to pay small "customs fees", "duty charges", or "redelivery fees" via bank transfer
+- Payment must be made urgently "within 24 hours" or parcel will be returned
+- Payment requested via e-wallet (Touch 'n Go, GrabPay) instead of official payment gateway
+- Courier asks you to pay via cryptocurrency
+- Any upfront payment request for a parcel you did not order
+
+REQUESTS FOR SENSITIVE INFORMATION:
+- Fake courier asks for your full name, IC number, and address (beyond rescheduling needs)
+- Asked to provide banking details or OTP to "process refund" or "verify identity"
+- Asked to download an app to "track your parcel" from an unofficial source
+
+PHONE CALLS:
+- Caller claims to be from customs or police regarding your parcel
+- Caller says illegal items (drugs, fake documents) were found in your parcel
+- Caller instructs you to keep the conversation confidential or face legal trouble
+- You are transferred between multiple "officers" — a common high-pressure tactic
+- Caller threatens arrest, court action, or frozen bank accounts
+
+================================================================================
+SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
+================================================================================
+
+RULE PA-01 [CRITICAL RISK]:
+IF user received a call from someone claiming to be police or customs AND they say
+illegal items were found in a parcel linked to user's name AND they request bank
+transfer to a "safe account" THEN risk level is CRITICAL.
+ACTION: Hang up immediately. This is the Macau Scam variant. Report to PDRM 999
+and NSRC 997 immediately.
+
+RULE PA-02 [HIGH RISK]:
+IF user received an SMS or WhatsApp about parcel delivery AND the message contains
+a link AND the link leads to a site asking for banking credentials or OTP THEN
+risk level is HIGH.
+ACTION: Do NOT enter any details. Do not click. Verify directly with courier using
+their official website or customer service hotline.
+
+RULE PA-03 [HIGH RISK]:
+IF user is asked to download an APK file or tracking app from a link in a message
+(not from official Google Play Store or Apple App Store) THEN risk level is HIGH.
+ACTION: Do NOT download. APK files from unknown sources are commonly malware or RATs.
+
+RULE PA-04 [HIGH RISK]:
+IF user received a request to pay customs duty, delivery fee, or any charge for
+a parcel they did not order THEN risk level is HIGH.
+ACTION: Do NOT pay. Verify directly with the official courier company using
+their official hotline.
+
+RULE PA-05 [MEDIUM RISK]:
+IF user received a parcel delivery notification AND the tracking number cannot be
+verified on the courier's official website THEN risk level is MEDIUM.
+ACTION: Do not click any links. Go to the official courier website directly and
+enter the tracking number manually.
+
+RULE PA-06 [MEDIUM RISK]:
+IF user received a "missed delivery" notification AND the sender information does
+not match any expected parcels THEN risk level is MEDIUM.
+ACTION: Contact the courier using their official customer service number before
+taking any action.
+
+RULE PA-07 [CRITICAL - POST-INCIDENT]:
+IF user has already paid a delivery or customs fee to a suspected scammer THEN
+risk level is CRITICAL — financial loss has occurred.
+ACTION: Call NSRC 997 immediately. Report to PDRM ccid.rmp.gov.my. Contact bank
+to dispute transaction. Preserve all communication as evidence.
+
+RULE PA-08 [CRITICAL - POST-INCIDENT]:
+IF user has installed an APK app from a suspicious link THEN risk level is CRITICAL.
+ACTION: Immediately factory reset the device OR use antivirus to scan and remove
+malware. Call bank to freeze account. Change all passwords from a clean device.
+
+================================================================================
+SECTION 6: HOW TO VERIFY A PARCEL NOTIFICATION IS LEGITIMATE
+================================================================================
+
+STEP 1 - CHECK TRACKING NUMBER:
+A legitimate delivery notification always includes a real tracking number.
+Go directly to the courier's official website (type the URL yourself, do not click
+the link in the message) and enter the tracking number.
+
+Official tracking websites:
+- Pos Malaysia: pos.com.my
+- J&T Express: jtexpress.my
+- DHL: dhl.com/my
+- FedEx: fedex.com/en-my
+- Ninja Van: ninjavan.co/en-my
+- GDex: gdexpress.com
+
+STEP 2 - CROSS-CHECK WITH YOUR ORDER HISTORY:
+Log into Shopee, Lazada, or whichever platform you use. Check if you have any
+pending orders with a matching estimated delivery date. If no matching order exists,
+the parcel notification is likely fake.
+
+STEP 3 - CALL THE COURIER DIRECTLY:
+Use the courier's official hotline (found on their official website) to verify
+whether a parcel is truly in transit under your name.
+Do NOT use the phone number provided in the suspicious message.
+
+STEP 4 - CHECK SENDER:
+Official Pos Malaysia SMS comes from "Pos Malaysia" sender ID.
+If an SMS claims to be from Pos Malaysia but the sender is a phone number like
++60123456789 or a random name, it is fake.
+
+================================================================================
+SECTION 7: WHAT TO DO IF YOU ARE A VICTIM
+================================================================================
+
+IF YOU PAID A FEE (financial loss):
+1. Call NSRC 997 immediately — 24/7 hotline to freeze mule accounts
+2. Call your bank's fraud hotline to dispute the transaction and freeze account
+3. File a police report at PDRM (ccid.rmp.gov.my or nearest police station)
+4. Report to MCMC at aduan.mcmc.gov.my
+
+IF YOU ENTERED YOUR BANKING CREDENTIALS ON A FAKE SITE:
+1. Call your bank immediately to freeze account and change credentials
+2. Change all passwords from a clean, uncompromised device
+3. Monitor bank statements for unauthorised transactions
+4. Report to NSRC 997 and PDRM
+
+IF YOU INSTALLED A SUSPICIOUS APP:
+1. Do NOT open any banking apps on the compromised device
+2. Factory reset your device (WARNING: back up data to a different device first)
+3. Call your bank to freeze accounts from a clean device
+4. Enable enhanced security on banking apps (if available)
+5. Report to MyCERT at mycert.org.my
+
+IF YOU SPOKE TO A FAKE POLICE OFFICER / CUSTOMS OFFICER:
+1. Stop all communication immediately
+2. Note down all details: phone numbers, names used, what was said
+3. Report to real PDRM: 999 (emergency) or 03-2610-1559 (CCID)
+4. If money was transferred, call NSRC 997 immediately
+
+================================================================================
+SECTION 8: OFFICIAL COURIER CONTACT NUMBERS (MALAYSIA)
+================================================================================
+
+Pos Malaysia Customer Service: 1-300-300-300 | pos.com.my
+J&T Express Malaysia: 1700-81-9000 | jtexpress.my
+DHL Malaysia: 1-800-88-8388 | dhl.com/my
+FedEx Malaysia: 1-800-88-6363 | fedex.com/en-my
+Ninja Van Malaysia: 1-300-88-1811 | ninjavan.co/en-my
+GDex Malaysia: 03-7946-7000 | gdexpress.com
+Lazada Logistics / LEX: Via Lazada app Live Chat
+Shopee Express: Via Shopee app customer service
+
+================================================================================
+SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
+================================================================================
+
+NSRC (National Scam Response Centre): 997 (call IMMEDIATELY if you paid a scammer)
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
+MyCERT (malware/app incidents): mycert.org.my | +603-8992-6969
+Semak Mule (check if a number is a mule): semak.rmp.gov.my
+
+================================================================================
+END OF FILE: kb_02_parcel_scam.txt
+================================================================================

@@ -1,0 +1,245 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="2000" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- START -->
+    <mxCell id="2" value="START" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="540" y="30" width="120" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- INPUT: User Sends Message -->
+    <mxCell id="3" value="User Sends Message" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="490" y="110" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Welcome + Prompt -->
+    <mxCell id="4" value="Display Welcome Message&lt;br&gt;Ask User to Describe Situation&lt;br&gt;or Select a Scam Type" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="480" y="200" width="240" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- DECISION: Scam-Related? -->
+    <mxCell id="5" value="Is Query&lt;br&gt;Scam-Related?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="510" y="300" width="180" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Out of Scope -->
+    <mxCell id="6" value="Out of Scope Response:&lt;br&gt;Politely redirect user.&lt;br&gt;Suggest NSRC 997 / PDRM." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="800" y="300" width="200" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- PROCESS: Identify Scam Type -->
+    <mxCell id="7" value="Identify Scam Type&lt;br&gt;from User Message" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="490" y="420" width="220" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- DECISION: Which Scam Type? -->
+    <mxCell id="8" value="Which&lt;br&gt;Scam Type?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="510" y="510" width="180" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- 7 Scam Type Boxes -->
+    <mxCell id="9" value="Phishing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="20" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="10" value="Parcel Scam" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="150" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="11" value="Bank Alert" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="280" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="12" value="Job Scam" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="410" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="13" value="Investment Scam" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="540" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="14" value="Romance Scam" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="670" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="15" value="Unknown /&lt;br&gt;General" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="800" y="640" width="110" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- PROCESS: Load KB -->
+    <mxCell id="16" value="Load Relevant Knowledge Base File&lt;br&gt;(kb_01 to kb_06 or kb_general_faq.txt)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="750" width="340" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- PROCESS: Match Red Flags -->
+    <mxCell id="17" value="Match User Situation Against&lt;br&gt;Red Flag Table (kb_07_redflag_table.txt)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="850" width="340" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- PROCESS: Apply IF-THEN -->
+    <mxCell id="18" value="Apply IF-THEN Risk Assessment Rules&lt;br&gt;from Scam Knowledge Base" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="950" width="340" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- DECISION: Risk Level -->
+    <mxCell id="19" value="Risk&lt;br&gt;Level?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="520" y="1050" width="160" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- Risk Response Boxes -->
+    <mxCell id="20" value="CRITICAL RISK:&lt;br&gt;Call NSRC 997 NOW.&lt;br&gt;Freeze bank account.&lt;br&gt;File police report." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1190" width="170" height="75" as="geometry"/>
+    </mxCell>
+    <mxCell id="21" value="HIGH RISK:&lt;br&gt;Strong warning issued.&lt;br&gt;Do NOT click/pay/share.&lt;br&gt;Verify with official source." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="230" y="1190" width="170" height="75" as="geometry"/>
+    </mxCell>
+    <mxCell id="22" value="MEDIUM RISK:&lt;br&gt;Caution advisory.&lt;br&gt;Provide step-by-step&lt;br&gt;verification guide." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="430" y="1190" width="170" height="75" as="geometry"/>
+    </mxCell>
+    <mxCell id="23" value="LOW RISK:&lt;br&gt;Educational info only.&lt;br&gt;Scam awareness&lt;br&gt;guidance provided." style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="630" y="1190" width="170" height="75" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Red Flags -->
+    <mxCell id="24" value="Present Identified Red Flags to User" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="1340" width="340" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Recommended Actions -->
+    <mxCell id="25" value="Provide Recommended Actions to User" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="1440" width="340" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Reporting Contacts -->
+    <mxCell id="26" value="Provide Official Malaysian Reporting Contacts&lt;br&gt;(NSRC 997, PDRM, MCMC, BNM, SC Malaysia)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="430" y="1540" width="340" height="55" as="geometry"/>
+    </mxCell>
+
+    <!-- DECISION: More Help? -->
+    <mxCell id="27" value="Does User&lt;br&gt;Need More Help?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="510" y="1650" width="180" height="70" as="geometry"/>
+    </mxCell>
+
+    <!-- OUTPUT: Closing -->
+    <mxCell id="28" value="Display Closing Message&lt;br&gt;+ NSRC 997 Reminder" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="480" y="1790" width="240" height="50" as="geometry"/>
+    </mxCell>
+
+    <!-- END -->
+    <mxCell id="29" value="END" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="540" y="1890" width="120" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- EDGES -->
+    <mxCell id="e1" edge="1" source="2" target="3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e2" edge="1" source="3" target="4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e3" edge="1" source="4" target="5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e4" value="No" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="5" target="6" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="690" y="335"/><mxPoint x="800" y="335"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e5" value="Ask Again" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="6" target="3" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1060" y="330"/><mxPoint x="1060" y="135"/><mxPoint x="710" y="135"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e6" value="Yes" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="5" target="7" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e7" edge="1" source="7" target="8" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e8" value="Phishing" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="9" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="510" y="610"/><mxPoint x="75" y="610"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e9" value="Parcel" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="10" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="615"/><mxPoint x="205" y="615"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e10" value="Bank Alert" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="11" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="530" y="620"/><mxPoint x="335" y="620"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e11" value="Job Scam" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="12" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e12" value="Investment" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="13" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="660" y="620"/><mxPoint x="595" y="620"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e13" value="Romance" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="14" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="670" y="615"/><mxPoint x="725" y="615"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e14" value="Unknown" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="8" target="15" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="680" y="610"/><mxPoint x="855" y="610"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e15" edge="1" source="9" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="75" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e16" edge="1" source="10" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="205" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e17" edge="1" source="11" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="335" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e18" edge="1" source="12" target="16" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e19" edge="1" source="13" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="595" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e20" edge="1" source="14" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="725" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e21" edge="1" source="15" target="16" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="855" y="730"/><mxPoint x="600" y="730"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e22" edge="1" source="16" target="17" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e23" edge="1" source="17" target="18" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e24" edge="1" source="18" target="19" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e25" value="CRITICAL" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="19" target="20" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="520" y="1160"/><mxPoint x="115" y="1160"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e26" value="HIGH" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="19" target="21" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="530" y="1160"/><mxPoint x="315" y="1160"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e27" value="MEDIUM" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="19" target="22" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e28" value="LOW" style="edgeStyle=orthogonalEdgeStyle;fontSize=9;" edge="1" source="19" target="23" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="660" y="1160"/><mxPoint x="715" y="1160"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e29" edge="1" source="20" target="24" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="115" y="1320"/><mxPoint x="600" y="1320"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e30" edge="1" source="21" target="24" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="315" y="1320"/><mxPoint x="600" y="1320"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e31" edge="1" source="22" target="24" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e32" edge="1" source="23" target="24" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="715" y="1320"/><mxPoint x="600" y="1320"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e33" edge="1" source="24" target="25" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e34" edge="1" source="25" target="26" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e35" edge="1" source="26" target="27" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e36" value="Yes" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="27" target="3" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1100" y="1685"/><mxPoint x="1100" y="135"/><mxPoint x="710" y="135"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="e37" value="No" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="27" target="28" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e38" edge="1" source="28" target="29" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- LEGEND -->
+    <mxCell id="leg0" value="LEGEND" style="swimlane;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="1130" y="620" width="230" height="200" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg1" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="leg0">
+      <mxGeometry x="15" y="40" width="40" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg1t" value="Start / End (Terminal)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="leg0">
+      <mxGeometry x="65" y="40" width="150" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg2" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="leg0">
+      <mxGeometry x="15" y="72" width="40" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg2t" value="Input" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="leg0">
+      <mxGeometry x="65" y="72" width="150" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg3" value="" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="leg0">
+      <mxGeometry x="15" y="104" width="40" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg3t" value="Output" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="leg0">
+      <mxGeometry x="65" y="104" width="150" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="leg0">
+      <mxGeometry x="15" y="136" width="40" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg4t" value="Process" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="leg0">
+      <mxGeometry x="65" y="136" width="150" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg5" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="leg0">
+      <mxGeometry x="15" y="163" width="40" height="22" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg5t" value="Decision" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="leg0">
+      <mxGeometry x="65" y="163" width="150" height="22" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

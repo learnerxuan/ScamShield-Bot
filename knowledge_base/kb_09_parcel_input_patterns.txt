@@ -1,0 +1,226 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 09
+TOPIC: PARCEL SCAM INPUT-PATTERN RESEARCH
+Last Updated: 2026-04-06
+Research Scope: Pasted SMS/WhatsApp text, email text, and visible delivery links
+Validation Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the planned "paste suspicious message or link" feature for fake
+parcel delivery scams. It focuses on text patterns and visible link cues that can
+be extracted from a user-pasted message before follow-up questions are asked.
+
+This file should be used to:
+- detect fake parcel-delivery wording
+- detect fee-request and APK-install patterns
+- detect customs/police escalation language
+- trigger follow-up questions
+- strengthen parcel-scam risk scoring
+
+================================================================================
+SECTION 2: SUPPORTED INPUT TYPES
+================================================================================
+
+SUPPORTED:
+- SMS text
+- WhatsApp or Telegram parcel message text
+- Email text
+- Tracking or payment link pasted by user
+
+NOT SUPPORTED BY THIS FILE ALONE:
+- verifying whether a tracking number is genuinely valid
+- checking the final destination of shortened links
+- scanning APK files or attachments
+- confirming whether a parcel truly exists in courier systems
+
+================================================================================
+SECTION 3: COMMON MESSAGE WORDING PATTERNS
+================================================================================
+
+PATTERN GROUP A - FAILED DELIVERY / RESCHEDULE
+Examples of wording cues:
+- delivery failed
+- missed delivery
+- reschedule your parcel
+- update your address
+- parcel could not be delivered
+
+Interpretation:
+- Strong parcel-scam cue when combined with a link.
+
+PATTERN GROUP B - TRACKING / STATUS CUES
+Examples of wording cues:
+- track your parcel
+- tracking update
+- shipment status
+- click to track
+- verify delivery status
+
+Interpretation:
+- Medium cue by itself.
+- Higher risk when the user was not expecting a parcel.
+
+PATTERN GROUP C - PAYMENT REQUESTS
+Examples of wording cues:
+- customs fee
+- duty charge
+- delivery fee
+- redelivery fee
+- postage due
+
+Interpretation:
+- High-risk cue, especially for unexpected parcels.
+
+PATTERN GROUP D - APP / APK INSTALL
+Examples of wording cues:
+- install tracking app
+- download app to continue
+- download APK
+- install update for delivery
+
+Interpretation:
+- High to Critical cue.
+- Real courier notifications should not require sideloaded APK installation.
+
+PATTERN GROUP E - MACAU-SCAM ESCALATION
+Examples of wording cues:
+- illegal parcel
+- customs investigation
+- police case
+- confidential investigation
+- transfer money to safe account
+
+Interpretation:
+- Critical cue.
+- Indicates escalation beyond normal delivery scam into intimidation fraud.
+
+================================================================================
+SECTION 4: SUSPICIOUS URL / LINK PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+VISIBLE LINK CUES:
+- link does not match official courier domain
+- shortened link hides destination
+- fake courier-brand wording inside domain
+- random-character domain
+- fake payment page linked from delivery message
+- link associated with APK or direct app download
+
+BOT-USEFUL EXTRACTION FLAGS:
+- containsDeliveryLink
+- containsTrackingLink
+- containsPaymentLink
+- containsApkLink
+- usesShortenedUrl
+- visibleCourierDomainMismatch
+
+================================================================================
+SECTION 5: SENDER / IMPERSONATION PATTERNS
+================================================================================
+
+SENDER CUES:
+- message claims to come from Pos Malaysia or a known courier but sender ID is odd
+- message comes from ordinary mobile number or unknown contact
+- generic greeting is used instead of customer-specific details
+- no verifiable tracking number is present
+
+COMMON IMPERSONATION TARGETS:
+- Pos Malaysia
+- J&T Express
+- DHL
+- FedEx
+- Ninja Van
+- major e-commerce logistics brands
+
+================================================================================
+SECTION 6: EXPLICIT EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser should attempt to detect:
+
+- mentionsParcel
+- mentionsDeliveryFailure
+- mentionsReschedule
+- containsTrackingLink
+- asksForDeliveryFee
+- asksForCustomsFee
+- asksForBankingDetails
+- asksForOtp
+- asksToInstallApp
+- asksToInstallApk
+- claimsIllegalParcel
+- claimsPoliceOrCustomsInvolvement
+- asksForSafeAccountTransfer
+- unexpectedParcelLanguage
+- senderLooksUnofficial
+
+Suggested use:
+- use these indicators to classify likely parcel scam
+- still ask follow-up questions before final assessment
+
+================================================================================
+SECTION 7: POST-INCIDENT INDICATORS
+================================================================================
+
+These signals indicate likely harm or urgent risk:
+
+- user already paid the fee
+- user already clicked the link
+- user already entered banking details
+- user already installed the app or APK
+- user already spoke to alleged customs/police caller
+- user already transferred money to a safe account
+
+Suggested rule handling:
+- paid fee = CRITICAL
+- installed APK = CRITICAL
+- safe-account transfer = CRITICAL
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The following cannot be safely inferred from pasted text alone:
+
+- whether a pasted tracking number is valid in the courier's live system
+- whether a shortened link resolves to malware or a benign page
+- whether the linked app is malicious without separate analysis
+- whether the sender ID was technically spoofed
+- whether a real parcel exists outside the courier platform
+
+This file supports PRELIMINARY RULE-BASED ASSESSMENT only.
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. Pos Malaysia - Scam Update Page
+   https://www.pos.com.my/scam-update
+
+2. Pos Malaysia - Impersonator Scams Are on the Rise
+   https://www.pos.com.my/knowledge-hub/pos-malaysia-scam-are-on-the-rise
+
+3. Pos Malaysia - Online Security, Fraud and Scams
+   https://www.pos.com.my/news-info/online-security-fraud-and-scams.html
+
+4. NCSC - Scam 'Missed Parcel' SMS Messages
+   https://www.ncsc.gov.uk/guidance/scam-missed-parcel-sms-messages
+
+5. FTC - Fake Shipping Notification Emails and Text Messages
+   https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season
+
+6. FTC - Think That Text from USPS Could Be a Scam
+   https://consumer.ftc.gov/consumer-alerts/2025/04/think-text-message-usps-it-could-be-scam
+
+7. Action Fraud - Courier Fraud
+   https://www.actionfraud.police.uk/a-z-of-fraud/courier-fraud
+
+8. CyberSecurity Malaysia - Malicious Attachment Targeting Banking Users (2025)
+   https://www.cybersecurity.my/portal-main/advisories-details/dc8402e8-b9f7-11f0-b161-0050568ccc16
+
+================================================================================
+END OF FILE: kb_09_parcel_input_patterns.txt
+================================================================================

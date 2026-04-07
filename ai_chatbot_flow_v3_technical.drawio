@@ -1,0 +1,282 @@
+<mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3600" pageHeight="2400" math="0" shadow="0" adaptiveColors="auto">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1710" y="20" width="90" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="welcome" value="Greeting / Welcome" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;" vertex="1" parent="1">
+      <mxGeometry x="1620" y="100" width="270" height="55" as="geometry"/>
+    </mxCell>
+    <mxCell id="menu" value="Choice Card: Scam Type Menu" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;" vertex="1" parent="1">
+      <mxGeometry x="1590" y="185" width="330" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="hub" value="Selected option runs one technical workflow module below" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1460" y="280" width="590" height="60" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="phLane" value="Phishing Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="430" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="phQ" value="Questions&#xa;- suspicious link?&#xa;- OTP/password request?&#xa;- sender/site mismatch?&#xa;- urgency?&#xa;- entered credentials?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="phLane">
+      <mxGeometry x="20" y="55" width="210" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="phVars" value="Botpress vars&#xa;workflow.hasLink&#xa;workflow.requestsOtpOrPassword&#xa;workflow.senderMismatch&#xa;workflow.hasUrgency&#xa;workflow.enteredCredentials" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="phLane">
+      <mxGeometry x="260" y="55" width="220" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="phRules" value="Production rules&#xa;critical = workflow.enteredCredentials ||&#xa;(workflow.hasLink &amp;&amp; workflow.requestsOtpOrPassword)&#xa;score = (workflow.hasLink ? 2 : 0) +&#xa;(workflow.requestsOtpOrPassword ? 3 : 0) +&#xa;(workflow.senderMismatch ? 2 : 0) +&#xa;(workflow.hasUrgency ? 1 : 0)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="phLane">
+      <mxGeometry x="510" y="55" width="260" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="phRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;score &gt;= 5 ? &quot;High&quot; :&#xa;score &gt;= 3 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="phLane">
+      <mxGeometry x="800" y="55" width="220" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="phOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="phLane">
+      <mxGeometry x="800" y="165" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="paLane" value="Parcel Scam Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="430" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="paQ" value="Questions&#xa;- unexpected parcel?&#xa;- tracking/reschedule link?&#xa;- delivery/customs fee?&#xa;- install APK?&#xa;- safe-account claim?&#xa;- paid or installed already?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="paLane">
+      <mxGeometry x="20" y="55" width="210" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="paVars" value="Botpress vars&#xa;workflow.unexpectedParcel&#xa;workflow.hasTrackingLink&#xa;workflow.requestsFee&#xa;workflow.installedApk&#xa;workflow.safeAccountClaim&#xa;workflow.paidOrInstalled" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="paLane">
+      <mxGeometry x="260" y="55" width="220" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="paRules" value="Production rules&#xa;critical = workflow.installedApk ||&#xa;workflow.safeAccountClaim || workflow.paidOrInstalled&#xa;score = (workflow.unexpectedParcel ? 1 : 0) +&#xa;(workflow.hasTrackingLink ? 2 : 0) +&#xa;(workflow.requestsFee ? 2 : 0)&#xa;if workflow.hasTrackingLink &amp;&amp; workflow.requestsFee => High minimum" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="paLane">
+      <mxGeometry x="510" y="55" width="260" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="paRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;(workflow.hasTrackingLink &amp;&amp; workflow.requestsFee) ? &quot;High&quot; :&#xa;score &gt;= 2 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="paLane">
+      <mxGeometry x="800" y="55" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="paOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="paLane">
+      <mxGeometry x="800" y="175" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="baLane" value="Fake Bank Alert Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="2330" y="430" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="baQ" value="Questions&#xa;- claimed to be from bank?&#xa;- OTP/PIN/password request?&#xa;- suspicious link or number?&#xa;- safe-account transfer?&#xa;- shared bank details already?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="baLane">
+      <mxGeometry x="20" y="55" width="210" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="baVars" value="Botpress vars&#xa;workflow.claimsBankIdentity&#xa;workflow.requestsBankCredentials&#xa;workflow.hasSuspiciousLinkOrNumber&#xa;workflow.requestsSafeAccountTransfer&#xa;workflow.sharedBankDetails" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="baLane">
+      <mxGeometry x="260" y="55" width="220" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="baRules" value="Production rules&#xa;critical = workflow.sharedBankDetails ||&#xa;workflow.requestsSafeAccountTransfer&#xa;score = (workflow.claimsBankIdentity ? 1 : 0) +&#xa;(workflow.requestsBankCredentials ? 3 : 0) +&#xa;(workflow.hasSuspiciousLinkOrNumber ? 2 : 0)&#xa;if workflow.requestsBankCredentials => High minimum" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="baLane">
+      <mxGeometry x="510" y="55" width="260" height="175" as="geometry"/>
+    </mxCell>
+    <mxCell id="baRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;workflow.requestsBankCredentials ? &quot;High&quot; :&#xa;score &gt;= 3 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="baLane">
+      <mxGeometry x="800" y="55" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="baOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="baLane">
+      <mxGeometry x="800" y="175" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="jsLane" value="Job Scam Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="880" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="jsQ" value="Questions&#xa;- unsolicited offer?&#xa;- upfront fee?&#xa;- unrealistic pay?&#xa;- asked to move money?&#xa;- overseas without contract?&#xa;- task deposit required?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="jsLane">
+      <mxGeometry x="20" y="55" width="210" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="jsVars" value="Botpress vars&#xa;workflow.unsolicitedOffer&#xa;workflow.requestsUpfrontFee&#xa;workflow.promisesUnrealisticPay&#xa;workflow.requestsMoneyTransfer&#xa;workflow.overseasNoContract&#xa;workflow.requestsTaskDeposit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="jsLane">
+      <mxGeometry x="260" y="55" width="220" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="jsRules" value="Production rules&#xa;critical = workflow.requestsMoneyTransfer ||&#xa;workflow.overseasNoContract || workflow.requestsTaskDeposit&#xa;score = (workflow.unsolicitedOffer ? 1 : 0) +&#xa;(workflow.requestsUpfrontFee ? 3 : 0) +&#xa;(workflow.promisesUnrealisticPay ? 2 : 0)&#xa;if workflow.requestsUpfrontFee => High minimum" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="jsLane">
+      <mxGeometry x="510" y="55" width="260" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="jsRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;workflow.requestsUpfrontFee ? &quot;High&quot; :&#xa;score &gt;= 2 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="jsLane">
+      <mxGeometry x="800" y="55" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="jsOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="jsLane">
+      <mxGeometry x="800" y="175" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="ivLane" value="Investment Scam Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="880" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="ivQ" value="Questions&#xa;- guaranteed returns?&#xa;- licensed/verifiable?&#xa;- pressured to invest now?&#xa;- recommended by online contact?&#xa;- withdrawal fee?&#xa;- suspicious platform?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="ivLane">
+      <mxGeometry x="20" y="55" width="210" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="ivVars" value="Botpress vars&#xa;workflow.promisesGuaranteedReturns&#xa;workflow.isLicensed&#xa;workflow.pressuresQuickDecision&#xa;workflow.recommendedByOnlineContact&#xa;workflow.requestsWithdrawalFee&#xa;workflow.usesSuspiciousPlatform" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ivLane">
+      <mxGeometry x="260" y="55" width="220" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="ivRules" value="Production rules&#xa;critical = workflow.requestsWithdrawalFee ||&#xa;(workflow.recommendedByOnlineContact &amp;&amp;&#xa;workflow.promisesGuaranteedReturns &amp;&amp;&#xa;workflow.usesSuspiciousPlatform)&#xa;score = (workflow.promisesGuaranteedReturns ? 3 : 0) +&#xa;(!workflow.isLicensed ? 3 : 0) +&#xa;(workflow.pressuresQuickDecision ? 2 : 0) +&#xa;(workflow.recommendedByOnlineContact ? 2 : 0) +&#xa;(workflow.usesSuspiciousPlatform ? 2 : 0)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="ivLane">
+      <mxGeometry x="510" y="55" width="260" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="ivRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;score &gt;= 6 ? &quot;High&quot; :&#xa;score &gt;= 3 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="ivLane">
+      <mxGeometry x="800" y="55" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="ivOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="ivLane">
+      <mxGeometry x="800" y="175" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="rsLane" value="Romance Scam Workflow" style="swimlane;startSize=30;rounded=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="2330" y="880" width="1050" height="310" as="geometry"/>
+    </mxCell>
+    <mxCell id="rsQ" value="Questions&#xa;- met online only?&#xa;- fast emotional bond?&#xa;- refuses video verification?&#xa;- asks for money?&#xa;- pushes investment?&#xa;- sent money/private content?" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="rsLane">
+      <mxGeometry x="20" y="55" width="210" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="rsVars" value="Botpress vars&#xa;workflow.metOnlineOnly&#xa;workflow.fastEmotionalBond&#xa;workflow.refusesVideoVerification&#xa;workflow.requestsMoney&#xa;workflow.pushesInvestment&#xa;workflow.sentMoneyOrPrivateContent" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="rsLane">
+      <mxGeometry x="260" y="55" width="220" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="rsRules" value="Production rules&#xa;critical = workflow.sentMoneyOrPrivateContent ||&#xa;(workflow.requestsMoney &amp;&amp; workflow.refusesVideoVerification) ||&#xa;(workflow.pushesInvestment &amp;&amp; workflow.metOnlineOnly)&#xa;score = (workflow.metOnlineOnly ? 1 : 0) +&#xa;(workflow.fastEmotionalBond ? 1 : 0) +&#xa;(workflow.refusesVideoVerification ? 2 : 0) +&#xa;(workflow.requestsMoney ? 3 : 0) +&#xa;(workflow.pushesInvestment ? 3 : 0)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="rsLane">
+      <mxGeometry x="510" y="55" width="260" height="185" as="geometry"/>
+    </mxCell>
+    <mxCell id="rsRisk" value="Set workflow.riskLevel&#xa;critical ? &quot;Critical&quot; :&#xa;score &gt;= 5 ? &quot;High&quot; :&#xa;score &gt;= 3 ? &quot;Medium&quot; : &quot;Low&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="rsLane">
+      <mxGeometry x="800" y="55" width="220" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="rsOut" value="Output&#xa;Risk + triggered red flags + next steps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="rsLane">
+      <mxGeometry x="800" y="175" width="220" height="65" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="again" value="Check another scam?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1665" y="1310" width="180" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1710" y="1470" width="90" height="55" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e1" edge="1" parent="1" source="start" target="welcome" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" edge="1" parent="1" source="welcome" target="menu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" edge="1" parent="1" source="menu" target="hub" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e4" edge="1" parent="phLane" source="phQ" target="phVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" edge="1" parent="phLane" source="phVars" target="phRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" edge="1" parent="phLane" source="phRules" target="phRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" edge="1" parent="phLane" source="phRisk" target="phOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e8" edge="1" parent="paLane" source="paQ" target="paVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e9" edge="1" parent="paLane" source="paVars" target="paRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e10" edge="1" parent="paLane" source="paRules" target="paRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e11" edge="1" parent="paLane" source="paRisk" target="paOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e12" edge="1" parent="baLane" source="baQ" target="baVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e13" edge="1" parent="baLane" source="baVars" target="baRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e14" edge="1" parent="baLane" source="baRules" target="baRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e15" edge="1" parent="baLane" source="baRisk" target="baOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e16" edge="1" parent="jsLane" source="jsQ" target="jsVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e17" edge="1" parent="jsLane" source="jsVars" target="jsRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e18" edge="1" parent="jsLane" source="jsRules" target="jsRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e19" edge="1" parent="jsLane" source="jsRisk" target="jsOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e20" edge="1" parent="ivLane" source="ivQ" target="ivVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e21" edge="1" parent="ivLane" source="ivVars" target="ivRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e22" edge="1" parent="ivLane" source="ivRules" target="ivRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e23" edge="1" parent="ivLane" source="ivRisk" target="ivOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e24" edge="1" parent="rsLane" source="rsQ" target="rsVars" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e25" edge="1" parent="rsLane" source="rsVars" target="rsRules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e26" edge="1" parent="rsLane" source="rsRules" target="rsRisk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e27" edge="1" parent="rsLane" source="rsRisk" target="rsOut" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="e28" edge="1" parent="1" source="phOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="860" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e29" edge="1" parent="1" source="paOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1990" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e30" edge="1" parent="1" source="baOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="3120" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e31" edge="1" parent="1" source="jsOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="860" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e32" edge="1" parent="1" source="ivOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1990" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e33" edge="1" parent="1" source="rsOut" target="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="3120" y="1270"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e34" value="Yes" edge="1" parent="1" source="again" target="menu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1520" y="1360"/>
+          <mxPoint x="1520" y="215"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e35" value="No" edge="1" parent="1" source="again" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;html=1;endArrow=block;endFill=1;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

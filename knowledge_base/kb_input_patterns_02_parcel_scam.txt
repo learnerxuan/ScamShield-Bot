@@ -1,0 +1,161 @@
+================================================================================
+SCAMSHIELD BOT - INPUT PATTERN RESEARCH FILE 02
+TOPIC: PARCEL SCAM MESSAGE / LINK INPUT PATTERNS
+Last Updated: 2026-04-06
+Source Standard: Official government, regulator, law-enforcement, or public-agency
+sources only. No AI-generated or commercial summary sources used.
+================================================================================
+
+PURPOSE
+================================================================================
+This file supports the "paste suspicious message or link" feature for fake parcel
+delivery scams, including smishing and parcel-to-Macau-scam escalation patterns.
+
+This file is for:
+- message-level red flag extraction
+- follow-up question design
+- rule-based risk escalation
+
+This file is NOT for:
+- live tracking verification
+- definitive URL reputation checking
+- app or APK malware analysis
+
+================================================================================
+SECTION 1: PRIMARY SOURCE SET
+================================================================================
+
+1. Pos Malaysia - Scam Update Page
+   https://www.pos.com.my/scam-update
+2. Pos Malaysia - Impersonator Scams Are on the Rise
+   https://www.pos.com.my/knowledge-hub/pos-malaysia-scam-are-on-the-rise
+3. Pos Malaysia - Online Security, Fraud and Scams
+   https://www.pos.com.my/news-info/online-security-fraud-and-scams.html
+4. CyberSecurity Malaysia - Malicious Attachment Targeting Banking Users (2025)
+   https://www.cybersecurity.my/portal-main/advisories-details/dc8402e8-b9f7-11f0-b161-0050568ccc16
+5. FTC - Fake Shipping Notification Emails and Text Messages (2023)
+   https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season
+6. FTC - Think That Text from USPS Could Be a Scam (2025)
+   https://consumer.ftc.gov/consumer-alerts/2025/04/think-text-message-usps-it-could-be-scam
+7. FTC - Got a Package You Didn't Order? It's Probably a Scam (2025)
+   https://consumer.ftc.gov/consumer-alerts/2025/01/got-package-you-didnt-order-its-probably-scam
+8. NCSC - Scam 'Missed Parcel' SMS Messages
+   https://www.ncsc.gov.uk/guidance/scam-missed-parcel-sms-messages
+9. Action Fraud - Courier Fraud A-Z
+   https://www.actionfraud.police.uk/a-z-of-fraud/courier-fraud
+10. Action Fraud - Beat the Courier Fraudsters
+    https://www.actionfraud.police.uk/beatthecourierfraudsters
+11. INTERPOL - Social Engineering Scams
+    https://www.interpol.int/en/Crimes/Financial-crime/Social-engineering-scams
+
+================================================================================
+SECTION 2: COMMON PARCEL-SCAM WORDING PATTERNS
+================================================================================
+
+FAILED DELIVERY / MISSED PARCEL
+- "delivery failed"
+- "missed parcel"
+- "unable to deliver"
+- "reschedule delivery"
+- "parcel will be returned"
+
+ADDRESS OR INFORMATION UPDATE
+- "invalid address"
+- "update your address"
+- "confirm recipient information"
+- "update delivery details"
+
+FEE OR CUSTOMS PAYMENT
+- "customs fee"
+- "redelivery fee"
+- "postage due"
+- "release fee"
+- "pay now to receive parcel"
+
+UNEXPECTED PARCEL
+- "your parcel is waiting"
+- "undelivered package"
+- "package is on hold"
+- user has no matching order history
+
+================================================================================
+SECTION 3: LINK, APP, AND ESCALATION PATTERNS
+================================================================================
+
+- tracking or reschedule link:
+  - "track parcel"
+  - "reschedule now"
+  - "update shipping"
+- app or APK install:
+  - "download app"
+  - "install tracking app"
+  - "APK"
+- courier impersonation:
+  - message claims to be from Pos Malaysia, DHL, J&T, FedEx, Ninja Van
+- customs or police escalation:
+  - "parcel held at customs"
+  - "illegal items found"
+  - "police investigation"
+  - "avoid arrest"
+  - "transfer to safe account"
+
+================================================================================
+SECTION 4: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+- hasDeliveryFailurePhrase
+- hasTrackingOrReschedulePhrase
+- hasUnexpectedParcelCue
+- hasFeeRequest
+- hasCourierImpersonation
+- hasCustomsCue
+- hasPoliceCue
+- hasSafeAccountCue
+- hasAppInstallCue
+- hasLink
+- asksForPersonalOrBankInfo
+
+================================================================================
+SECTION 5: POST-INCIDENT INDICATORS
+================================================================================
+
+Escalate immediately if user says they:
+- already clicked the link
+- already paid the fee
+- already entered banking or card details
+- already installed the app / APK
+- already spoke to the caller and were told to transfer money
+- already transferred money to a so-called safe account
+
+================================================================================
+SECTION 6: RULE-BASED USE IN THE BOT
+================================================================================
+
+Recommended flow:
+1. User pastes message or link.
+2. Bot extracts parcel-scam indicators from the pasted content.
+3. Bot asks follow-up questions:
+   - Were you expecting this parcel?
+   - Did it ask for payment?
+   - Did it ask you to install an app?
+   - Did it mention police, customs, or a safe account?
+   - Did you already pay or install anything?
+4. Bot calculates final risk from both the pasted content and user answers.
+
+================================================================================
+SECTION 7: LIMITATIONS
+================================================================================
+
+Do not claim these from pasted text or visible link alone:
+- that a URL is definitely malicious
+- that a courier tracking number is fake without checking the official courier site
+- that an APK actually contains malware without technical inspection
+- that a police/customs claim is false without independent verification
+
+Therefore:
+- The feature must be framed as a preliminary rule-based assessment.
+- The bot should not behave like a live courier lookup system or malware scanner.
+
+================================================================================
+END OF FILE: kb_input_patterns_02_parcel_scam.txt
+================================================================================

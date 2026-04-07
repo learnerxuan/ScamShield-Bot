@@ -1,0 +1,328 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 06
+TOPIC: ROMANCE SCAMS
+Last Updated: 2026-03-27
+Sources: PDRM, MCMC, FBI IC3, FTC, Interpol, ACCC Scamwatch, AARP Fraud
+================================================================================
+
+SECTION 1: WHAT IS A ROMANCE SCAM?
+================================================================================
+
+A romance scam (also called catfishing or love scam) is a type of fraud where
+criminals create fake romantic relationships to emotionally manipulate victims
+into sending money, gifts, cryptocurrency, or personal information.
+
+The scammer poses as an attractive, successful, and caring person — often a
+foreign professional (doctor, military officer, engineer working abroad, or
+offshore oil rig worker). After building a deep emotional bond over weeks or
+months, they invent financial emergencies and ask the victim for help.
+
+Romance scams are among the most emotionally devastating types of fraud because:
+- Victims believe they are in a genuine relationship and have made an emotional bond
+- Many victims feel shame and do not report or seek help
+- Scammers may continue contacting victims even after the scam is exposed
+- The financial losses can be catastrophic — from thousands to millions of ringgit
+
+In Malaysia, PDRM and MCMC report romance scams as one of the top three most
+reported cybercrime categories. Victims include all genders and ages, though
+statistics show middle-aged adults and seniors are disproportionately targeted.
+
+================================================================================
+SECTION 2: HOW ROMANCE SCAMS WORK (STEP BY STEP)
+================================================================================
+
+STEP 1 - PROFILE CREATION (CATFISHING)
+Scammer creates a convincing fake identity using stolen photos from real people
+(often military personnel, doctors, engineers, or attractive models).
+They create complete social media profiles — Facebook, Instagram, LinkedIn —
+with years of posts, tagged photos, and friends.
+
+STEP 2 - INITIAL CONTACT
+Scammer contacts victim via:
+- Facebook (most common in Malaysia)
+- Instagram, Twitter/X
+- Dating apps: Tinder, Bumble, Badoo, Tagged
+- WhatsApp (wrong number opener)
+- LinkedIn (poses as a business professional)
+- In some cases, through mutual "friends" (the friend's account was hacked)
+
+Common opening gambits:
+- "Hi, I think I know you from somewhere — are you from [city]?"
+- Sending a message to a "wrong number" and then striking up conversation
+- Leaving a comment on victim's social media post
+
+STEP 3 - RELATIONSHIP DEVELOPMENT
+Scammer invests significant time building a deep, personal relationship:
+- Daily messages — good morning and good night texts
+- Expressing interest in victim's life, children, work, hobbies
+- Sharing (fabricated) personal stories to build intimacy and trust
+- Quick declarations of love or deep connection ("soulmate", "the one")
+- Discusses plans for the future — meeting in person, marriage, travel together
+
+The scammer is typically portrayed as:
+- A widower or divorcee (often with one young child who needs a maternal/paternal figure)
+- Working abroad — oil rig, military deployment, construction in Middle East
+- Extremely successful — doctor, engineer, architect, military general
+
+STEP 4 - CRISIS AND MONEY REQUEST
+After weeks or months, a financial emergency arises:
+- Medical emergency ("I had an accident — I need money for surgery")
+- Business deal going wrong ("My shipment is stuck in customs — I need RM10,000")
+- Airline ticket to finally meet ("My company owes me money but I need bridge funding")
+- Investment opportunity — victim invited to participate in a "sure-win" deal
+- Legal trouble — scammer arrested and needs bail money or lawyer fees
+
+The request escalates: each time the victim pays, a new emergency appears.
+The scammer is emotionally manipulative — guilt-tripping, declaring love, and
+threatening to end the relationship if the victim does not help.
+
+STEP 5 - FINANCIAL EXPLOITATION
+Money is sent via:
+- Bank transfer to "mule" accounts
+- Gift cards (iTunes, Google Play, Steam, Amazon) — untraceable
+- Cryptocurrency (Bitcoin, USDT)
+- Wire transfers overseas
+- Online payment platforms
+
+STEP 6 - DISAPPEARANCE OR ESCALATION
+When the victim has no more money to give or becomes suspicious, the scammer:
+- Disappears completely (cuts all contact)
+- Becomes aggressive, threatening legal action or releasing private information
+- Claims to have been "robbed" or "arrested" — requesting rescue money
+- Attempts to sell the victim a "recovery scam" — offering to help retrieve lost funds
+  for a fee (all paid to the same criminal syndicate)
+
+================================================================================
+SECTION 3: TYPES OF ROMANCE SCAMS
+================================================================================
+
+TYPE 1 - CLASSIC CATFISH ROMANCE SCAM
+Long-term fake relationship built over months. Gradual financial requests. Victim
+genuinely believes in the relationship and is emotionally invested before money is requested.
+Key identifier: Person is always unavailable to video call "live" — camera is broken,
+deployed in a remote area, or quality is always too poor to confirm identity.
+
+TYPE 2 - PIG BUTCHERING ROMANCE SCAM (Sha Zhu Pan - Love + Investment)
+Romantic relationship is used as a vehicle to introduce an investment opportunity.
+After building emotional trust, scammer introduces a "secret" investment platform
+where victim can "make money together."
+Initial small withdrawals allowed to build confidence. Then victim is encouraged
+to invest larger amounts until the platform freezes and everything is lost.
+Key identifier: New romantic interest who introduces an investment platform
+and claims personal financial expertise.
+
+TYPE 3 - MILITARY ROMANCE SCAM
+Scammer poses as a military officer deployed overseas (US Army, UN peacekeeping forces).
+Claims unable to access military pay — needs help with bills, medical costs, or travel.
+Claims to be due a large pension soon — victim just needs to pay small fees first.
+Key identifier: Real military personnel on deployment have access to financial services.
+Legitimate soldiers do not request money from online romantic partners.
+
+TYPE 4 - DOCTOR / PROFESSIONAL ROMANCE SCAM
+Scammer claims to be a doctor, engineer, or other professional working abroad.
+Establishes credibility through technical language and professional references.
+Romantic interest is used to build trust before financial requests begin.
+Key identifier: Professional who is always working in a remote or dangerous location.
+
+TYPE 5 - INHERITANCE / BUSINESS DEAL SCAM VARIANT
+Scammer is a "wealthy" individual who shares a business opportunity or inheritance
+story — victim is asked to help with small fees to release large sums.
+Similar to advance fee fraud (419 scam) but delivered through a romantic channel.
+Key identifier: Promises of sharing large sums of money once victim helps with fees.
+
+TYPE 6 - SEXTORTION ROMANCE SCAM
+Scammer builds romantic relationship and pressures victim into sharing intimate
+photos or participating in explicit video calls. Footage is then used to blackmail
+the victim for money, threatening to send the content to family or employers.
+Key identifier: New online relationship that quickly becomes sexual. Requests for
+intimate content from someone never met in person.
+
+================================================================================
+SECTION 4: RED FLAGS AND WARNING SIGNS
+================================================================================
+
+PROFILE RED FLAGS:
+- Profile photos look like professional model shots or stock photos
+- Very few photos available — photos all look taken in professional settings
+- Profile was created recently (few months old) with few friends or connections
+- Profile shows a person who is exceptionally attractive, successful, and single
+- Reverse image search (Google Images, TinEye) shows photos belong to another person
+
+COMMUNICATION RED FLAGS:
+- Contacts you without any prior connection — "wrong number" or random message
+- Falls in love or develops deep affection very quickly (within days or weeks)
+- Communicates predominantly via WhatsApp or Telegram, avoids video calls
+- When video calls happen, quality is always poor — camera "broken" or "connection bad"
+- Messages feel scripted or copy-paste — responses do not address specific questions
+- Language is sometimes inconsistent — unusual grammar or phrases despite claiming
+  to be a native English or Malay speaker
+- Avoids specific personal details, changes subject when pressed for verification
+
+RELATIONSHIP RED FLAGS:
+- Works in a remote location: military deployment, offshore oil rig, UN mission,
+  mining site, ship at sea
+- Always prevented from meeting in person — flights cancelled, visa problems, work delays
+- Is a widow/widower with a young child who needs care
+- Claims to be extremely wealthy or successful but needs financial help
+- Asks you to communicate ONLY via private channels — not to tell family or friends
+
+MONEY REQUEST RED FLAGS:
+- Any request for money from someone you have never met in person
+- Emergency that only money can solve — medical, legal, business, travel
+- Request for gift cards (iTunes, Google Play, Steam, Amazon) — untraceable
+- Request for cryptocurrency transfer
+- Offers to send you money first — then asks you to forward it (money mule setup)
+- Promises that you will receive a large sum of money once you help with a fee
+- Multiple emergencies over time — each resolved by sending more money
+
+================================================================================
+SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
+================================================================================
+
+RULE RS-01 [CRITICAL RISK]:
+IF user has sent money to an online romantic partner AND has never met them in
+person AND the person continues to ask for more money THEN risk level is CRITICAL.
+ACTION: Stop sending money immediately. Contact PDRM and NSRC 997.
+Speak to a trusted family member or friend. Do not be ashamed — you are a victim.
+
+RULE RS-02 [HIGH RISK]:
+IF user is in an online relationship AND the person has never agreed to a live,
+unscripted video call AND has started asking for money THEN risk level is HIGH.
+ACTION: Demand a live video call with a specific requested action (wave hand,
+show a piece of paper with today's date). If refused, this person is likely fake.
+
+RULE RS-03 [HIGH RISK]:
+IF user wants to send money to someone they met online AND has not met in person
+AND the person's photos return different results on reverse image search
+THEN risk level is CRITICAL.
+ACTION: Stop all financial transactions. This person is using stolen photos.
+
+RULE RS-04 [HIGH RISK]:
+IF user's new online romantic partner has introduced them to an investment platform
+and encouraged them to invest THEN risk level is HIGH — Pig Butchering pattern.
+ACTION: Stop investing. Do not make further deposits. This is likely a romance-
+investment hybrid scam designed to steal all deposited funds.
+
+RULE RS-05 [HIGH RISK]:
+IF user's new romantic partner is asking for iTunes gift cards, Google Play cards,
+Steam cards, or Amazon gift cards for any reason THEN risk level is CRITICAL.
+ACTION: Reject the request. Gift cards are the payment method of choice for scammers
+because they are untraceable. No legitimate romantic partner asks for gift cards.
+
+RULE RS-06 [MEDIUM RISK]:
+IF user met someone online recently AND the person declares love or deep affection
+very quickly AND the person claims to work in a remote location preventing meeting
+THEN risk level is MEDIUM — early warning signs present.
+ACTION: Advise caution. Perform reverse image search on profile photos.
+Do not send money. Discuss with a trusted person before proceeding.
+
+RULE RS-07 [MEDIUM RISK]:
+IF user received intimate images or participated in explicit video call AND is now
+being threatened or pressured for money to keep content private
+THEN risk level is CRITICAL — sextortion.
+ACTION: Do NOT pay. Payment often increases demands. Report to PDRM CyberSafe
+and MCMC. Save all evidence (screenshots of threats).
+
+================================================================================
+SECTION 6: HOW TO VERIFY A PERSON'S IDENTITY ONLINE
+================================================================================
+
+STEP 1 - REVERSE IMAGE SEARCH:
+Right-click on the profile photo and select "Search image" (in Google Chrome).
+Or go to images.google.com and drag the photo into the search box.
+Or use TinEye (tineye.com) for a more thorough reverse search.
+If the same photo appears with a different name or on stock photo sites, it is stolen.
+
+STEP 2 - REQUEST A LIVE VIDEO CALL WITH VERIFICATION:
+Ask the person to wave their hand, write your name on paper and hold it up, or
+perform a specific action on the live video call. Scammers cannot manipulate
+pre-recorded videos to perform specific real-time requests.
+If they always have excuses for why they cannot video call — be suspicious.
+
+STEP 3 - VERIFY CLAIMED IDENTITY:
+If person claims to work for a specific hospital, company, or military unit,
+look up the organisation independently and call them to verify the person's
+employment. Do not use contact details provided by the person.
+
+STEP 4 - SEARCH NAME + SCAM:
+Google the person's name and the word "scam" or "romance scam" or "catfish".
+Other victims may have already reported and documented the same fake persona.
+
+STEP 5 - SEMAK MULE:
+If the person has given you a Malaysian bank account to send money to,
+check it at semak.rmp.gov.my. The account may already be flagged as a mule account.
+
+STEP 6 - ASK TRUSTED FRIENDS OR FAMILY:
+Share the person's profile and story with someone you trust. Romance scam victims
+often become emotionally blinded and cannot see the red flags clearly.
+An outside perspective is often very helpful.
+
+================================================================================
+SECTION 7: THE EMOTIONAL IMPACT AND HOW TO COPE
+================================================================================
+
+Romance scams cause deep emotional trauma beyond financial loss:
+- Grief and loss — victim had genuine feelings for a relationship that was fake
+- Shame and embarrassment — preventing victims from seeking help or reporting
+- Depression and anxiety — especially when large sums were lost
+- Trust issues — difficulty trusting new relationships
+- Isolation — many victims do not tell family and withdraw socially
+
+It is important to know:
+- Being scammed does NOT mean you are stupid or naive — these criminals are professional
+  psychological manipulators. They study human psychology and know how to exploit trust.
+- You are NOT alone — thousands of Malaysians experience romance scams every year.
+- Reporting is important — it helps prevent the same criminal from victimising others.
+- Recovery is possible — emotionally and financially.
+
+Where to get support:
+- Befrienders Malaysia (emotional support): 03-7627-2929 (24-hour helpline)
+- Malaysian Mental Health Association: mmha.org.my | 03-2780-6803
+- Talian Kasih (family/domestic issues): 15999 | WhatsApp 019-261-5999
+
+================================================================================
+SECTION 8: WHAT TO DO IF YOU ARE A VICTIM
+================================================================================
+
+IMMEDIATE STEPS:
+1. Stop all communication with the scammer
+2. Stop all money transfers — even if the scammer threatens consequences
+3. Block the scammer on all platforms (WhatsApp, Facebook, Instagram, Telegram)
+4. Call NSRC 997 if money was transferred recently — they can attempt to freeze accounts
+5. Talk to a trusted person — family member, close friend, or counsellor
+
+REPORTING:
+- PDRM (CCID): ccid.rmp.gov.my | 03-2610-1559
+- MCMC: aduan.mcmc.gov.my | 1-800-188-030
+- NSRC: 997
+- Report fake profile to the social media platform (Facebook, Instagram)
+
+EVIDENCE TO PRESERVE:
+- Screenshots of all conversations (WhatsApp, Facebook Messenger, etc.)
+- Profile photos, name, username of the scammer
+- Bank transfer receipts and reference numbers
+- Any phone numbers or email addresses used
+- Screenshots of the payment requests
+- All evidence needed for PDRM investigation
+
+FINANCIAL RECOVERY:
+- Contact your bank immediately — if transfer was recent, freezing the mule account
+  may be possible
+- File a formal police report — necessary for bank dispute and legal action
+- Consult AKPK for debt counselling if you took loans or used credit: 1-800-88-2575
+
+================================================================================
+SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
+================================================================================
+
+NSRC (National Scam Response Centre): 997
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
+Befrienders Malaysia (24-hour emotional support): 03-7627-2929
+Talian Kasih: 15999 | WhatsApp 019-261-5999
+AKPK (debt counselling): 1-800-88-2575 | akpk.org.my
+Semak Mule (check bank accounts): semak.rmp.gov.my
+
+================================================================================
+END OF FILE: kb_06_romance_scam.txt
+================================================================================

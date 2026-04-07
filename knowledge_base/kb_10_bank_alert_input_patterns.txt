@@ -1,0 +1,208 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 10
+TOPIC: FAKE BANK ALERT INPUT-PATTERN RESEARCH
+Last Updated: 2026-04-06
+Research Scope: Pasted SMS text, email text, chat text, and visible banking links
+Validation Standard: Official/public-authority sources only
+================================================================================
+
+SECTION 1: PURPOSE
+================================================================================
+
+This file supports the planned "paste suspicious message or link" feature for fake
+bank-alert and bank-impersonation scams. It focuses on text patterns, visible URL
+patterns, and impersonation cues that can be extracted from user-pasted content.
+
+This file should be used to:
+- detect fake bank-alert wording patterns
+- detect fake hotline and safe-account language
+- detect credential-harvesting cues
+- trigger follow-up questions
+- strengthen bank-alert risk scoring
+
+================================================================================
+SECTION 2: SUPPORTED INPUT TYPES
+================================================================================
+
+SUPPORTED:
+- SMS bank-alert text
+- WhatsApp/chat text claiming to be from a bank
+- email text
+- visible banking-related URL or hotline in pasted content
+
+NOT SUPPORTED BY THIS FILE ALONE:
+- checking live bank systems
+- verifying whether a caller ID was spoofed
+- confirming website legitimacy beyond visible text cues
+- inspecting mobile apps or attachments
+
+================================================================================
+SECTION 3: COMMON MESSAGE WORDING PATTERNS
+================================================================================
+
+PATTERN GROUP A - SECURITY ALERT / ACCOUNT PROBLEM
+Examples of wording cues:
+- suspicious transaction detected
+- unusual activity
+- account suspended
+- account frozen
+- secure your account now
+- verify transaction immediately
+
+Interpretation:
+- Strong cue when message also contains a link or callback number.
+
+PATTERN GROUP B - CREDENTIAL REQUEST
+Examples of wording cues:
+- provide OTP
+- confirm PIN
+- verify password
+- update banking details
+- confirm card information
+
+Interpretation:
+- High to Critical cue.
+- Legitimate banks do not request these through such channels.
+
+PATTERN GROUP C - CALLBACK / HOTLINE REDIRECTION
+Examples of wording cues:
+- call this number immediately
+- contact fraud department now
+- urgent hotline
+- call support to stop transaction
+
+Interpretation:
+- High-risk cue when the number is embedded inside the suspicious message.
+
+PATTERN GROUP D - SAFE ACCOUNT LANGUAGE
+Examples of wording cues:
+- transfer your money to a safe account
+- secure account
+- temporary holding account
+- move funds to protect them
+
+Interpretation:
+- Critical cue.
+- This is a core bank-impersonation fraud pattern.
+
+================================================================================
+SECTION 4: SUSPICIOUS URL / LINK PATTERNS VISIBLE FROM TEXT
+================================================================================
+
+VISIBLE LINK CUES:
+- login link sent in security alert message
+- domain that looks like the bank but is slightly different
+- fake "secure" or "verify" words added to bank name
+- shortened or masked URLs
+- visible mismatch between bank name and domain
+
+BOT-USEFUL EXTRACTION FLAGS:
+- containsLoginLink
+- containsBankBrand
+- visibleBankDomainMismatch
+- containsHotlineNumber
+- containsSafeAccountLanguage
+- usesShortenedUrl
+
+================================================================================
+SECTION 5: SENDER / IMPERSONATION PATTERNS
+================================================================================
+
+SENDER CUES:
+- message claims to come from bank or regulator
+- sender provides a number different from official card/hotline channels
+- caller claims urgency to bypass normal verification
+- message uses institutional tone to force compliance
+
+COMMON IMPERSONATION TARGETS IN SOURCE MATERIAL:
+- banks
+- BNM
+- bank fraud department / security unit
+
+================================================================================
+SECTION 6: EXPLICIT EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+The parser should attempt to detect:
+
+- claimsBankIdentity
+- claimsRegulatorIdentity
+- mentionsSuspiciousTransaction
+- mentionsAccountSuspension
+- asksForOtp
+- asksForPin
+- asksForPassword
+- asksForBankingDetails
+- containsLoginLink
+- containsHotlineNumber
+- visibleBankDomainMismatch
+- asksToCallNumberInMessage
+- asksForSafeAccountTransfer
+- hasUrgencyLanguage
+
+Suggested use:
+- use these indicators to classify likely fake bank alert
+- still ask follow-up questions before final assessment
+
+================================================================================
+SECTION 7: POST-INCIDENT INDICATORS
+================================================================================
+
+These signals indicate likely compromise or urgent danger:
+
+- user already clicked the login link
+- user already shared OTP
+- user already shared PIN or password
+- user already called the hotline in the message
+- user already transferred money to a "safe account"
+
+Suggested rule handling:
+- shared OTP / PIN / password = CRITICAL
+- safe-account transfer = CRITICAL
+- clicked suspicious login link = HIGH, escalate with follow-up
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+The following cannot be safely inferred from pasted text or visible link alone:
+
+- whether a hotline number truly belongs to a fraudster unless cross-checked
+- whether the message came from a spoofed sender ID
+- whether the linked site performs backend credential harvesting
+- whether a transaction alert is genuine without checking the real bank account
+- whether a bank app or webpage is technically compromised
+
+This file supports PRELIMINARY RULE-BASED ASSESSMENT only.
+
+================================================================================
+SECTION 9: PRIMARY SOURCES USED
+================================================================================
+
+1. BNM - Alert on SMS Scam and Fake Website Involving BNM Name
+   https://www.bnm.gov.my/-/alert-on-sms-scam-and-fake-website-involving-bank-negara-malaysia-name
+
+2. BNM - Beware of Bogus Calls Impersonating BNM Officers
+   https://www.bnm.gov.my/-/beware-of-bogus-calls-from-persons-impersonating-as-bank-negara-malaysia-officers
+
+3. BNM - Beware of Fraudulent SMS and Telephone Calls (Credit Card)
+   https://www.bnm.gov.my/-/beware-of-fraudulent-sms-and-telephone-calls-requesting-confirmation-on-credit-card-transactions
+
+4. BNM - Financial Fraud Alert Hub
+   https://www.bnm.gov.my/web/financial-fraud-alert
+
+5. CCID (PDRM) - E-Banking Fraud
+   https://ccid.rmp.gov.my/Card/E-Banking-Fraud.cfm
+
+6. FTC - How to Avoid Imposter Scams
+   https://consumer.ftc.gov/articles/how-avoid-imposter-scams
+
+7. CISA - Recognize and Report Phishing
+   https://www.cisa.gov/secure-our-world/recognize-and-report-phishing
+
+8. NCSC - How to Spot a Scam Email, Text or Call
+   https://www.ncsc.gov.uk/collection/phishing-scams
+
+================================================================================
+END OF FILE: kb_10_bank_alert_input_patterns.txt
+================================================================================

@@ -1,0 +1,299 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 01
+TOPIC: PHISHING SCAMS
+Last Updated: 2026-03-27
+Sources: MCMC, MyCERT, BNM, CISA, FTC, APWG, Microsoft Security, NIST
+================================================================================
+
+SECTION 1: WHAT IS PHISHING?
+================================================================================
+
+Phishing is a type of cybercrime where scammers impersonate trusted organisations
+such as banks, government agencies, courier services, or popular websites to trick
+victims into revealing sensitive personal information. This includes passwords,
+banking credentials, credit card numbers, MyKad/IC numbers, and OTP codes.
+
+In Malaysia, phishing is one of the most reported cybercrimes. MyCERT and MCMC
+receive thousands of phishing reports annually. Phishing attacks target all
+demographics — students, working adults, senior citizens, and businesses.
+
+Common impersonated entities in Malaysia:
+- Banks: Maybank, CIMB, Public Bank, RHB, Hong Leong, AmBank, BSN
+- Government: LHDN (tax refund), JPJ, PDRM, KWSP/EPF, MySejahtera
+- E-commerce: Shopee, Lazada, Grab, Touch 'n Go eWallet
+- Telcos: Maxis, Celcom, Digi, TM Unifi
+- Delivery: Pos Malaysia, J&T Express, DHL, FedEx
+
+================================================================================
+SECTION 2: HOW PHISHING SCAMS WORK (STEP BY STEP)
+================================================================================
+
+STEP 1 - INITIAL CONTACT
+The scammer sends a message via SMS, WhatsApp, email, or social media. The message
+appears to come from a legitimate source. It creates urgency, fear, or excitement.
+Examples: "Your account will be suspended", "You have a pending tax refund of RM1,200",
+"Congratulations! You won a prize."
+
+STEP 2 - FAKE LINK OR ATTACHMENT
+The message contains a link to a fake website that looks identical to the real one.
+OR it contains a malicious attachment (PDF, Word document) that installs malware.
+The fake website URL often looks similar but is slightly different:
+- Real: www.maybank2u.com.my
+- Fake: www.maybank2u-secure.com / www.maybonk2u.com / www.maybank.com.my-login.info
+
+STEP 3 - CREDENTIAL HARVESTING
+Victim enters username, password, IC number, banking PIN, or OTP on the fake site.
+The scammer immediately captures all entered information in real time.
+
+STEP 4 - ACCOUNT TAKEOVER OR IDENTITY THEFT
+Using the stolen credentials, the scammer:
+- Logs into the victim's real bank account and transfers money
+- Takes over the victim's social media or email accounts
+- Applies for loans or credit cards under the victim's identity
+- Sells the stolen data on underground markets
+
+STEP 5 - MONEY LOSS
+Victims typically realise they have been scammed only after noticing unauthorised
+transactions on their bank statement or when they are locked out of their accounts.
+
+================================================================================
+SECTION 3: TYPES OF PHISHING
+================================================================================
+
+TYPE 1 - EMAIL PHISHING (Most common)
+Bulk emails sent to thousands of victims at once. Claims to be from banks, LHDN,
+government agencies, or popular services. Contains urgent call to action.
+Red flag: Generic greeting ("Dear Customer" instead of your actual name).
+
+TYPE 2 - SMS PHISHING (Smishing)
+Fraudulent text messages with shortened URLs (e.g., bit.ly, tinyurl). Very common
+in Malaysia — often impersonates Pos Malaysia, banks, or government agencies.
+Red flag: Unsolicited SMS with a link asking you to verify account details.
+
+TYPE 3 - VOICE PHISHING (Vishing)
+Phone calls from scammers pretending to be bank officers, police, LHDN officers,
+or Telekom Malaysia. They create urgency ("your account is frozen", "you have a
+warrant of arrest"). They may ask you to press keys on your keypad or reveal OTPs.
+Red flag: Caller asks for OTP, banking PIN, or IC number over the phone.
+
+TYPE 4 - SPEAR PHISHING
+Highly targeted phishing that uses personal information to appear more convincing.
+The email or message addresses you by name, mentions your employer, or references
+recent transactions to gain your trust. Common in corporate environments.
+Red flag: Personalised message from unknown sender asking for urgent action.
+
+TYPE 5 - WHALING
+Spear phishing that specifically targets high-level executives, CEOs, or finance
+managers. Often requests urgent wire transfers or asks executives to approve
+fraudulent invoices. Also known as Business Email Compromise (BEC).
+Red flag: CEO or senior manager's email asking for an urgent fund transfer.
+
+TYPE 6 - CLONE PHISHING
+Scammer duplicates a legitimate email you previously received but replaces the
+links or attachments with malicious ones. The sender address is spoofed.
+Red flag: A follow-up email claiming to resend a previous attachment.
+
+TYPE 7 - PHARMING
+Victim is redirected to a fake website even when typing the correct URL. Malware
+modifies the victim's computer or router DNS settings.
+Red flag: Bank website looks slightly different, SSL padlock is missing.
+
+================================================================================
+SECTION 4: RED FLAGS AND WARNING SIGNS
+================================================================================
+
+URGENCY AND PRESSURE:
+- "Your account will be blocked in 24 hours if you do not verify now"
+- "You must act immediately to avoid legal action"
+- "Offer expires today — claim your reward now"
+- Messages that create panic, fear, or extreme excitement
+
+SUSPICIOUS SENDER:
+- Email sender domain does not match official company domain
+  Example: maybank@gmail.com (FAKE) vs noreply@maybank.com.my (REAL)
+- Slight misspellings in sender address (mayb4nk, maybonk, m4ybank)
+- Caller ID shows overseas number (+1, +44, +62) for a local bank or agency
+
+SUSPICIOUS LINK:
+- URL contains IP address instead of domain name (e.g., http://192.168.1.1/login)
+- URL uses HTTP instead of HTTPS (missing security padlock)
+- URL domain is slightly different from official:
+  e.g., bnm-gov.com.my instead of bnm.gov.my
+- URL uses free hosting: .wixsite.com, .weebly.com, .blogspot.com
+- Shortened URLs in SMS or email (bit.ly, tinyurl, goo.gl) hiding the real destination
+- Pop-up warning appears when you hover over the link
+
+REQUESTS FOR SENSITIVE INFORMATION:
+- Any request for OTP (One-Time Password) — real banks NEVER ask for OTP
+- Request for full password or PIN over phone, SMS, or email
+- Request to share your screen via AnyDesk, TeamViewer, or similar apps
+- Request for IC number, passport number, or date of birth via message
+
+POOR QUALITY CONTENT:
+- Spelling errors, grammatical mistakes, or awkward phrasing in official-looking messages
+- Mismatched logos, low-quality images, or outdated branding
+- Generic greetings ("Dear User", "Dear Customer") instead of your name
+
+UNUSUAL REQUESTS:
+- Ask to install a new app for "security purposes" (often RAT malware)
+- Ask to withdraw cash and deposit it into a specified account
+- Ask to purchase gift cards or e-wallet top-ups as payment
+- Ask to take a photo of your bank card (front and back)
+
+================================================================================
+SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
+================================================================================
+
+RULE P-01 [CRITICAL RISK]:
+IF user received a message AND the message contains a link AND the link leads to
+a page requesting OTP or banking password THEN risk level is CRITICAL.
+ACTION: Do NOT enter any information. Close the page. Report to MyCERT immediately.
+
+RULE P-02 [HIGH RISK]:
+IF user received an SMS or WhatsApp from unknown number AND message claims to be
+from a bank AND message contains a link THEN risk level is HIGH.
+ACTION: Do NOT click the link. Verify directly with the bank by calling official hotline.
+
+RULE P-03 [HIGH RISK]:
+IF user received a phone call AND caller claims to be a bank officer or police officer
+AND caller asks for OTP or PIN THEN risk level is HIGH.
+ACTION: Hang up immediately. Real banks and police never ask for OTP over the phone.
+
+RULE P-04 [HIGH RISK]:
+IF user received an email AND the sender domain does not match the official company
+domain AND the email contains an attachment or link THEN risk level is HIGH.
+ACTION: Do NOT open attachment or click link. Report to IT department (if corporate).
+
+RULE P-05 [MEDIUM RISK]:
+IF user received a message claiming they won a prize or are eligible for a refund
+AND the message asks them to click a link to claim THEN risk level is MEDIUM-HIGH.
+ACTION: Verify independently. Search the company's official website. Do not click.
+
+RULE P-06 [MEDIUM RISK]:
+IF a website is asking for login credentials AND the URL uses HTTP (not HTTPS)
+OR the URL does not match the official domain THEN risk level is HIGH.
+ACTION: Close the website. Do not enter any credentials.
+
+RULE P-07 [LOW RISK - AWARENESS]:
+IF user received a suspicious-looking email but has NOT clicked any link or entered
+any information THEN risk level is LOW.
+ACTION: Delete the email. Mark as spam. No immediate financial risk.
+
+RULE P-08 [CRITICAL - POST-INCIDENT]:
+IF user has already entered banking credentials or OTP on a suspicious website
+THEN risk level is CRITICAL — potential account compromise.
+ACTION: Call bank immediately to freeze account. Change all passwords. Report to PDRM.
+
+================================================================================
+SECTION 6: WHAT TO DO IF YOU ARE A VICTIM
+================================================================================
+
+IMMEDIATE ACTIONS (Within the first hour):
+1. Call your bank's 24-hour fraud hotline immediately to freeze your account.
+   - Maybank: 1-300-88-6688
+   - CIMB: 1-300-880-900
+   - Public Bank: 1-800-22-5555
+   - RHB: 1-800-88-9950
+   - Hong Leong: 1-300-88-8111
+   - AmBank: 1-800-88-9999
+   - BSN: 1-300-88-1900
+   OR call NSRC (National Scam Response Centre): 997
+
+2. Change all passwords immediately — email, banking, social media.
+   Use a different device if you suspect your device is compromised.
+
+3. Enable two-factor authentication on all important accounts.
+
+4. Do NOT share the incident with scammers or respond to follow-up messages.
+
+REPORTING:
+- PDRM Cybercrime: Report at ccid.rmp.gov.my or call 03-2610-1559
+- MCMC: aduan.mcmc.gov.my (for website/online scam reporting)
+- MyCERT: mycert.org.my/ar/aduan (for cybersecurity incidents)
+- BNM BNMTELELINK: 1-300-88-5465 (for banking-related fraud)
+- NSRC 997: Call 997 (fastest way to freeze mule accounts)
+
+EVIDENCE TO PRESERVE:
+- Screenshot the suspicious message, link, or email
+- Note the date, time, and sender details
+- Do NOT delete messages — they are needed for police investigation
+- Get transaction reference numbers for any unauthorised transfers
+
+================================================================================
+SECTION 7: HOW TO VERIFY IF A WEBSITE IS LEGITIMATE
+================================================================================
+
+CHECK 1 - URL INSPECTION:
+Look at the full URL carefully before entering any information.
+Official Malaysian government websites end in .gov.my
+Official bank websites: maybank2u.com.my, cimbclicks.com.my, pbebank.com, rhbgroup.com
+If unsure, go directly to Google and search for the official website.
+
+CHECK 2 - SSL CERTIFICATE:
+Click the padlock icon next to the URL in your browser.
+Check if the certificate is issued to the correct organisation.
+HTTPS does not guarantee the site is legitimate — scammers can also use HTTPS.
+But missing HTTPS (HTTP only) is always a red flag.
+
+CHECK 3 - CONTACT VERIFICATION:
+Call the organisation using the phone number listed on their official website.
+Do NOT use the phone number provided in the suspicious message.
+Banks will never ask you to verify your details via a link sent by SMS or email.
+
+CHECK 4 - SEMAK MULE:
+Visit semak.rmp.gov.my to check if a phone number or bank account is linked to scam reports.
+
+CHECK 5 - WHOIS LOOKUP:
+Go to whois.domaintools.com and enter the domain.
+Legitimate companies own domains registered years ago.
+A domain registered only days or weeks ago is a strong scam indicator.
+
+================================================================================
+SECTION 8: PHISHING PREVENTION TIPS
+================================================================================
+
+PREVENTION TIP 1 - NEVER SHARE OTP:
+Your OTP (One-Time Password) is personal and confidential. No legitimate bank,
+government agency, or company will EVER ask you for your OTP over the phone,
+SMS, or email. If anyone asks for your OTP — it is a scam.
+
+PREVENTION TIP 2 - THINK BEFORE YOU CLICK:
+Hover over links before clicking to preview the actual URL.
+When in doubt, type the official URL directly into your browser.
+Bookmark important websites so you always visit the correct one.
+
+PREVENTION TIP 3 - KEEP SOFTWARE UPDATED:
+Enable automatic updates for your operating system, browser, and antivirus.
+Outdated software has security vulnerabilities that phishers exploit.
+
+PREVENTION TIP 4 - USE OFFICIAL APPS:
+Download banking apps only from official Google Play Store or Apple App Store.
+Do not install APK files sent via WhatsApp or Telegram.
+
+PREVENTION TIP 5 - ENABLE TRANSACTION ALERTS:
+Turn on SMS or email alerts for all bank transactions.
+This allows you to detect unauthorised transactions immediately.
+
+PREVENTION TIP 6 - USE A PASSWORD MANAGER:
+A password manager only auto-fills credentials on the correct domain.
+If you are on a phishing site, the password manager will NOT auto-fill —
+this is a useful signal that the site may be fake.
+
+PREVENTION TIP 7 - VERIFY BEFORE ACTING:
+If you receive an unexpected message from your bank or government agency,
+always call them directly using their official hotline before taking any action.
+
+================================================================================
+SECTION 9: QUICK REFERENCE — OFFICIAL REPORTING CONTACTS
+================================================================================
+
+NSRC (National Scam Response Centre): 997 (24/7 hotline — fastest response)
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
+MyCERT (cybersecurity incidents): mycert.org.my | +603-8992-6969
+BNM BNMTELELINK: 1-300-88-5465
+Semak Mule (check mule accounts): semak.rmp.gov.my
+
+================================================================================
+END OF FILE: kb_01_phishing.txt
+================================================================================

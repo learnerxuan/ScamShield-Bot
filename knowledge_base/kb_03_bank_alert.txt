@@ -1,0 +1,332 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 03
+TOPIC: FAKE BANK ALERT SCAMS
+Last Updated: 2026-03-27
+Sources: BNM, AIBIM, PDRM, FTC, OCC (US), FFIEC, MyCERT, MCMC
+================================================================================
+
+SECTION 1: WHAT IS A FAKE BANK ALERT SCAM?
+================================================================================
+
+A fake bank alert scam is a type of fraud where scammers impersonate banks or
+financial institutions to trick victims into revealing banking credentials, OTPs,
+or personal information. The scammer's ultimate goal is to gain unauthorised access
+to the victim's bank account and steal money.
+
+In Malaysia, BNM (Bank Negara Malaysia) and AIBIM (Association of Islamic Banking
+and Financial Institutions Malaysia) have issued multiple public advisories about
+this type of scam. Malaysian banks most commonly impersonated include:
+
+- Maybank / Maybank2u
+- CIMB / CIMB Clicks
+- Public Bank / PBe
+- RHB Bank
+- Hong Leong Bank
+- AmBank
+- Bank Islam
+- Bank Rakyat
+- BSN (Bank Simpanan Nasional)
+- Alliance Bank
+
+This scam is particularly dangerous because victims receive messages that look
+extremely convincing — using real bank logos, official-sounding language, and
+spoofed sender IDs that show the legitimate bank name.
+
+================================================================================
+SECTION 2: HOW FAKE BANK ALERT SCAMS WORK (STEP BY STEP)
+================================================================================
+
+STEP 1 - FAKE SECURITY ALERT
+Victim receives an SMS, WhatsApp, or email that appears to be from their bank.
+The message creates immediate alarm:
+- "Unusual activity detected on your account"
+- "Your Maybank2u account has been temporarily suspended"
+- "A new device has been added to your account — verify now to prevent loss"
+- "Suspicious transaction of RM3,500 detected — click here to dispute"
+
+STEP 2 - URGENT CALL TO ACTION
+The message includes a link, phone number, or instructions telling the victim to
+act immediately to "secure" their account. Victim is told they will lose money
+or access to their account if they do not respond within a short time window
+(e.g., "within 2 hours").
+
+STEP 3 - CREDENTIAL CAPTURE
+Victim clicks the link to a fake bank login page that looks identical to the
+real bank website. Victim enters their username and password.
+The scammer captures the credentials in real time.
+
+STEP 4 - OTP INTERCEPTION
+The fake website then asks for an OTP (One-Time Password) sent to victim's phone,
+claiming it is needed to "verify identity" or "dispute the transaction."
+When victim enters the OTP, the scammer uses it to log into the real bank account.
+
+OR — the victim calls the fake hotline number in the message, and a scammer
+posing as a bank officer asks for OTP, account number, and PIN over the phone.
+
+STEP 5 - ACCOUNT TAKEOVER AND FUND TRANSFER
+With full credentials and OTP, the scammer logs into the real bank account.
+They transfer funds to mule accounts as quickly as possible.
+Victims lose anywhere from a few hundred ringgit to hundreds of thousands of ringgit.
+
+STEP 6 - SECOND-STAGE SCAM (SOMETIMES)
+After the initial theft, scammers may contact the victim again:
+- Posing as a "fraud recovery specialist" offering to help retrieve lost funds
+- Posing as a police officer investigating the case
+- Both variants attempt to steal even more money from the same victim.
+
+================================================================================
+SECTION 3: TYPES OF FAKE BANK ALERT SCAMS
+================================================================================
+
+TYPE 1 - FAKE SUSPENSION/SECURITY ALERT SMS (Most Common)
+Victim receives SMS saying account is suspended or compromised. Message contains
+a link to a fake login page. Sender ID may appear as the real bank name due to
+SMS sender ID spoofing.
+Key identifier: Real banks never include login links in security alert SMS.
+
+TYPE 2 - FAKE BANK OFFICER PHONE CALL
+Caller claims to be a bank officer and says suspicious activity was detected.
+They ask for OTP, PIN, and full account details "for verification purposes."
+Caller may be very professional and convincing.
+Key identifier: No legitimate bank officer ever asks for OTP over the phone.
+
+TYPE 3 - FAKE BANK EMAIL PHISHING
+Victim receives an official-looking email from a spoofed bank address.
+Email contains a link to a fake bank portal. Design and branding looks authentic.
+Key identifier: Hover over the sender address — domain will not match official bank.
+
+TYPE 4 - FAKE TRANSACTION DISPUTE
+Victim is told a large transaction was made from their account and to dispute it
+by clicking a link or calling a number. The urgency of a large "unauthorised"
+transaction pressures the victim to act without thinking.
+Key identifier: Log into your real banking app to check — if no such transaction
+exists, the alert is fake.
+
+TYPE 5 - CARD BLOCKING SCAM
+Victim is told their bank card has been blocked due to "suspicious activity" and
+must verify details to reactivate it. Scammer collects full card number, expiry
+date, and CVV — enough to make fraudulent online purchases.
+Key identifier: Banks never ask for full card details over the phone to unblock a card.
+
+TYPE 6 - BANKING APP UPGRADE SCAM
+Victim is told their banking app is outdated and needs to be upgraded via a link.
+The link downloads a fake app (malware/RAT) that captures SMS OTPs and credentials.
+Key identifier: Never update banking apps via links in messages — use official stores only.
+
+TYPE 7 - FAKE E-WALLET ALERT
+Similar to bank alerts but targeting e-wallet users (Touch 'n Go, GrabPay, Boost,
+BigPay). Victim is told their e-wallet has been compromised and must verify.
+Key identifier: Same warning signs apply — do not click links in e-wallet alert messages.
+
+================================================================================
+SECTION 4: SENDER ID SPOOFING — WHY FAKE ALERTS LOOK REAL
+================================================================================
+
+A particularly deceptive technique used in bank alert scams is SMS Sender ID Spoofing.
+
+In Malaysia and globally, SMS technology allows the sender to replace a phone number
+with a text name (e.g., "Maybank" or "CIMB-Bank"). This technology is designed for
+legitimate business use, but scammers exploit it to make their fraudulent SMS appear
+in the SAME conversation thread as real bank messages on your phone.
+
+What this means: You may see a scam SMS appearing in the same thread as legitimate
+Maybank SMS messages. The SMS thread label will say "Maybank" even though it came
+from scammers. Your phone does NOT verify the identity of the sender.
+
+Malaysian banks have been working with telcos and MCMC to combat sender ID spoofing,
+but it remains an active threat.
+
+How to detect spoofed bank SMS:
+- A real bank SMS for security alerts will NOT contain a clickable link
+- Real security alerts instruct you to call the number on the BACK of your bank card
+- Real banks do NOT send SMS saying "your account is suspended — click here to fix"
+- If unsure: open your banking app directly or call the number on your card
+
+================================================================================
+SECTION 5: RED FLAGS AND WARNING SIGNS
+================================================================================
+
+IN THE MESSAGE CONTENT:
+- Urgent language: "immediate action required", "account suspended", "within 2 hours"
+- A link in a security alert SMS from your bank
+- Message mentions a large transaction you do not recall making
+- Message asks you to call a specific phone number provided in the SMS
+- Grammar errors, unusual phrasing, or inconsistent bank branding
+- Message mentions your account will be closed if you do not respond
+
+IN THE LINK OR WEBSITE:
+- URL does not match official bank domain exactly
+  e.g., maybank2u-secure.com / maybonk.com / maybank-my.net (all FAKE)
+  Official Maybank: maybank2u.com.my
+- Website URL uses HTTP (not HTTPS) — missing padlock
+- Login page design has minor differences (fonts, colours, logo positioning)
+- After logging in, site immediately asks for OTP — real bank would show your actual
+  account summary first
+- Site asks for more information than usual (e.g., full card number, mother's maiden name)
+
+ON THE PHONE:
+- Caller claims to be a bank officer and knows your name and last 4 digits of your card
+  (scammers buy data from data breaches — knowing your name does NOT mean they are real)
+- Caller asks you to share your OTP to "verify your identity" or "stop the transaction"
+- Caller asks you to stay on the line and not end the call (high pressure tactic)
+- Caller asks you to transfer money to a "safe account" to protect your funds
+- You are transferred to multiple "departments" or "officers" during the call
+
+================================================================================
+SECTION 6: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
+================================================================================
+
+RULE BA-01 [CRITICAL RISK]:
+IF user received a call from someone claiming to be a bank officer AND they are
+asking for OTP, PIN, or password THEN risk level is CRITICAL.
+ACTION: Hang up immediately. No bank officer will ever ask for your OTP.
+Call back the bank using the number on the back of your card.
+
+RULE BA-02 [CRITICAL RISK]:
+IF user has already provided their OTP to a caller or a website THEN risk level
+is CRITICAL — account may already be compromised.
+ACTION: Call bank fraud hotline IMMEDIATELY to freeze account. Call NSRC 997.
+Check transaction history for unauthorised transfers.
+
+RULE BA-03 [HIGH RISK]:
+IF user received an SMS from "bank name" AND the SMS contains a link to click
+for security purposes THEN risk level is HIGH.
+ACTION: Do NOT click. Real banks do not send clickable links in security SMS.
+Verify by logging into your banking app directly or calling bank hotline.
+
+RULE BA-04 [HIGH RISK]:
+IF user is on a website that looks like a bank login page AND the URL does not
+exactly match the official bank domain THEN risk level is HIGH.
+ACTION: Do NOT enter credentials. Close the browser tab. Go to the official URL.
+
+RULE BA-05 [HIGH RISK]:
+IF user received a message saying their bank account is suspended AND message
+provides a phone number to call that is different from the number on their bank card
+THEN risk level is HIGH.
+ACTION: Do NOT call the number in the message. Call the official number on your card.
+
+RULE BA-06 [HIGH RISK]:
+IF user is asked to transfer money to a "safe account" to protect from fraud
+THEN risk level is CRITICAL. This is always a scam.
+ACTION: No bank will ever ask you to transfer to a safe account. Refuse and call
+the real bank immediately.
+
+RULE BA-07 [MEDIUM RISK]:
+IF user received a suspicious bank alert email AND has NOT clicked any link or
+entered any information THEN risk level is LOW-MEDIUM.
+ACTION: Delete the email. Log into your bank account directly to check status.
+Report the phishing email to your bank.
+
+RULE BA-08 [MEDIUM RISK]:
+IF user installed a banking app from a link in a message (not from Play Store/App Store)
+THEN risk level is HIGH.
+ACTION: Uninstall immediately. Factory reset device. Contact bank to freeze account.
+
+================================================================================
+SECTION 7: HOW TO TELL IF YOUR BANK ACTUALLY CONTACTED YOU
+================================================================================
+
+REAL BANK ALERTS — What Banks Actually Do:
+- Real bank OTP SMS contains only the OTP number and a brief description
+- Real bank security alerts instruct you to call the number on your card, not a new number
+- Real bank emails come from official domain (e.g., @maybank.com.my, @cimb.com)
+- Real bank apps never ask for OTP via a link — OTP arrives via SMS separately
+- Real banks never ask you to share your OTP with anyone, including bank staff
+
+HOW TO VERIFY:
+1. Do NOT use the link, email, or number provided in the suspicious message
+2. Open your banking app directly on your phone
+3. Check your transaction history — if the "suspicious transaction" does not appear,
+   the alert is fake
+4. Call the bank using the number printed on the back of your physical bank card
+5. Visit the nearest bank branch in person if you are unsure
+
+CHECKING OFFICIAL BANK HOTLINES (Malaysia):
+- Maybank: 1-300-88-6688
+- CIMB: 1-300-880-900
+- Public Bank: 1-800-22-5555
+- RHB: 1-800-88-9950
+- Hong Leong: 1-300-88-8111
+- AmBank: 1-800-88-9999
+- Bank Islam: 1-300-88-2265
+- Bank Rakyat: 1-800-88-5565
+- BSN: 1-300-88-1900
+- Alliance Bank: 1-300-80-0110
+
+================================================================================
+SECTION 8: WHAT TO DO IF YOU ARE A VICTIM
+================================================================================
+
+IMMEDIATE ACTIONS — FIRST 30 MINUTES ARE CRITICAL:
+1. Call your bank's 24-hour fraud hotline from the number on your bank card
+   (not from any number provided in suspicious messages)
+2. Ask the bank to: freeze your account, block online transactions, flag the case
+3. Call NSRC 997 — they can coordinate with banks to freeze mule accounts before
+   the scammer withdraws the money
+4. Change your online banking password and PIN from a clean, uncompromised device
+
+REPORTING:
+- PDRM (police report): ccid.rmp.gov.my or nearest police station
+- BNM BNMTELELINK: 1-300-88-5465 (for unresolved disputes with banks)
+- MCMC: aduan.mcmc.gov.my (if fraud involved SMS or online communication)
+- NSRC 997 (fastest response for freezing mule accounts)
+
+EVIDENCE TO PRESERVE:
+- Screenshot all suspicious messages (SMS, WhatsApp, email)
+- Screenshot the fake website URL
+- Screenshot the fake transaction history (if visible on the fake site)
+- Write down the caller's phone number, name used, time of call
+- Get your bank's reference number for the fraud report
+- All evidence is needed for police investigation and bank dispute process
+
+BANK DISPUTE PROCESS:
+- File a formal dispute with your bank in writing
+- Banks are required under BNM guidelines to investigate and respond within 14 days
+- If unsatisfied with bank's response, escalate to BNM BNMTELELINK: 1-300-88-5465
+- For legal action: consult a lawyer about potential claims
+
+================================================================================
+SECTION 9: PREVENTION — HOW TO PROTECT YOURSELF
+================================================================================
+
+PREVENTION TIP 1 - NEVER SHARE OTP:
+OTP is a One-Time Password for YOUR use only. No bank staff, police officer,
+or government agent is ever authorised to ask you for it.
+
+PREVENTION TIP 2 - VERIFY BEFORE ACTING:
+If you receive any security alert, verify by logging into your official banking app
+directly — not by clicking the link in the message.
+
+PREVENTION TIP 3 - REGISTER FOR TRANSACTION ALERTS:
+Enable real-time SMS or push notification alerts for all transactions above RM1.
+This lets you detect unauthorised transactions the moment they occur.
+
+PREVENTION TIP 4 - REVIEW TRANSACTIONS REGULARLY:
+Check your bank statement at least once a week. Early detection limits damage.
+
+PREVENTION TIP 5 - SET DAILY TRANSFER LIMITS:
+Log into your real banking app and set a low daily online transfer limit.
+This limits the maximum amount a scammer can steal even if they gain access.
+
+PREVENTION TIP 6 - USE SECURE KILL SWITCH:
+Maybank and some other banks offer a "kill switch" or account freeze feature
+directly in the app that lets you instantly block all transactions if you
+suspect fraud — activate this immediately if you receive suspicious activity.
+
+PREVENTION TIP 7 - USE OFFICIAL APP FROM OFFICIAL STORE:
+Download your banking app only from the official Google Play Store or Apple App Store.
+Enable automatic app updates to ensure you have the latest security patches.
+
+================================================================================
+SECTION 10: QUICK REFERENCE — REPORTING CONTACTS
+================================================================================
+
+NSRC (National Scam Response Centre): 997 (24/7 — call IMMEDIATELY)
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+BNM BNMTELELINK: 1-300-88-5465 (banking-related disputes)
+MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
+Semak Mule: semak.rmp.gov.my
+
+================================================================================
+END OF FILE: kb_03_bank_alert.txt
+================================================================================

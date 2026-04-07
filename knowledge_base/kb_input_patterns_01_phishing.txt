@@ -1,0 +1,181 @@
+================================================================================
+SCAMSHIELD BOT - INPUT PATTERN RESEARCH FILE 01
+TOPIC: PHISHING MESSAGE / LINK INPUT PATTERNS
+Last Updated: 2026-04-06
+Source Standard: Official government, regulator, law-enforcement, or public-agency
+sources only. No AI-generated or commercial summary sources used.
+================================================================================
+
+PURPOSE
+================================================================================
+This file supports the "paste suspicious message or link" feature for phishing-
+style scam checks. It is designed for rule-based extraction from pasted SMS,
+email text, chat text, and visible link wording.
+
+This file is for:
+- message-level red flag extraction
+- follow-up question design
+- rule-based risk escalation
+
+This file is NOT for:
+- live website inspection
+- definitive URL reputation checking
+- malware analysis
+- proving a domain is safe
+
+================================================================================
+SECTION 1: PRIMARY SOURCE SET
+================================================================================
+
+1. MCMC - Identify Phishing E-Mail
+   https://www.mcmc.gov.my/en/faqs/phishing-attack/2-identify-phishing-e-mail
+2. MCMC - Protect Yourself from Phishing
+   https://mcmc.gov.my/en/faqs/phishing-attack/3-protect-yourself-how
+3. MyCERT - Phishing Emails Targeting Bank Negara Malaysia
+   https://www.mycert.org.my/portal/advisory?id=MA-640.102016
+4. CyberSecurity Malaysia - Security Best Practices for Online Account Credentials
+   https://www.cybersecurity.my/portal-main/advisories-details/3800db58-522f-11f0-a5d3-0050568c1b65
+5. CCID (PDRM) - E-Banking Fraud
+   https://ccid.rmp.gov.my/Card/E-Banking-Fraud.cfm
+6. FTC - How To Recognize and Avoid Phishing Scams
+   https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams
+7. CISA - Recognize and Report Phishing
+   https://www.cisa.gov/secure-our-world/recognize-and-report-phishing
+8. CISA - Phishing Guidance: Stopping the Attack Cycle at Phase One
+   https://www.cisa.gov/resources-tools/resources/phishing-guidance-stopping-attack-cycle-phase-one
+9. NCSC - Phishing: Spot and Report Scam Emails, Texts, Websites and Calls
+   https://www.ncsc.gov.uk/collection/phishing-scams
+10. FBI IC3 - Cyber Actors Exploit "Secure" Websites in Phishing
+    https://www.ic3.gov/PSA/2019/PSA190610
+
+================================================================================
+SECTION 2: COMMON PHISHING WORDING PATTERNS
+================================================================================
+
+ACCOUNT VERIFICATION / ACCOUNT PROBLEM
+- "verify your account"
+- "unlock your account"
+- "secure your account"
+- "account suspended"
+- "account blocked"
+- "update your details"
+- "confirm your identity"
+
+URGENCY / THREAT
+- "act now"
+- "within 24 hours"
+- "immediately"
+- "final warning"
+- "legal action"
+- "your account will be closed"
+- "transaction will be cancelled"
+
+REWARD / REFUND / PRIZE
+- "claim your refund"
+- "you won a prize"
+- "tax refund"
+- "reward pending"
+- "bonus claim"
+
+CREDENTIAL / OTP HARVESTING
+- "enter OTP"
+- "confirm OTP"
+- "verify password"
+- "update PIN"
+- "banking password"
+- "login again to continue"
+
+================================================================================
+SECTION 3: LINK AND URL PATTERNS EXTRACTABLE FROM TEXT
+================================================================================
+
+- message contains a click prompt:
+  - "click here"
+  - "tap to verify"
+  - "open this link"
+  - "log in here"
+- visible domain mismatch or brand misspelling
+- shortened-link services such as bit.ly or tinyurl
+- visible HTTP instead of HTTPS
+- legitimacy language such as:
+  - "official verification portal"
+  - "secure portal"
+  - "official support page"
+
+================================================================================
+SECTION 4: IMPERSONATION PATTERNS
+================================================================================
+
+Common impersonated entities:
+- banks
+- government agencies
+- tax/refund authorities
+- telcos
+- courier services
+- popular online services
+
+Message-level impersonation cues:
+- sender claims to be a bank or regulator
+- sender name does not match expected domain
+- message gives a hotline or support number not known to the user
+- generic greeting instead of the user's name
+
+================================================================================
+SECTION 5: EXTRACTABLE INDICATORS FOR THE BOT
+================================================================================
+
+- hasLink
+- hasUrgency
+- requestsOtp
+- requestsPasswordOrPin
+- requestsSensitiveInfo
+- claimsAccountProblem
+- claimsRewardOrRefund
+- senderMismatch
+- suggestsUnofficialHotline
+- requestsAppInstall
+
+================================================================================
+SECTION 6: POST-INCIDENT INDICATORS
+================================================================================
+
+Escalate immediately if user says they:
+- already clicked the link
+- already entered login credentials
+- already entered OTP
+- already called the suspicious number
+- already downloaded or installed an app
+- already noticed unauthorized account activity
+
+================================================================================
+SECTION 7: RULE-BASED USE IN THE BOT
+================================================================================
+
+Recommended flow:
+1. User pastes message or link.
+2. Bot extracts phishing-style indicators from the pasted content.
+3. Bot asks follow-up questions:
+   - Did it ask for OTP or password?
+   - Did you already click?
+   - Did you enter anything?
+   - Did the sender or site look suspicious?
+4. Bot calculates final risk from both the pasted content and user answers.
+
+================================================================================
+SECTION 8: LIMITATIONS
+================================================================================
+
+Do not claim these from pasted text or visible link alone:
+- that a URL is definitely malicious
+- that a URL is definitely safe
+- that a domain really belongs to the claimed institution
+- that a shortened link resolves to a malicious site without expansion
+- that a website contains malware without technical inspection
+
+Therefore:
+- The feature must be framed as a preliminary rule-based assessment.
+- The bot should not act like a full URL scanner or browser-security product.
+
+================================================================================
+END OF FILE: kb_input_patterns_01_phishing.txt
+================================================================================

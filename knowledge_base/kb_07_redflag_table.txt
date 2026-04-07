@@ -1,0 +1,371 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 07
+TOPIC: MASTER RED FLAG TABLE — ALL SCAM TYPES
+Last Updated: 2026-03-27
+Sources: PDRM, BNM, SC Malaysia, MCMC, MyCERT, FTC, FBI IC3, Interpol
+================================================================================
+
+This file contains a structured list of red flags across all 6 scam types covered
+by ScamShield Bot. Each entry includes a unique ID, description, risk level, and
+recommended action. This table is used for quick risk assessment and chatbot responses.
+
+Risk Levels:
+- CRITICAL: Immediate action required — high probability of financial loss
+- HIGH: Strong warning signs — do not proceed without verification
+- MEDIUM: Caution advised — verify before taking any action
+- LOW: Awareness level — stay alert but no immediate danger
+
+================================================================================
+SCAM TYPE: PHISHING
+================================================================================
+
+RED FLAG ID: PH-01
+Risk Level: HIGH
+Description: Received SMS or email with a link claiming account is suspended or needs verification.
+Recommended Action: Do not click the link. Log into your banking app directly. Call bank hotline.
+
+RED FLAG ID: PH-02
+Risk Level: CRITICAL
+Description: Link in message leads to a page asking for OTP or banking password.
+Recommended Action: Do not enter anything. Close the page immediately. Report to MyCERT and PDRM.
+
+RED FLAG ID: PH-03
+Risk Level: HIGH
+Description: Email sender domain does not match the official company domain (e.g. maybank@gmail.com instead of @maybank.com.my).
+Recommended Action: Do not open attachments or click links. Report the email as phishing.
+
+RED FLAG ID: PH-04
+Risk Level: CRITICAL
+Description: Caller claiming to be a bank officer or government officer asks for OTP over the phone.
+Recommended Action: Hang up immediately. Real banks and government officers never ask for OTP.
+
+RED FLAG ID: PH-05
+Risk Level: MEDIUM
+Description: Message creates extreme urgency — must act within 24 hours to avoid account closure.
+Recommended Action: Verify directly with official hotline. Urgency is a manipulation tactic.
+
+RED FLAG ID: PH-06
+Risk Level: HIGH
+Description: URL of website uses HTTP instead of HTTPS or contains a misspelled domain name.
+Recommended Action: Close the website immediately. Navigate to the official URL manually.
+
+RED FLAG ID: PH-07
+Risk Level: LOW
+Description: Generic greeting in message — says Dear Customer instead of your real name.
+Recommended Action: Treat as suspicious. Official bank messages use your registered name.
+
+RED FLAG ID: PH-08
+Risk Level: HIGH
+Description: Message asks you to download a new security app via a link in SMS or WhatsApp.
+Recommended Action: Do not download. Install apps only from official Play Store or App Store.
+
+RED FLAG ID: PH-09
+Risk Level: HIGH
+Description: Message asks you to call a specific number that is not on the back of your bank card.
+Recommended Action: Do not call that number. Use only the official number from the back of your card.
+
+RED FLAG ID: PH-10
+Risk Level: CRITICAL
+Description: You have already entered your OTP or banking credentials on a suspicious website.
+Recommended Action: Call bank fraud hotline immediately to freeze account. Change all passwords. Report to PDRM.
+
+================================================================================
+SCAM TYPE: PARCEL SCAM (FAKE DELIVERY)
+================================================================================
+
+RED FLAG ID: PA-01
+Risk Level: MEDIUM
+Description: Received SMS or WhatsApp about a parcel you did not order or are not expecting.
+Recommended Action: Do not click any links. Verify on the official courier website directly.
+
+RED FLAG ID: PA-02
+Risk Level: HIGH
+Description: Parcel notification contains a link to click to reschedule or verify delivery.
+Recommended Action: Do not click. Navigate to the official courier website and enter tracking number manually.
+
+RED FLAG ID: PA-03
+Risk Level: HIGH
+Description: Asked to pay customs duty or delivery fee for an unexpected parcel via bank transfer or e-wallet.
+Recommended Action: Do not pay. Real customs notices come through official channels, not WhatsApp.
+
+RED FLAG ID: PA-04
+Risk Level: HIGH
+Description: Asked to download a parcel tracking app from a link in a message (not from Play Store).
+Recommended Action: Do not download APK files from unknown sources. Use official app stores only.
+
+RED FLAG ID: PA-05
+Risk Level: CRITICAL
+Description: Received a call about illegal items found in a parcel registered under your name.
+Recommended Action: Hang up. This is the Macau Scam variant. Report to PDRM 999 and NSRC 997.
+
+RED FLAG ID: PA-06
+Risk Level: CRITICAL
+Description: Caller says you must transfer money to a safe account to avoid arrest related to a parcel.
+Recommended Action: This is always a scam. Police never ask for bank transfers. Call PDRM 999.
+
+RED FLAG ID: PA-07
+Risk Level: MEDIUM
+Description: Tracking number in the message cannot be verified on the official courier website.
+Recommended Action: Contact courier directly using their official hotline. Do not click any links.
+
+RED FLAG ID: PA-08
+Risk Level: HIGH
+Description: Asked to pay for a parcel using e-wallet or cryptocurrency instead of official payment gateway.
+Recommended Action: Real courier fees are never requested via e-wallet or crypto. Stop immediately.
+
+RED FLAG ID: PA-09
+Risk Level: HIGH
+Description: Fake delivery notification asks for your IC number or full banking details to reschedule.
+Recommended Action: Do not provide. Rescheduling delivery never requires IC or banking information.
+
+RED FLAG ID: PA-10
+Risk Level: CRITICAL
+Description: You have already paid a delivery or customs fee to a suspected scammer.
+Recommended Action: Call NSRC 997. Contact bank. File police report at ccid.rmp.gov.my.
+
+================================================================================
+SCAM TYPE: FAKE BANK ALERT
+================================================================================
+
+RED FLAG ID: BA-01
+Risk Level: HIGH
+Description: Received SMS from bank name sender ID with a clickable link for security verification.
+Recommended Action: Do not click. Real banks never send clickable login links in security alert SMS.
+
+RED FLAG ID: BA-02
+Risk Level: CRITICAL
+Description: Caller claims to be a bank officer and asks for OTP to stop a suspicious transaction.
+Recommended Action: Hang up immediately. No bank officer will ever ask for your OTP.
+
+RED FLAG ID: BA-03
+Risk Level: CRITICAL
+Description: You have already provided your OTP to a caller or entered it on a suspicious website.
+Recommended Action: Call bank fraud hotline to freeze account. Call NSRC 997. Check for unauthorised transactions.
+
+RED FLAG ID: BA-04
+Risk Level: HIGH
+Description: Website that looks like a bank login page has a slightly different URL from the official one.
+Recommended Action: Close immediately. Type the official bank URL directly into the browser.
+
+RED FLAG ID: BA-05
+Risk Level: HIGH
+Description: Bank security alert message provides a different hotline number than what is on your bank card.
+Recommended Action: Do not call that number. Use only the number printed on the back of your bank card.
+
+RED FLAG ID: BA-06
+Risk Level: CRITICAL
+Description: Caller asks you to transfer money to a safe account to protect your funds from fraud.
+Recommended Action: This is always a scam. Banks never ask for safe account transfers. Call bank directly.
+
+RED FLAG ID: BA-07
+Risk Level: HIGH
+Description: Banking app was installed from a link in a WhatsApp message, not from the official app store.
+Recommended Action: Uninstall app. Factory reset device. Call bank to freeze account immediately.
+
+RED FLAG ID: BA-08
+Risk Level: HIGH
+Description: Received email claiming unusual account activity with an attachment to download and open.
+Recommended Action: Do not open attachment. Log into banking app directly to check account status.
+
+RED FLAG ID: BA-09
+Risk Level: HIGH
+Description: Bank alert SMS says account is suspended and lists a phone number to call for resolution.
+Recommended Action: Ignore the number in the SMS. Call the official bank hotline from the back of your card.
+
+RED FLAG ID: BA-10
+Risk Level: CRITICAL
+Description: Fake login website immediately asks for OTP after login before showing your actual account.
+Recommended Action: Close the page. This is credential harvesting. Call bank. Change all passwords.
+
+================================================================================
+SCAM TYPE: FAKE JOB OFFER
+================================================================================
+
+RED FLAG ID: JS-01
+Risk Level: HIGH
+Description: Job offer received via unsolicited WhatsApp or Telegram message from an unknown person.
+Recommended Action: Be very cautious. Legitimate jobs are applied for — they do not cold-contact you.
+
+RED FLAG ID: JS-02
+Risk Level: CRITICAL
+Description: Asked to pay any registration, training, or equipment fee before starting work.
+Recommended Action: Stop immediately. Legitimate employers never charge job seekers any fees.
+
+RED FLAG ID: JS-03
+Risk Level: HIGH
+Description: Job offers very high daily or monthly pay for simple online tasks like clicking or reviewing.
+Recommended Action: This is a classic online part-time scam pattern. Do not engage further.
+
+RED FLAG ID: JS-04
+Risk Level: CRITICAL
+Description: Offered a job overseas in Cambodia, Myanmar, Thailand, or Philippines without a formal employment contract.
+Recommended Action: Do not travel. This is a human trafficking red flag. Report to JTKSM and PDRM.
+
+RED FLAG ID: JS-05
+Risk Level: CRITICAL
+Description: Asked to receive money into your personal bank account and forward it to another account for a commission.
+Recommended Action: This is money mule activity. It is illegal under AMLATFPUAA 2001. Refuse and report to PDRM.
+
+RED FLAG ID: JS-06
+Risk Level: CRITICAL
+Description: Completed initial tasks and earned small amounts, then asked to deposit money to unlock higher-earning tasks.
+Recommended Action: Stop. This is the deposit trap. Any money deposited will not be returned.
+
+RED FLAG ID: JS-07
+Risk Level: MEDIUM
+Description: Company name of employer cannot be found in the SSM company registry at ssm.com.my.
+Recommended Action: Do not proceed. Always verify company registration before accepting a job offer.
+
+RED FLAG ID: JS-08
+Risk Level: MEDIUM
+Description: Recruiter only communicates via WhatsApp and has no official company email or office address.
+Recommended Action: Request official communication channels. Verify company through independent search.
+
+RED FLAG ID: JS-09
+Risk Level: HIGH
+Description: Overseas job recruiter is not registered with JTKSM as a licensed overseas employment agency.
+Recommended Action: Only use JTKSM-registered agencies for overseas employment. Verify at jtksm.gov.my.
+
+RED FLAG ID: JS-10
+Risk Level: CRITICAL
+Description: Recruiter asks to keep your passport for safekeeping after you arrive overseas.
+Recommended Action: Never surrender your passport. This is a trafficking tactic. Contact Malaysian Embassy immediately.
+
+================================================================================
+SCAM TYPE: INVESTMENT SCAM
+================================================================================
+
+RED FLAG ID: IV-01
+Risk Level: HIGH
+Description: Investment promises guaranteed returns regardless of market conditions.
+Recommended Action: No legitimate investment guarantees returns. This is a hallmark of investment fraud.
+
+RED FLAG ID: IV-02
+Risk Level: HIGH
+Description: Promised returns exceed 10% per month or 30% per year — far above any legitimate market rate.
+Recommended Action: Such returns are mathematically unsustainable. This is likely a Ponzi scheme or fraudulent platform.
+
+RED FLAG ID: IV-03
+Risk Level: HIGH
+Description: Investment operator is not listed on SC Malaysia's official licensed entities list.
+Recommended Action: Do not invest. Verify at sc.com.my before committing any funds.
+
+RED FLAG ID: IV-04
+Risk Level: CRITICAL
+Description: Asked to pay a fee, tax, or upgrade charge to withdraw your investment returns.
+Recommended Action: This is the final stage of the scam. Stop all payments. Funds are likely already lost.
+
+RED FLAG ID: IV-05
+Risk Level: CRITICAL
+Description: New online friend or romantic partner introduces and recommends a specific investment platform.
+Recommended Action: This is the Pig Butchering scam pattern. Stop investing immediately. Seek a trusted second opinion.
+
+RED FLAG ID: IV-06
+Risk Level: HIGH
+Description: Investment app was downloaded from outside the official Google Play or Apple App Store.
+Recommended Action: Uninstall. Only use investment platforms available on official stores with verified reviews.
+
+RED FLAG ID: IV-07
+Risk Level: MEDIUM
+Description: Social media advertisement features a celebrity endorsing an investment scheme.
+Recommended Action: Verify endorsement on the celebrity's official verified account. Check if operator is SC-licensed.
+
+RED FLAG ID: IV-08
+Risk Level: HIGH
+Description: Told to keep the investment secret and not tell family members or friends.
+Recommended Action: Secrecy is a manipulation tactic. Any legitimate investment can be openly discussed.
+
+RED FLAG ID: IV-09
+Risk Level: MEDIUM
+Description: Pressure to invest quickly due to limited slots or a promotion expiring today.
+Recommended Action: Legitimate investments do not require rushed decisions. Take time to verify first.
+
+RED FLAG ID: IV-10
+Risk Level: CRITICAL
+Description: Platform balance grows unrealistically fast but withdrawal requests are delayed or blocked.
+Recommended Action: The platform is fake. Stop all deposits. Report to SC Malaysia and PDRM.
+
+================================================================================
+SCAM TYPE: ROMANCE SCAM
+================================================================================
+
+RED FLAG ID: RS-01
+Risk Level: HIGH
+Description: Person met online refuses or always has excuses for not doing a live video call.
+Recommended Action: Request a live unscripted video call. Consistent refusal means this person is likely fake.
+
+RED FLAG ID: RS-02
+Risk Level: CRITICAL
+Description: Online romantic partner's profile photos appear in a reverse image search under a different name.
+Recommended Action: These photos are stolen. This person is a scammer using a fake identity. Stop all contact.
+
+RED FLAG ID: RS-03
+Risk Level: MEDIUM
+Description: Online partner declares love or deep affection within days or weeks of first contact.
+Recommended Action: This is love bombing. Maintain caution. Never send money to someone not met in person.
+
+RED FLAG ID: RS-04
+Risk Level: MEDIUM
+Description: Online partner claims to work on an oil rig, military deployment, or overseas remote location.
+Recommended Action: This is a common cover story for romance scammers. Verify identity through third-party means.
+
+RED FLAG ID: RS-05
+Risk Level: CRITICAL
+Description: Online romantic partner has a financial emergency and asks for money to be sent to them.
+Recommended Action: Do not send money to anyone you have never met in person. Report to PDRM.
+
+RED FLAG ID: RS-06
+Risk Level: CRITICAL
+Description: Person asks you to send iTunes, Google Play, Steam, or Amazon gift cards as payment.
+Recommended Action: Gift cards are requested because they are untraceable. This is always a scam.
+
+RED FLAG ID: RS-07
+Risk Level: CRITICAL
+Description: Romantic partner introduces a specific investment platform and encourages you to invest together.
+Recommended Action: This is the Pig Butchering variant. Stop all investment activity. Report to SC Malaysia and PDRM.
+
+RED FLAG ID: RS-08
+Risk Level: CRITICAL
+Description: Online partner threatens to release intimate photos or videos unless you pay them money.
+Recommended Action: Sextortion — do not pay. Report to PDRM CyberSafe and MCMC immediately.
+
+RED FLAG ID: RS-09
+Risk Level: CRITICAL
+Description: You have already sent money to an online romantic partner you have never met in person.
+Recommended Action: Stop all transfers. Contact NSRC 997. File PDRM report. Seek emotional support.
+
+RED FLAG ID: RS-10
+Risk Level: CRITICAL
+Description: Online partner sends money to you first and asks you to forward it to someone else.
+Recommended Action: This is money mule setup. Refuse and do not forward any funds. Report to PDRM.
+
+================================================================================
+SUMMARY RISK COUNT TABLE
+================================================================================
+
+Scam Type        | CRITICAL | HIGH | MEDIUM | LOW | TOTAL
+-----------------|----------|------|--------|-----|------
+Phishing         |    3     |  5   |   1    |  1  |  10
+Parcel Scam      |    4     |  5   |   1    |  0  |  10
+Bank Alert       |    4     |  5   |   0    |  0  |  10 (note: BA-03 promoted to CRITICAL)
+Job Scam         |    5     |  3   |   2    |  0  |  10
+Investment Scam  |    4     |  4   |   2    |  0  |  10
+Romance Scam     |    7     |  1   |   2    |  0  |  10
+TOTAL            |   27     |  23  |   8    |  1  |  60
+
+================================================================================
+QUICK REFERENCE — REPORTING CONTACTS
+================================================================================
+
+NSRC (National Scam Response Centre): 997 (8 AM - 8 PM daily)
+PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
+MyCERT: mycert.org.my | +603-8992-6969
+BNM BNMTELELINK: 1-300-88-5465
+SC Malaysia: 1-800-88-5465 | sc.com.my
+Semak Mule: semak.rmp.gov.my
+JTKSM (job scams): 03-8886-5000 | jtksm.gov.my
+
+================================================================================
+END OF FILE: kb_07_redflag_table.txt
+================================================================================
