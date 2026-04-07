@@ -23,9 +23,9 @@ For the input-based scam types, the `Autonomous Node` is allowed to apply the pr
 
 ## Autonomous Result Node Transition Setup
 
-After testing, the `Autonomous Node` can continue to another node when a transition is configured properly. Each scam result node should transition to a common `Check_Another_Scam` node after the assessment result is given.
+After testing, the `Autonomous Node` can continue to another node when a transition is configured properly. Each scam result node transitions to a common `Check_Another_Scam` node after the assessment result is given.
 
-Recommended result flow:
+Build this result flow:
 
 ```text
 Scam questions
@@ -34,16 +34,6 @@ Scam questions
 -> if yes: Scam Type Menu
 -> if no: End
 ```
-
-If Botpress provides an AI text generation card inside a `Standard Node`, prefer this structure:
-
-```text
-Standard Result Node
--> AI generation card using the production-rule rubric
--> Check_Another_Scam
-```
-
-If using an `Autonomous Node` as the result node, make sure it is configured to transition to the next step if the UI supports it. If it cannot be connected or transitioned reliably, replace it with a Standard Node that contains an AI-generation card or use a fixed Text result as a fallback.
 
 In each result `Autonomous Node`, add this exact sentence to the node instructions:
 
@@ -57,7 +47,7 @@ Also add a transition from the result node to `Check_Another_Scam`. Use this exa
 After giving the assessment result, use workflow.transition to continue to the connected Check_Another_Scam node.
 ```
 
-This transition condition was tested successfully in the phishing branch.
+Use this transition setup for every scam result node.
 
 Create a common `Standard Node` named:
 
@@ -1278,22 +1268,10 @@ Romance_Intro -> Romance_Questions
 
 ## Romance Result Node
 
-Create a result node named:
+Create an `Autonomous Node` named:
 
 ```text
 Romance_Result
-```
-
-Preferred type:
-
-```text
-Standard Node with AI-generation card, if available
-```
-
-Alternative type:
-
-```text
-Autonomous Node, only if it can transition to Check_Another_Scam reliably
 ```
 
 Connect:
@@ -1302,7 +1280,7 @@ Connect:
 Romance_Questions -> Romance_Result
 ```
 
-Use this instruction text for the AI-generated result:
+Use this instruction text:
 
 ```text
 You are ScamShield Bot, a Malaysian scam-awareness assistant.
