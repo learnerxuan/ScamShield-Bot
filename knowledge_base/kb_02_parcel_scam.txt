@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 02
 TOPIC: FAKE PARCEL DELIVERY SCAMS
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: PDRM, MCMC, NSRC 997, FTC, Pos Malaysia Advisories, FBI IC3, MCMC
 ================================================================================
 
@@ -138,14 +138,17 @@ SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
 RULE PA-01 [CRITICAL RISK]:
 IF user received a call from someone claiming to be police or customs AND they say
 illegal items were found in a parcel linked to user's name AND they request bank
-transfer to a "safe account" THEN risk level is CRITICAL.
+transfer to a "safe account" THEN risk level is HIGH. If the user already
+transferred money, THEN risk level is CRITICAL.
 ACTION: Hang up immediately. This is the Macau Scam variant. Report to PDRM 999
 and NSRC 997 immediately.
 
 RULE PA-02 [HIGH RISK]:
 IF user received an SMS or WhatsApp about parcel delivery AND the message contains
-a link AND the link leads to a site asking for banking credentials or OTP THEN
-risk level is HIGH.
+a link AND the link leads to a site asking for banking credentials, OTP, card
+details, or payment through an unofficial-looking page THEN risk level is HIGH.
+If the user already entered banking credentials, OTP, or card details, THEN risk
+level is CRITICAL.
 ACTION: Do NOT enter any details. Do not click. Verify directly with courier using
 their official website or customer service hotline.
 
@@ -156,7 +159,10 @@ ACTION: Do NOT download. APK files from unknown sources are commonly malware or 
 
 RULE PA-04 [HIGH RISK]:
 IF user received a request to pay customs duty, delivery fee, or any charge for
-a parcel they did not order THEN risk level is HIGH.
+a parcel they did not order through a suspicious link, unknown sender, or
+unofficial payment method THEN risk level is HIGH. If the user was expecting the
+parcel and the message provides no suspicious link, app install request, or
+credential/payment request, risk level is LOW-MEDIUM.
 ACTION: Do NOT pay. Verify directly with the official courier company using
 their official hotline.
 
@@ -220,8 +226,11 @@ SECTION 7: WHAT TO DO IF YOU ARE A VICTIM
 ================================================================================
 
 IF YOU PAID A FEE (financial loss):
-1. Call NSRC 997 immediately — 24/7 hotline to freeze mule accounts
-2. Call your bank's fraud hotline to dispute the transaction and freeze account
+1. Call NSRC 997 immediately between 8:00am and 8:00pm daily for urgent online
+   financial scam response.
+2. Call your bank's fraud/scam hotline using the number on your bank card,
+   official app, official website, or ABM fraud/scam directory. Do NOT call any
+   number from the suspicious message.
 3. File a police report at PDRM (ccid.rmp.gov.my or nearest police station)
 4. Report to MCMC at aduan.mcmc.gov.my
 
@@ -236,12 +245,13 @@ IF YOU INSTALLED A SUSPICIOUS APP:
 2. Factory reset your device (WARNING: back up data to a different device first)
 3. Call your bank to freeze accounts from a clean device
 4. Enable enhanced security on banking apps (if available)
-5. Report to MyCERT at mycert.org.my
+5. Report to CyberSecurity Malaysia Cyber999/MyCERT at cyber999@cybersecurity.my,
+   1-300-88-2999, or emergency mobile +6019-266 5850.
 
 IF YOU SPOKE TO A FAKE POLICE OFFICER / CUSTOMS OFFICER:
 1. Stop all communication immediately
 2. Note down all details: phone numbers, names used, what was said
-3. Report to real PDRM: 999 (emergency) or 03-2610-1559 (CCID)
+3. Report to real PDRM: 999 (emergency) or 03-2610 1559 / 03-2610 1599 (CCID)
 4. If money was transferred, call NSRC 997 immediately
 
 ================================================================================
@@ -262,9 +272,9 @@ SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
 ================================================================================
 
 NSRC (National Scam Response Centre): 997 (call IMMEDIATELY if you paid a scammer)
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599 | ccid.rmp.gov.my
 MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
-MyCERT (malware/app incidents): mycert.org.my | +603-8992-6969
+CyberSecurity Malaysia Cyber999/MyCERT (malware/app incidents): cyber999@cybersecurity.my | 1-300-88-2999; emergency mobile +6019-266 5850
 Semak Mule (check if a number is a mule): semak.rmp.gov.my
 
 ================================================================================

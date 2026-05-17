@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 05
 TOPIC: INVESTMENT SCAMS
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: SC Malaysia, BNM, IOSCO, FTC, SEC, FBI IC3, Interpol, ACCC Scamwatch
 ================================================================================
 
@@ -169,16 +169,21 @@ PLATFORM CONCERNS:
 SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
 ================================================================================
 
-RULE IV-01 [CRITICAL RISK]:
+RULE IV-01 [HIGH / CRITICAL RISK]:
 IF user is being asked to pay a fee (tax, upgrade, processing) to withdraw their
-investment returns THEN risk level is CRITICAL.
-ACTION: Stop all payments. This is the final stage of a scam. No legitimate
-investment platform charges fees to release your own money. Funds are likely lost.
+investment returns THEN risk level is HIGH. If the user already paid the
+withdrawal fee/tax/deposit or already transferred investment funds and cannot
+withdraw, THEN risk level is CRITICAL.
+ACTION: Stop all payments. This may be the final stage of a scam. No legitimate
+investment platform should pressure users to pay extra fees through unofficial
+channels to release their own money.
 
-RULE IV-02 [CRITICAL RISK]:
+RULE IV-02 [HIGH / CRITICAL RISK]:
 IF someone user met online (romantically or as a new friend) is recommending a
 specific investment platform AND user is developing emotional attachment THEN
-risk level is CRITICAL — this is the Pig Butchering pattern.
+risk level is HIGH because this may match the Pig Butchering pattern. If the user
+already transferred money, paid fees, or cannot withdraw funds, THEN risk level
+is CRITICAL.
 ACTION: Immediately cease investment activity. Seek advice from family or trusted
 friends. Report to PDRM if money has been transferred.
 
@@ -254,10 +259,10 @@ STOP INVESTING IMMEDIATELY:
 2. Do not believe promises that paying more will recover your funds
 
 TAKE ACTION:
-1. Report to SC Malaysia: 1-800-88-5465 or via eTribuan at sc.com.my
-2. Report to BNM: 1-300-88-5465 (BNMTELELINK)
-3. Report to PDRM (CCID): ccid.rmp.gov.my or 03-2610-1559
-4. If money was recently transferred: call NSRC 997 immediately
+1. Report to SC Malaysia: 03-6204 8999 or via eTribuan at sc.com.my
+2. Report to BNM TELELINK: 1-300-88-5465 / +603-2174-1717
+3. Report to PDRM CCID: ccid.rmp.gov.my or 03-2610 1559 / 03-2610 1599
+4. If money was recently transferred: call NSRC 997 between 8:00am and 8:00pm daily
 5. Report to MCMC if scam was via online platform: aduan.mcmc.gov.my
 
 PRESERVE EVIDENCE:
@@ -306,10 +311,10 @@ INVESTOR RIGHTS:
 SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
 ================================================================================
 
-SC Malaysia (investment fraud): 1-800-88-5465 | sc.com.my | eTribuan portal
-BNM BNMTELELINK: 1-300-88-5465 | bnm.gov.my
+SC Malaysia (investment fraud): 03-6204 8999 | sc.com.my | eTribuan portal
+BNM TELELINK: 1-300-88-5465 / +603-2174-1717 | bnm.gov.my
 NSRC (National Scam Response Centre): 997 (call immediately if recently paid)
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599 | ccid.rmp.gov.my
 MCMC: aduan.mcmc.gov.my
 AKPK (debt counselling): 1-800-88-2575 | akpk.org.my
 Ombudsman for Financial Services: ofs.org.my | 03-2272-2811

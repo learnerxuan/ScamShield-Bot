@@ -1,5 +1,5 @@
 # ScamShield Bot — Official Resource Links
-**Last Updated:** March 2026
+**Last Updated:** May 2026
 **Total Resources:** 194 official links across 6 scam categories
 **Sources:** Government (.gov.my), regulatory bodies, law enforcement, central banks, international agencies only
 
@@ -9,12 +9,13 @@
 
 | Agency | Contact | Link |
 |---|---|---|
-| **NSRC 997** (National Scam Response Centre) | Call **997** (8am–8pm daily) | https://nfcc.jpm.gov.my/index.php/en/about-nsrc |
-| **BNM BNMLINK** | 1-300-88-5465 / bnmtelelink@bnm.gov.my | https://www.bnm.gov.my/web/financial-fraud-alert |
-| **PDRM CCID** | 013-211 1222 (WhatsApp only) | https://ccid.rmp.gov.my/ |
+| **NSRC 997** (National Scam Response Centre) | Call **997** (8am-8pm daily) | https://nfcc.jpm.gov.my/index.php/en/about-nsrc |
+| **ABM Bank Fraud/Scam Directory** | Verified bank fraud/scam contact numbers | https://www.abm.org.my/safe-online-banking/directory/ |
+| **BNM TELELINK** | 1-300-88-5465 / +603-2174-1717 | https://bnmlink.bnm.gov.my/site/livechat?lang=en |
+| **PDRM CCID Scam Response Centre** | 03-2610 1559 / 03-2610 1599 | https://www.rmp.gov.my/news-detail/2022/09/19/besmartstayalert-letsfightscammertogether-hebahan-scam-alert-hubungi-ccid-scam-response-center-untuk-ketahui-modus-operandi-jenayah-komersil |
 | **Semak Mule (PDRM)** | Verify bank accounts / phone numbers | https://semakmule.rmp.gov.my/ |
-| **MCMC** | 1-800-88-8030 | https://aduan.skmm.gov.my/ |
-| **MyCERT / CyberSecurity Malaysia** | +6019-266 5850 (24/7) | https://www.mycert.org.my/ |
+| **MCMC Aduan** | 1-800-188-030 | https://www.mcmc.gov.my/ms/contact/headquarter |
+| **CyberSecurity Malaysia Cyber999 / MyCERT** | 1-300-88-2999 / +6019-266 5850 | https://www.cybersecurity.my/portal-main/services/cyber999-overview |
 | **SC Malaysia** | +603-6204 8999 | https://www.sc.com.my/investment-checker |
 
 ---

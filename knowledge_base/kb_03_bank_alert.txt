@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 03
 TOPIC: FAKE BANK ALERT SCAMS
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: BNM, AIBIM, PDRM, FTC, OCC (US), FFIEC, MyCERT, MCMC
 ================================================================================
 
@@ -176,9 +176,11 @@ ON THE PHONE:
 SECTION 6: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
 ================================================================================
 
-RULE BA-01 [CRITICAL RISK]:
+RULE BA-01 [HIGH RISK]:
 IF user received a call from someone claiming to be a bank officer AND they are
-asking for OTP, PIN, or password THEN risk level is CRITICAL.
+asking for OTP, PIN, or password THEN risk level is HIGH. If the user already
+shared OTP, PIN, password, card details, or banking details, THEN risk level is
+CRITICAL.
 ACTION: Hang up immediately. No bank officer will ever ask for your OTP.
 Call back the bank using the number on the back of your card.
 
@@ -190,9 +192,11 @@ Check transaction history for unauthorised transfers.
 
 RULE BA-03 [HIGH RISK]:
 IF user received an SMS from "bank name" AND the SMS contains a link to click
-for security purposes THEN risk level is HIGH.
-ACTION: Do NOT click. Real banks do not send clickable links in security SMS.
-Verify by logging into your banking app directly or calling bank hotline.
+for security purposes AND the link/domain is suspicious, unofficial, shortened,
+or combined with urgency, credential requests, or transaction threats THEN risk
+level is HIGH.
+ACTION: Do NOT use the link. Verify by logging into your banking app directly or
+calling the bank using the number on your card or official website.
 
 RULE BA-04 [HIGH RISK]:
 IF user is on a website that looks like a bank login page AND the URL does not
@@ -201,13 +205,16 @@ ACTION: Do NOT enter credentials. Close the browser tab. Go to the official URL.
 
 RULE BA-05 [HIGH RISK]:
 IF user received a message saying their bank account is suspended AND message
-provides a phone number to call that is different from the number on their bank card
-THEN risk level is HIGH.
+provides a phone number to call that is different from the number on their bank
+card or official bank website THEN risk level is HIGH. If the message only
+advises the user to check the official app or call the official card number and
+does not request secrets or transfers, risk level is LOW-MEDIUM.
 ACTION: Do NOT call the number in the message. Call the official number on your card.
 
-RULE BA-06 [HIGH RISK]:
+RULE BA-06 [HIGH / CRITICAL RISK]:
 IF user is asked to transfer money to a "safe account" to protect from fraud
-THEN risk level is CRITICAL. This is always a scam.
+THEN risk level is HIGH. If the user already transferred money, THEN risk level
+is CRITICAL. The "safe account" claim is always a scam indicator.
 ACTION: No bank will ever ask you to transfer to a safe account. Refuse and call
 the real bank immediately.
 
@@ -219,7 +226,8 @@ Report the phishing email to your bank.
 
 RULE BA-08 [MEDIUM RISK]:
 IF user installed a banking app from a link in a message (not from Play Store/App Store)
-THEN risk level is HIGH.
+THEN risk level is CRITICAL. If the message asks the user to install such an app
+but the user has not installed it, THEN risk level is HIGH.
 ACTION: Uninstall immediately. Factory reset device. Contact bank to freeze account.
 
 ================================================================================
@@ -242,16 +250,25 @@ HOW TO VERIFY:
 5. Visit the nearest bank branch in person if you are unsure
 
 CHECKING OFFICIAL BANK HOTLINES (Malaysia):
-- Maybank: 1-300-88-6688
-- CIMB: 1-300-880-900
-- Public Bank: 1-800-22-5555
-- RHB: 1-800-88-9950
-- Hong Leong: 1-300-88-8111
-- AmBank: 1-800-88-9999
-- Bank Islam: 1-300-88-2265
-- Bank Rakyat: 1-800-88-5565
-- BSN: 1-300-88-1900
-- Alliance Bank: 1-300-80-0110
+Primary rule: use the number printed on the back of your bank card, the bank's
+official app, or the bank's official website. Do NOT use phone numbers provided
+inside suspicious messages, SMS, emails, or calls.
+
+Verified fraud/scam contact directory:
+- ABM official bank fraud/scam directory: https://www.abm.org.my/safe-online-banking/directory/
+
+Common verified bank fraud/scam contacts from ABM/official bank pages:
+- Maybank: 03-5891 4744
+- CIMB: 03-6204 7788
+- Public Bank Case Management Unit: 03-2177 3555
+- RHB Bank: 03-9206 8118
+- Hong Leong Bank: 03-7626 8899
+- AmBank: 03-2178 8888
+- Alliance Bank: 03-5516 9800
+- UOB Malaysia: 03-2612 8100
+- Bank Islam Contact Centre: 03-2690 0900
+- BSN Contact Centre / Report Fraud and Scam: 1300-88-1900 or 03-2613-1900
+- Bank Rakyat Fraud Hotline: 1-300-80-2273
 
 ================================================================================
 SECTION 8: WHAT TO DO IF YOU ARE A VICTIM
@@ -261,15 +278,17 @@ IMMEDIATE ACTIONS — FIRST 30 MINUTES ARE CRITICAL:
 1. Call your bank's 24-hour fraud hotline from the number on your bank card
    (not from any number provided in suspicious messages)
 2. Ask the bank to: freeze your account, block online transactions, flag the case
-3. Call NSRC 997 — they can coordinate with banks to freeze mule accounts before
-   the scammer withdraws the money
+3. Call NSRC 997 between 8:00am and 8:00pm daily for urgent online financial
+   scams involving recent unauthorised transactions or money transfers. NSRC can
+   coordinate with banks to attempt to freeze mule accounts before the scammer
+   withdraws the money.
 4. Change your online banking password and PIN from a clean, uncompromised device
 
 REPORTING:
 - PDRM (police report): ccid.rmp.gov.my or nearest police station
-- BNM BNMTELELINK: 1-300-88-5465 (for unresolved disputes with banks)
+- BNM TELELINK: 1-300-88-5465 / +603-2174-1717 (for unresolved disputes with banks)
 - MCMC: aduan.mcmc.gov.my (if fraud involved SMS or online communication)
-- NSRC 997 (fastest response for freezing mule accounts)
+- NSRC 997 (8:00am-8:00pm daily for urgent online financial scam response)
 
 EVIDENCE TO PRESERVE:
 - Screenshot all suspicious messages (SMS, WhatsApp, email)
@@ -282,7 +301,7 @@ EVIDENCE TO PRESERVE:
 BANK DISPUTE PROCESS:
 - File a formal dispute with your bank in writing
 - Banks are required under BNM guidelines to investigate and respond within 14 days
-- If unsatisfied with bank's response, escalate to BNM BNMTELELINK: 1-300-88-5465
+- If unsatisfied with bank's response, escalate to BNM TELELINK: 1-300-88-5465 / +603-2174-1717
 - For legal action: consult a lawyer about potential claims
 
 ================================================================================
@@ -321,9 +340,9 @@ Enable automatic app updates to ensure you have the latest security patches.
 SECTION 10: QUICK REFERENCE — REPORTING CONTACTS
 ================================================================================
 
-NSRC (National Scam Response Centre): 997 (24/7 — call IMMEDIATELY)
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
-BNM BNMTELELINK: 1-300-88-5465 (banking-related disputes)
+NSRC (National Scam Response Centre): 997 (8:00am-8:00pm daily for urgent online financial scam response)
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599
+BNM TELELINK: 1-300-88-5465 / +603-2174-1717 (banking complaints and unresolved disputes)
 MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
 Semak Mule: semak.rmp.gov.my
 

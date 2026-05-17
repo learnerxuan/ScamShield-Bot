@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 08
 TOPIC: GENERAL FAQ, POST-INCIDENT GUIDE & MALAYSIAN REPORTING DIRECTORY
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: NSRC 997, PDRM, BNM, MCMC, SC Malaysia, MyCERT, AKPK
 ================================================================================
 
@@ -169,7 +169,7 @@ RESULTS:
 1-2 YES answers: Moderate concern — verify the situation before proceeding
 3-4 YES answers: High risk — stop and verify with official sources before any action
 5+ YES answers: Very high risk — this is very likely a scam. Stop all activity.
-               Call NSRC 997 or PDRM 03-2610-1559 for assistance.
+               Call NSRC 997 or PDRM CCID 03-2610 1559 / 03-2610 1599 for assistance.
 
 ================================================================================
 SECTION 3: POST-INCIDENT STEP-BY-STEP GUIDE
@@ -192,16 +192,26 @@ NSRC hotline: 997 (available 8 AM to 8 PM daily)
 STEP 3 - CALL YOUR BANK'S FRAUD HOTLINE
 Request an immediate account freeze or transaction dispute.
 Provide the transaction date, amount, and destination account if known.
-Bank fraud hotlines (24-hour):
-- Maybank: 1-300-88-6688
-- CIMB: 1-300-880-900
-- Public Bank: 1-800-22-5555
-- RHB: 1-800-88-9950
-- Hong Leong: 1-300-88-8111
-- AmBank: 1-800-88-9999
-- BSN: 1-300-88-1900
-- Bank Islam: 1-300-88-2265
-- Bank Rakyat: 1-800-88-5565
+Bank fraud/scam contacts:
+Primary rule: use the number printed on your bank card, the official banking app,
+or the bank's official website. Do NOT call any number provided inside the
+suspicious message.
+
+ABM verified bank fraud/scam directory:
+https://www.abm.org.my/safe-online-banking/directory/
+
+Common verified bank fraud/scam contacts from ABM/official bank pages:
+- Maybank: 03-5891 4744
+- CIMB: 03-6204 7788
+- Public Bank Case Management Unit: 03-2177 3555
+- RHB Bank: 03-9206 8118
+- Hong Leong Bank: 03-7626 8899
+- AmBank: 03-2178 8888
+- Alliance Bank: 03-5516 9800
+- UOB Malaysia: 03-2612 8100
+- Bank Islam Contact Centre: 03-2690 0900
+- BSN Contact Centre / Report Fraud and Scam: 1300-88-1900 or 03-2613-1900
+- Bank Rakyat Fraud Hotline: 1-300-80-2273
 
 STEP 4 - SECURE YOUR ACCOUNTS
 If you shared passwords or banking credentials:
@@ -225,10 +235,10 @@ You will receive a police report reference number — keep this for all future f
 
 STEP 7 - REPORT TO RELEVANT AUTHORITIES
 Depending on scam type, also report to:
-- SC Malaysia (investment scams): sc.com.my or 1-800-88-5465
+- SC Malaysia (investment scams): sc.com.my or 03-6204 8999
 - MCMC (online/messaging scams): aduan.mcmc.gov.my or 1-800-188-030
 - BNM (banking-related fraud): bnmtelelink@bnm.gov.my or 1-300-88-5465
-- MyCERT (malware/device compromise): mycert.org.my or +603-8992-6969
+- CyberSecurity Malaysia Cyber999/MyCERT (malware/device compromise): cyber999@cybersecurity.my, 1-300-88-2999, or emergency mobile +6019-266 5850
 - JTKSM (job/labour scams): jtksm.gov.my or 03-8886-5000
 
 --- WITHIN THE FIRST WEEK ---
@@ -237,7 +247,7 @@ STEP 8 - FOLLOW UP WITH BANK
 Ask for the outcome of the dispute. Request a formal written response.
 If dissatisfied with your bank's response, escalate to:
 - Ombudsman for Financial Services (OFS): ofs.org.my | 03-2272-2811
-- BNM BNMTELELINK: 1-300-88-5465
+- BNM TELELINK: 1-300-88-5465 / +603-2174-1717
 
 STEP 9 - CONSULT FINANCIAL COUNSELLING (IF NEEDED)
 If you took loans or are in debt due to the scam:
@@ -265,8 +275,8 @@ Phone: 999
 Best for: Emergencies, immediate physical danger
 
 --- CYBERCRIME REPORTING ---
-PDRM Cybercrime (CCID)
-Phone: 03-2610-1559
+PDRM CCID Scam Response Centre
+Phone: 03-2610 1559 / 03-2610 1599
 Online: ccid.rmp.gov.my
 Best for: All cybercrime reports, police investigations
 
@@ -275,13 +285,13 @@ Website: semak.rmp.gov.my
 Best for: Verifying if a bank account or phone number is linked to scam reports
 
 --- FINANCIAL REGULATION ---
-BNM BNMTELELINK
-Phone: 1-300-88-5465
+BNM TELELINK
+Phone: 1-300-88-5465 / +603-2174-1717
 Email: bnmtelelink@bnm.gov.my
 Best for: Banking-related fraud, unlicensed financial activities, bank complaints
 
 Securities Commission Malaysia (SC)
-Phone: 1-800-88-5465
+Phone: 03-6204 8999
 Website: sc.com.my | eTribuan: etribuan.sc.com.my
 Best for: Investment fraud, unlicensed investment advisors, capital market fraud
 
@@ -300,9 +310,10 @@ Phone: 1-800-188-030
 Website: aduan.mcmc.gov.my
 Best for: Scam SMS, phishing websites, fraudulent online content
 
-MyCERT (Malaysian Computer Emergency Response Team)
-Phone: +603-8992-6969
-Website: mycert.org.my
+CyberSecurity Malaysia Cyber999 / MyCERT
+Phone: 1-300-88-2999; emergency mobile +6019-266 5850
+Email: cyber999@cybersecurity.my
+Website: cybersecurity.my/portal-main/services/cyber999-overview
 Best for: Malware, hacked accounts, cybersecurity incidents
 
 --- EMPLOYMENT AND LABOUR ---
@@ -370,7 +381,7 @@ is your civic duty and helps protect others in your community.
 RIGHT 4 - RIGHT TO DISPUTE:
 Under BNM's consumer protection guidelines, you have the right to file a formal
 dispute with your bank for unauthorised transactions. Banks are required to investigate
-and respond in writing. If unsatisfied, you can escalate to OFS or BNM BNMTELELINK.
+and respond in writing. If unsatisfied, you can escalate to OFS or BNM TELELINK.
 
 RIGHT 5 - RIGHT TO PROTECTION:
 Malaysia has multiple laws protecting citizens from financial fraud:

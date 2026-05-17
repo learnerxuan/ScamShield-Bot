@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 06
 TOPIC: ROMANCE SCAMS
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: PDRM, MCMC, FBI IC3, FTC, Interpol, ACCC Scamwatch, AARP Fraud
 ================================================================================
 
@@ -194,7 +194,8 @@ show a piece of paper with today's date). If refused, this person is likely fake
 RULE RS-03 [HIGH RISK]:
 IF user wants to send money to someone they met online AND has not met in person
 AND the person's photos return different results on reverse image search
-THEN risk level is CRITICAL.
+THEN risk level is HIGH. If the user already sent the money, THEN risk level is
+CRITICAL.
 ACTION: Stop all financial transactions. This person is using stolen photos.
 
 RULE RS-04 [HIGH RISK]:
@@ -205,7 +206,8 @@ investment hybrid scam designed to steal all deposited funds.
 
 RULE RS-05 [HIGH RISK]:
 IF user's new romantic partner is asking for iTunes gift cards, Google Play cards,
-Steam cards, or Amazon gift cards for any reason THEN risk level is CRITICAL.
+Steam cards, or Amazon gift cards for any reason THEN risk level is HIGH. If the
+user already bought or sent the gift card codes, THEN risk level is CRITICAL.
 ACTION: Reject the request. Gift cards are the payment method of choice for scammers
 because they are untraceable. No legitimate romantic partner asks for gift cards.
 
@@ -316,7 +318,7 @@ SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
 ================================================================================
 
 NSRC (National Scam Response Centre): 997
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599 | ccid.rmp.gov.my
 MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
 Befrienders Malaysia (24-hour emotional support): 03-7627-2929
 Talian Kasih: 15999 | WhatsApp 019-261-5999

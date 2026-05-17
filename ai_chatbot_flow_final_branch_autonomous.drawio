@@ -1,0 +1,212 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="final-simplified-botpress-flow" name="Final Botpress Flow">
+    <mxGraphModel dx="1030" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="2100" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="Start" vertex="1">
+          <mxGeometry height="60" width="100" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="welcome" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="Greeting / Welcome" vertex="1">
+          <mxGeometry height="60" width="260" x="80" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" value="Choose one scam type" vertex="1">
+          <mxGeometry height="80" width="320" x="50" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="d_phishing" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Phishing?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="d_parcel" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Parcel scam?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d_bank" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Fake bank alert?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="d_job" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Job scam?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="d_investment" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Investment scam?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="d_romance" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Romance scam?" vertex="1">
+          <mxGeometry height="100" width="220" x="100" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Paste suspicious message or link&lt;br&gt;Did you click the link?&lt;br&gt;Did you enter OTP, password, PIN, banking details, or personal information?" vertex="1">
+          <mxGeometry height="130" width="500" x="520" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="pa_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Paste parcel message or delivery link&lt;br&gt;Were you expecting this delivery?&lt;br&gt;Did you pay a fee?&lt;br&gt;Did you install any app or APK?" vertex="1">
+          <mxGeometry height="130" width="500" x="500" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="ba_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Paste bank alert, phone number, or link&lt;div&gt;Did you click the link or call the number?&lt;br&gt;Did you share banking details?&lt;br&gt;Did you transfer money?&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="500" x="480" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="job_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Unsolicited offer? Upfront fee?&lt;br&gt;Unrealistic pay? Money forwarding?&lt;br&gt;Unsafe overseas job? Task deposit?" vertex="1">
+          <mxGeometry height="120" width="500" x="480" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="inv_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Guaranteed returns? Licensed or registered?&lt;br&gt;Pressure to invest? Online contact?&lt;br&gt;Withdrawal fee? Suspicious platform?" vertex="1">
+          <mxGeometry height="120" width="500" x="460" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="rom_questions" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;br&gt;Online-only contact? Serious quickly?&lt;br&gt;Refused verification? Asked for money?&lt;br&gt;Investment suggestion? Already sent money/images/info?" vertex="1">
+          <mxGeometry height="120" width="520" x="450" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Phishing autonomous result&#xa;Review pasted link/message&#xa;Apply phishing production rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="pa_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Parcel autonomous result&#xa;Review delivery message/link&#xa;Apply parcel scam production rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ba_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Bank alert autonomous result&#xa;Review bank message/number/link&#xa;Apply bank impersonation rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="job_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Job scam autonomous result&#xa;Review job answers&#xa;Apply job scam production rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="inv_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Investment autonomous result&#xa;Review investment answers&#xa;Apply investment production rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="rom_result" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=10;" value="Romance autonomous result&#xa;Review relationship answers&#xa;Apply romance scam production rules&#xa;Generate risk result and advice" vertex="1">
+          <mxGeometry height="120" width="390" x="1170" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="check_node" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" value="Would you like to check another scam type?" vertex="1">
+          <mxGeometry height="80" width="350" x="1770" y="925" as="geometry" />
+        </mxCell>
+        <mxCell id="check_decision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;" value="Check another scam?" vertex="1">
+          <mxGeometry height="110" width="210" x="1840" y="1055" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="End" vertex="1">
+          <mxGeometry height="60" width="100" x="1895" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="e_start_welcome" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="welcome">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_welcome_menu" edge="1" parent="1" source="welcome" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_menu_phishing" edge="1" parent="1" source="menu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_phishing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_phishing_no" edge="1" parent="1" source="d_phishing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_parcel" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parcel_no" edge="1" parent="1" source="d_parcel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_bank" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bank_no" edge="1" parent="1" source="d_bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_job" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_job_no" edge="1" parent="1" source="d_job" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_investment" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inv_no" edge="1" parent="1" source="d_investment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="d_romance" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rom_no" edge="1" parent="1" source="d_romance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="menu" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="1570" />
+              <mxPoint x="40" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_phishing_yes" edge="1" parent="1" source="d_phishing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="ph_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_parcel_yes" edge="1" parent="1" source="d_parcel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="pa_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bank_yes" edge="1" parent="1" source="d_bank" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="ba_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_job_yes" edge="1" parent="1" source="d_job" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="job_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inv_yes" edge="1" parent="1" source="d_investment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="inv_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rom_yes" edge="1" parent="1" source="d_romance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="rom_questions" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ph_assess" edge="1" parent="1" source="ph_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="ph_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pa_assess" edge="1" parent="1" source="pa_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="pa_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ba_assess" edge="1" parent="1" source="ba_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="ba_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_job_assess" edge="1" parent="1" source="job_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="job_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inv_assess" edge="1" parent="1" source="inv_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="inv_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rom_assess" edge="1" parent="1" source="rom_questions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="rom_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ph_check" edge="1" parent="1" source="ph_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="420" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pa_check" edge="1" parent="1" source="pa_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="650" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ba_check" edge="1" parent="1" source="ba_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="880" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_job_check" edge="1" parent="1" source="job_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="1110" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_inv_check" edge="1" parent="1" source="inv_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="1340" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rom_check" edge="1" parent="1" source="rom_result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_node">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1690" y="1570" />
+              <mxPoint x="1690" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_check_decision" edge="1" parent="1" source="check_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="check_decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_check_yes" edge="1" parent="1" source="check_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="menu" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2150" y="1115" />
+              <mxPoint x="2150" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_check_no" edge="1" parent="1" source="check_decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="end" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

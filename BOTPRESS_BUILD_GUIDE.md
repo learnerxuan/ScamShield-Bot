@@ -8,6 +8,16 @@ The bot is being built as a rule-based scam assessment chatbot. The current impl
 
 For now, the detailed build has been started for all six scam branches: phishing, parcel scam, fake bank alert, fake job offer, investment scam, and romance scam.
 
+## Knowledge Base Files To Upload
+
+Upload the project knowledge base files into Botpress Knowledge Base. Make sure the emergency contact file is included because the autonomous result nodes rely on it for verified Malaysia scam-response contacts:
+
+```text
+knowledge_base/kb_00_emergency_contacts.txt
+```
+
+This file contains the validated NSRC 997 guidance, ABM bank fraud/scam directory, selected verified bank fraud contacts, BNM TELELINK, PDRM CCID, MCMC, and Cyber999/MyCERT contacts. If Botpress does not have this file, the AI may omit urgent hotline advice in Critical cases.
+
 ## Botpress Components Used So Far
 
 Use these Botpress components:
@@ -268,13 +278,15 @@ User action answers:
 - Entered OTP, password, PIN, banking details, or personal information: {{workflow.phishingEnteredSenInfo}}
 
 Production-rule rubric:
-- If the user entered OTP, password, PIN, banking details, or personal information, classify the risk as Critical.
-- If the user clicked the link but did not enter sensitive information, classify the risk as High.
-- If the pasted message asks for OTP, password, PIN, banking details, account verification, account unlocking, or login through a link, classify the risk as High or Critical depending on severity.
-- If the pasted message contains urgent, threatening, or fear-based wording such as account suspension, blocked account, refund expiry, legal action, or immediate verification, increase the risk.
-- If the pasted message contains a shortened URL, random-looking domain, unusual spelling, or a domain that does not clearly match the claimed organization, increase the risk.
-- If the pasted input is only a link and there is not enough context, do not say the link is safe. Explain that the assessment is limited and recommend verifying through the official app or website.
-- If there are no strong warning signs and the user did not click or enter information, classify the risk as Low or Medium, but still advise caution.
+- IF the user entered OTP, password, PIN, banking details, or personal information, THEN classify the risk as Critical.
+- Do not classify the case as High or Critical based only on the presence of a link or because the user clicked a link.
+- IF the user clicked the link but did not enter sensitive information, THEN classify the risk as Medium by default. IF the pasted message or visible URL also contains strong warning signs such as suspicious domain, shortened URL, impersonation, urgency, credential request, payment request, malware/app instruction, or threat, THEN escalate to High.
+- IF the pasted message asks for OTP, password, PIN, banking details, account verification, account unlocking, or login through a link AND the link/domain or surrounding message contains suspicious indicators, THEN classify the risk as High. IF the user already entered sensitive information, THEN classify as Critical.
+- IF the pasted message contains urgent, threatening, or fear-based wording such as account suspension, blocked account, refund expiry, legal action, or immediate verification AND it also asks the user to click a link, log in, pay, download, or share information, THEN increase the risk.
+- IF the pasted message contains a shortened URL, random-looking domain, unusual spelling, or a domain that does not clearly match the claimed organization, THEN increase the risk.
+- IF the link appears to match the claimed organization's official domain AND there are no other strong warning signs, THEN classify as Low or Medium and advise the user to access the service through the official app or by typing the official website manually.
+- IF the pasted input is only a link AND there is not enough context, THEN do not say the link is safe; explain that the assessment is limited and recommend verifying through the official app or website.
+- IF there are no strong warning signs AND the user did not click or enter information, THEN classify the risk as Low or Medium, but still advise caution.
 
 Important rules:
 - Do not claim that a link is definitely safe or definitely malicious.
@@ -282,6 +294,10 @@ Important rules:
 - Do not override the user's action answers.
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear and practical.
+- Base the risk level on the combination of visible message indicators and user actions, not on one weak indicator alone.
+- If the risk is Critical and the user entered OTP, banking details, card details, or lost money, include urgent Malaysia response advice: contact the bank immediately using the official app, bank card, official website, or ABM fraud/scam directory; call NSRC 997 between 8:00am and 8:00pm daily; do not call any number from the suspicious message.
+- If the phishing case involves a non-bank account such as email, social media, shopping, university, or cloud login, advise changing that account password from a clean device, enabling 2FA, and contacting the official platform support.
+- If the pasted input suggests malware, suspicious attachment, or app installation, advise disconnecting from sensitive accounts and reporting to CyberSecurity Malaysia Cyber999/MyCERT.
 
 Return the answer in this format:
 
@@ -471,15 +487,16 @@ User action answers:
 - User installed an app or APK from the message: {{workflow.parcelInstalledApp}}
 
 Production-rule rubric:
-- If the user installed an app or APK from the message, classify the risk as Critical.
-- If the user already paid a delivery, customs, rescheduling, or clearance fee, classify the risk as High or Critical depending on the message.
-- If the pasted message asks for a delivery fee, customs fee, clearance fee, redelivery fee, or rescheduling fee, increase the risk.
-- If the pasted message asks the user to click a tracking, redelivery, or rescheduling link, increase the risk.
-- If the pasted message asks the user to install an app or APK, classify the risk as Critical.
-- If the message claims illegal parcel contents, customs investigation, police involvement, or asks the user to move money to a safe account, classify the risk as Critical.
-- If the user was not expecting a parcel from this company and the message contains a link or payment request, classify the risk as High.
-- If the pasted input is only a link and there is not enough context, do not say the link is safe. Explain that the assessment is limited and recommend verifying through the courier's official website or app.
-- If there are no strong warning signs and the user was expecting a parcel, classify the risk as Low or Medium, but still advise caution.
+- IF the user installed an app or APK from the message, THEN classify the risk as Critical.
+- IF the user already paid a delivery, customs, rescheduling, or clearance fee, THEN classify the risk as High by default. IF the payment was made through a suspicious link, the message also requested banking/card details, or the message involved fake police/customs/safe-account threats, THEN escalate to Critical.
+- Do not classify the case as High or Critical based only on the presence of a parcel tracking, redelivery, or rescheduling link.
+- IF the pasted message asks for a delivery fee, customs fee, clearance fee, redelivery fee, or rescheduling fee through a suspicious or unofficial-looking link, THEN classify the risk as High.
+- IF the pasted message asks the user to click a tracking, redelivery, or rescheduling link, THEN classify as Medium by default. IF it is combined with warning signs such as unexpected parcel, payment request, shortened/suspicious URL, urgency, fake courier branding, credential request, or app/APK instruction, THEN escalate to High.
+- IF the pasted message asks the user to install an app or APK, THEN classify the risk as High. IF the user already installed it, THEN classify as Critical.
+- IF the message claims illegal parcel contents, customs investigation, police involvement, or asks the user to move money to a safe account, THEN classify the risk as High. IF the user already paid, transferred money, shared banking/card details, or installed an app/APK, THEN classify as Critical.
+- IF the user was not expecting a parcel from this company AND the message contains a suspicious link or payment request, THEN classify the risk as High. IF the link appears to be the courier's official domain AND no payment/app/credential request exists, THEN classify as Low or Medium and advise verification through the official courier app/website.
+- IF the pasted input is only a link AND there is not enough context, THEN do not say the link is safe; explain that the assessment is limited and recommend verifying through the courier's official website or app.
+- IF there are no strong warning signs AND the user was expecting a parcel, THEN classify the risk as Low or Medium, but still advise caution.
 
 Important rules:
 - Do not claim that the link is definitely safe or definitely malicious.
@@ -487,6 +504,9 @@ Important rules:
 - Do not override the user's action answers.
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear and practical.
+- Base the risk level on the combination of visible message indicators and user actions, not on one weak indicator alone.
+- If the risk is Critical because the user paid money, entered banking/card details, installed a suspicious APK/app, or lost account access, include urgent Malaysia response advice: contact the bank immediately using the official app, bank card, official website, or ABM fraud/scam directory; call NSRC 997 between 8:00am and 8:00pm daily for recent financial loss; do not call any number from the suspicious message.
+- If an APK/app was installed, advise the user not to open banking apps on that device, use another clean device to contact the bank, and report the cyber incident to CyberSecurity Malaysia Cyber999/MyCERT.
 
 Return the answer in this format:
 
@@ -680,14 +700,17 @@ User action answers:
 - User transferred money after receiving the message or call: {{workflow.bankTransferredMoney}}
 
 Production-rule rubric:
-- If the user shared OTP, password, PIN, card number, or banking details, classify the risk as Critical.
-- If the user transferred money after receiving the message or call, classify the risk as Critical.
-- If the message asks the user to transfer money to a "safe account", "secure account", "BNM account", "police account", or any third-party account, classify the risk as Critical.
-- If the message asks the user to click a login/security link or call a number shown in the message, increase the risk.
-- If the message asks for OTP, password, PIN, card number, TAC, Secure2u approval, or banking details, classify the risk as High or Critical depending on the context.
-- If the message claims suspicious transactions, account freeze, blocked account, unauthorized login, legal action, or urgent verification, increase the risk.
-- If the pasted input is only a phone number or link and there is not enough context, do not say it is safe. Explain that the assessment is limited and recommend contacting the bank using the official number from the bank's website or app.
-- If there are no strong warning signs and the user did not click, share details, or transfer money, classify the risk as Low or Medium, but still advise caution.
+- IF the user shared OTP, password, PIN, card number, or banking details, THEN classify the risk as Critical.
+- IF the user transferred money after receiving the message or call, THEN classify the risk as Critical.
+- IF the message asks the user to transfer money to a "safe account", "secure account", "BNM account", "police account", or any third-party account, THEN classify the risk as High. IF the user already transferred money, THEN classify as Critical.
+- Do not classify the case as High or Critical based only on the presence of a bank name, phone number, alert wording, or link.
+- IF the user clicked a bank link or called a number shown in the message but did not share information or transfer money, THEN classify the risk as Medium by default. IF the pasted alert also contains strong warning signs such as suspicious domain, fake hotline, OTP/PIN/card request, safe-account instruction, urgent threat, or spoofed-bank wording, THEN escalate to High.
+- IF the message asks the user to click a login/security link or call a number shown in the message AND the link/number is suspicious, unofficial, unexpected, or combined with urgency or credential/payment requests, THEN increase the risk.
+- IF the message asks for OTP, password, PIN, card number, TAC, Secure2u approval, or banking details, THEN classify the risk as High. IF the user already shared the information or approved a transaction, THEN classify as Critical.
+- IF the message claims suspicious transactions, account freeze, blocked account, unauthorized login, legal action, or urgent verification AND it also asks the user to click a link, call a provided number, share credentials, approve a transaction, or move money, THEN increase the risk.
+- IF the alert appears to come from the official banking app AND does not request a link click, callback to a suspicious number, OTP, credential sharing, or money transfer, THEN classify as Low or Medium and advise the user to verify inside the official app or by calling the number on the bank card.
+- IF the pasted input is only a phone number or link AND there is not enough context, THEN do not say it is safe; explain that the assessment is limited and recommend contacting the bank using the official number from the bank's website or app.
+- IF there are no strong warning signs AND the user did not click, share details, or transfer money, THEN classify the risk as Low or Medium, but still advise caution.
 
 Important rules:
 - Do not claim that a link or phone number is definitely safe.
@@ -695,7 +718,24 @@ Important rules:
 - Do not override the user's action answers.
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear and practical.
-- For urgent banking loss or recent money transfer in Malaysia, advise the user to immediately contact their bank's official hotline and NSRC 997.
+- Base the risk level on the combination of visible alert indicators and user actions, not on one weak indicator alone.
+- If the risk is Critical, include urgent Malaysia response advice: contact the bank immediately using the official app, the number on the bank card, the official bank website, or the ABM fraud/scam directory; call NSRC 997 between 8:00am and 8:00pm daily for recent unauthorised transactions or money transfers; do not call any number from the suspicious message.
+- If the bank name is identifiable in the pasted input, include the matching verified bank contact below in Recommended next steps. Still tell the user to verify through the official bank app/card/website because contact numbers can change.
+- If the user transferred money, shared OTP, shared PIN/password/card details, approved Secure2u/TAC, or was told to move money to a "safe account", the Recommended next steps must include bank freeze/blocking advice and NSRC 997.
+
+Verified bank contacts to include when the bank is identifiable:
+- Maybank / Maybank2u: 03-5891 4744
+- CIMB / CIMB Clicks: 03-6204 7788
+- Public Bank / PBe: 03-2177 3555
+- RHB Bank: 03-9206 8118
+- Hong Leong Bank: 03-7626 8899
+- AmBank: 03-2178 8888
+- Alliance Bank: 03-5516 9800
+- UOB Malaysia: 03-2612 8100
+- Bank Islam: 03-2690 0900
+- BSN: 1300-88-1900 or 03-2613-1900
+- Bank Rakyat: 1-300-80-2273
+- If the bank is not in this list, tell the user to use the ABM fraud/scam directory: https://www.abm.org.my/safe-online-banking/directory/
 
 Return the answer in this format:
 
@@ -890,13 +930,13 @@ User answers:
 - Asked to deposit money to unlock higher-paying tasks or commissions: {{workflow.jobDepositUnlockTasks}}
 
 Production-rule rubric:
-- If the user was asked to receive and forward money, classify the risk as Critical because this may indicate money mule recruitment.
-- If the job is overseas without a proper contract, verified employer, or clear legal process, classify the risk as Critical or High depending on the context.
-- If the user was asked to deposit money to unlock higher-paying tasks or commissions, classify the risk as Critical.
-- If the user was asked to pay an upfront fee before starting, classify the risk as High.
-- If the job promises unusually high income for simple online tasks and came through an unsolicited message, classify the risk as Medium or High.
-- If only one weak indicator is present, classify the risk as Low or Medium but advise caution.
-- If there are no strong warning signs, classify the risk as Low.
+- IF the user was asked to receive and forward money, THEN classify the risk as High because this may indicate money mule recruitment. IF the user already received, transferred, or allowed their account to be used for the money movement, THEN classify as Critical.
+- IF the job is overseas without a proper contract, verified employer, or clear legal process, THEN classify the risk as High. IF the user is already being transported, confined, threatened, or has lost control of documents or movement, THEN classify as Critical.
+- IF the user was asked to deposit money to unlock higher-paying tasks or commissions, THEN classify the risk as High. IF the user already paid/deposited money or is being pressured to pay more to recover funds, THEN classify as Critical.
+- IF the user was asked to pay an upfront fee before starting, THEN classify the risk as High.
+- IF the job promises unusually high income for simple online tasks AND came through an unsolicited message, THEN classify the risk as Medium or High.
+- IF only one weak indicator is present, THEN classify the risk as Low or Medium but advise caution.
+- IF there are no strong warning signs, THEN classify the risk as Low.
 
 Important rules:
 - Do not guarantee that a job is legitimate.
@@ -904,6 +944,9 @@ Important rules:
 - Do not override the user's answers.
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear and practical.
+- Base the risk level on confirmed user answers. Do not classify Critical just because the user was asked to do something unless the user already did it or is in immediate danger.
+- If the risk is Critical because the user paid money, deposited money to unlock tasks, or forwarded money through their bank account, include urgent Malaysia response advice: contact the bank using the official app/card/website, call NSRC 997 between 8:00am and 8:00pm daily for recent financial loss, preserve evidence, and file a police report.
+- If the user was asked to receive and forward money, clearly warn that this may involve money mule activity and advise them to stop immediately and report it.
 
 Return the answer in this format:
 
@@ -1092,13 +1135,13 @@ User answers:
 - Investment uses an app, website, or platform that looks unverified or unfamiliar: {{workflow.investmentSuspiciousPlatform}}
 
 Production-rule rubric:
-- If the user was asked to pay a fee, tax, or deposit before withdrawing profits, classify the risk as Critical.
-- If the investment promises guaranteed or unusually high returns and cannot be verified as licensed or registered, classify the risk as High or Critical.
-- If the investment was recommended by someone met online and uses an unfamiliar platform, classify the risk as High or Critical because this may indicate a relationship-investment scam.
-- If the user is pressured to invest quickly or keep the opportunity secret, increase the risk.
-- If the investment cannot be verified as licensed or registered, increase the risk.
-- If only one weak indicator is present, classify the risk as Low or Medium but advise caution.
-- If there are no strong warning signs and the company is verified as licensed or registered, classify the risk as Low.
+- IF the user was asked to pay a fee, tax, or deposit before withdrawing profits, THEN classify the risk as High. IF the user already paid the withdrawal fee/tax/deposit or already transferred investment funds and cannot withdraw, THEN classify as Critical.
+- IF the investment promises guaranteed or unusually high returns AND cannot be verified as licensed or registered, THEN classify the risk as High.
+- IF the investment was recommended by someone met online AND uses an unfamiliar platform, THEN classify the risk as High because this may indicate a relationship-investment scam. IF the user already transferred money or paid additional withdrawal/release fees, THEN classify as Critical.
+- IF the user is pressured to invest quickly or keep the opportunity secret, THEN increase the risk.
+- IF the investment cannot be verified as licensed or registered, THEN increase the risk.
+- IF only one weak indicator is present, THEN classify the risk as Low or Medium but advise caution.
+- IF there are no strong warning signs AND the company is verified as licensed or registered, THEN classify the risk as Low.
 
 Important rules:
 - Do not guarantee that an investment is legitimate or profitable.
@@ -1108,6 +1151,8 @@ Important rules:
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear and practical.
 - Advise the user to verify investment entities through official regulator channels such as SC Malaysia Investment Checker or BNM resources.
+- Base the risk level on confirmed user answers. Do not classify Critical just because the user was offered an investment or asked to pay; reserve Critical for actual payment, transfer, lockout, or severe exposure.
+- If the risk is Critical because the user already transferred money or was asked to pay a withdrawal fee, tax, or deposit, include urgent Malaysia response advice: contact the bank using the official app/card/website, call NSRC 997 between 8:00am and 8:00pm daily for recent financial loss, preserve evidence, and report the investment entity to SC Malaysia where relevant.
 
 Return the answer in this format:
 
@@ -1296,13 +1341,13 @@ User answers:
 - User already sent money, intimate images, or sensitive personal information: {{workflow.romanceAlreadySent}}
 
 Production-rule rubric:
-- If the user already sent money, intimate images, or sensitive personal information, classify the risk as Critical.
-- If the person asked for money and refused verification, classify the risk as High or Critical.
-- If the person encouraged investment in a platform they recommended, classify the risk as High or Critical because this may indicate a romance-investment scam.
-- If the relationship became serious quickly and the person was met online only, increase the risk.
-- If the person refused video call or identity verification, increase the risk.
-- If only early weak indicators are present and there is no money request, classify the risk as Low or Medium but advise caution.
-- If there are no strong warning signs, classify the risk as Low.
+- IF the user already sent money, intimate images, or sensitive personal information, THEN classify the risk as Critical.
+- IF the person asked for money AND refused verification, THEN classify the risk as High. IF the user already sent money, cryptocurrency, gift cards, intimate images, or sensitive information, or threats/blackmail are happening, THEN classify as Critical.
+- IF the person encouraged investment in a platform they recommended, THEN classify the risk as High because this may indicate a romance-investment scam. IF the user already transferred money or paid platform/withdrawal fees, THEN classify as Critical.
+- IF the relationship became serious quickly AND the person was met online only, THEN increase the risk.
+- IF the person refused video call or identity verification, THEN increase the risk.
+- IF only early weak indicators are present AND there is no money request, THEN classify the risk as Low or Medium but advise caution.
+- IF there are no strong warning signs, THEN classify the risk as Low.
 
 Important rules:
 - Do not shame or blame the user.
@@ -1310,6 +1355,8 @@ Important rules:
 - Do not override the user's answers.
 - Use only Low, Medium, High, or Critical as the risk level.
 - Keep the answer clear, sensitive, and practical.
+- Base the risk level on confirmed user answers. Do not classify Critical just because someone asked for money or suggested investment unless the user already sent money/sensitive content or is being threatened.
+- If the risk is Critical because the user sent money, cryptocurrency, gift cards, or bank transfers, include urgent Malaysia response advice: contact the bank or payment provider using official channels, call NSRC 997 between 8:00am and 8:00pm daily for recent financial loss, preserve evidence, and file a police report.
 - If intimate images were shared and threats are involved, advise the user not to pay, preserve evidence, and seek help from relevant authorities/platform reporting channels.
 
 Return the answer in this format:

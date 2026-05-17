@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 07
 TOPIC: MASTER RED FLAG TABLE — ALL SCAM TYPES
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: PDRM, BNM, SC Malaysia, MCMC, MyCERT, FTC, FBI IC3, Interpol
 ================================================================================
 
@@ -354,15 +354,15 @@ Romance Scam     |    7     |  1   |   2    |  0  |  10
 TOTAL            |   27     |  23  |   8    |  1  |  60
 
 ================================================================================
-QUICK REFERENCE — REPORTING CONTACTS
+QUICK REFERENCE - REPORTING CONTACTS
 ================================================================================
 
-NSRC (National Scam Response Centre): 997 (8 AM - 8 PM daily)
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+NSRC (National Scam Response Centre): 997 (8:00am-8:00pm daily)
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599 | ccid.rmp.gov.my
 MCMC Aduan: aduan.mcmc.gov.my | 1-800-188-030
-MyCERT: mycert.org.my | +603-8992-6969
-BNM BNMTELELINK: 1-300-88-5465
-SC Malaysia: 1-800-88-5465 | sc.com.my
+CyberSecurity Malaysia Cyber999/MyCERT: cyber999@cybersecurity.my | 1-300-88-2999; emergency mobile +6019-266 5850
+BNM TELELINK: 1-300-88-5465 / +603-2174-1717
+SC Malaysia Consumer & Investor Office: 03-6204 8999 | sc.com.my
 Semak Mule: semak.rmp.gov.my
 JTKSM (job scams): 03-8886-5000 | jtksm.gov.my
 

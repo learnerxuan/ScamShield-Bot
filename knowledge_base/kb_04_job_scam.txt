@@ -1,7 +1,7 @@
 ================================================================================
 SCAMSHIELD BOT - KNOWLEDGE BASE FILE 04
 TOPIC: FAKE JOB OFFER SCAMS
-Last Updated: 2026-03-27
+Last Updated: 2026-05-09
 Sources: MOHR Malaysia, JTKSM, FTC, FBI IC3, ILO, US DOL, PDRM, MCMC
 ================================================================================
 
@@ -163,10 +163,12 @@ OVERSEAS JOB RED FLAGS:
 SECTION 5: RISK ASSESSMENT RULES (IF-THEN PRODUCTION RULES)
 ================================================================================
 
-RULE JS-01 [CRITICAL RISK]:
+RULE JS-01 [HIGH / CRITICAL RISK]:
 IF user is offered an overseas job AND the job is located in Cambodia, Myanmar,
 Thailand, or Philippines AND the recruiter arranged the flight and accommodation
-AND user has not seen a formal employment contract THEN risk level is CRITICAL.
+AND user has not seen a formal employment contract THEN risk level is HIGH. If
+the user is already travelling, has arrived, is being confined, threatened, or
+has lost control of travel documents, THEN risk level is CRITICAL.
 ACTION: Do NOT travel. This is a human trafficking red flag. Report to JTKSM
 and PDRM immediately.
 
@@ -182,13 +184,17 @@ ACTION: Do NOT engage further. This is a classic online part-time scam entry poi
 
 RULE JS-04 [HIGH RISK]:
 IF user is asked to receive money into their personal bank account and forward it
-to another account in exchange for commission THEN risk level is CRITICAL.
-ACTION: Do NOT agree to this under any circumstances. This is money mule activity
-and is a criminal offence under Section 4 of AMLATFPUAA 2001.
+to another account in exchange for commission THEN risk level is HIGH. If the
+user already received, transferred, or allowed their account to be used for this
+money movement, THEN risk level is CRITICAL.
+ACTION: Do NOT agree to this under any circumstances. This may be money mule
+activity and can become a criminal offence under Section 4 of AMLATFPUAA 2001.
 
 RULE JS-05 [HIGH RISK]:
 IF user completed initial tasks and earned small amounts AND is now being asked
-to deposit money to "unlock" higher-earning tasks THEN risk level is CRITICAL.
+to deposit money to "unlock" higher-earning tasks THEN risk level is HIGH. If
+the user already deposited money or is being pressured to pay more to recover
+funds, THEN risk level is CRITICAL.
 ACTION: Stop immediately. The platform is a scam — deposited money will not be returned.
 
 RULE JS-06 [MEDIUM RISK]:
@@ -295,7 +301,7 @@ SECTION 9: QUICK REFERENCE — REPORTING CONTACTS
 ================================================================================
 
 NSRC (National Scam Response Centre): 997
-PDRM Cybercrime (CCID): 03-2610-1559 | ccid.rmp.gov.my
+PDRM CCID Scam Response Centre: 03-2610 1559 / 03-2610 1599 | ccid.rmp.gov.my
 JTKSM (job scam / illegal recruitment): 03-8886-5000 | jtksm.gov.my
 Wisma Putra Emergency (Malaysians abroad): 03-8887-4000
 MAPO (trafficking victims): 15001

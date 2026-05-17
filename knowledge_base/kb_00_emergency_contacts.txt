@@ -1,0 +1,102 @@
+================================================================================
+SCAMSHIELD BOT - KNOWLEDGE BASE FILE 00
+TOPIC: VERIFIED MALAYSIA EMERGENCY SCAM CONTACTS
+Last Updated: 2026-05-09
+Sources: NSRC/NFCC, ABM, Bank Islam, BSN, Bank Rakyat, BNM, MCMC, PDRM, CyberSecurity Malaysia
+================================================================================
+
+IMPORTANT USE RULE
+================================================================================
+
+If a user may have lost money, transferred money, shared OTP/password/PIN/card
+details, installed a suspicious banking-related app/APK, or noticed unauthorised
+bank transactions, the chatbot must include urgent contact advice.
+
+Primary safety rule:
+- Tell the user to contact their bank using the number printed on the back of
+  their bank card, the official banking app, or the bank's official website.
+- Tell the user NOT to call any phone number provided inside a suspicious SMS,
+  email, WhatsApp message, website, or phone call.
+
+================================================================================
+URGENT ONLINE FINANCIAL SCAM RESPONSE
+================================================================================
+
+NSRC (National Scam Response Centre)
+- Hotline: 997
+- Hours: 8:00am to 8:00pm daily, including public holidays.
+- Use for urgent online financial scams where money was transferred without
+  authorisation or the user was tricked into transferring money.
+- NSRC is for emergency response, not general case follow-up.
+
+If the incident happens outside NSRC hours:
+- Contact the bank's 24-hour fraud/scam hotline immediately.
+- Make a police report as soon as possible.
+
+================================================================================
+VERIFIED BANK FRAUD / SCAM CONTACTS
+================================================================================
+
+Official directory:
+- ABM Banks' Contact Numbers for Issues Relating to Fraud/Scams:
+  https://www.abm.org.my/safe-online-banking/directory/
+
+Common verified bank fraud/scam contacts from ABM/official bank pages:
+- Affin Bank: 03-8230 2222
+- Alliance Bank: 03-5516 9800
+- AmBank: 03-2178 8888
+- CIMB Bank: 03-6204 7788
+- Citibank Malaysia: 03-2383 0000
+- Hong Leong Bank: 03-7626 8899
+- HSBC Malaysia: 1300-88-1388
+- Maybank: 03-5891 4744
+- OCBC Personal Banking: 03-8317 5000
+- OCBC Business Banking: 03-8317 5200
+- Public Bank Case Management Unit: 03-2177 3555
+- RHB Bank: 03-9206 8118
+- Standard Chartered Malaysia: 03-7849 6888
+- UOB Malaysia: 03-2612 8100
+- Bank Islam Contact Centre: 03-2690 0900
+- BSN Contact Centre / Report Fraud and Scam: 1300-88-1900 or 03-2613-1900
+- Bank Rakyat Fraud Hotline: 1-300-80-2273
+
+Important limitation:
+- Contact numbers can change. If uncertain, the safest instruction is to use the
+  bank card, official app, official website, or ABM directory.
+
+================================================================================
+OTHER OFFICIAL REPORTING CHANNELS
+================================================================================
+
+PDRM CCID Scam Response Centre
+- Phone: 03-2610 1559 / 03-2610 1599
+- Hours: 8:00am to 8:00pm daily.
+- Use for commercial crime/scam enquiries, scam modus operandi, and reporting
+  support. For emergency fund-freezing, contact the bank or NSRC first.
+
+Semak Mule (PDRM)
+- Website: https://semakmule.rmp.gov.my/
+- Use to check whether a bank account or phone number has been reported in scam
+  cases before making payment.
+
+BNM TELELINK
+- Phone: 1-300-88-5465 or +603-2174-1717
+- Hours: Monday to Friday office hours.
+- Use for banking complaints or unresolved disputes with financial institutions.
+- Not the first emergency contact for immediate fund-freezing.
+
+MCMC Aduan
+- Website: https://aduan.mcmc.gov.my/
+- Hotline: 1-800-188-030
+- Use for online, SMS, communications, and platform-related complaints.
+
+CyberSecurity Malaysia Cyber999 / MyCERT
+- Email: cyber999@cybersecurity.my
+- Hotline: 1-300-88-2999
+- Emergency mobile: +6019-266 5850
+- Use for cybersecurity incidents such as phishing, malware, hacked accounts, or
+  suspicious malicious links/apps.
+
+================================================================================
+END OF FILE: kb_00_emergency_contacts.txt
+================================================================================
